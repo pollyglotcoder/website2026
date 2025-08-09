@@ -3,31 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to MONDO GLOBAL!</title>
+    <title>MONDO GLOBAL</title>
     <style>
-        div{background-color: rgb(110, 110, 201);
-            color: rgb(141, 189, 30);
-        }
-    </style>
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(14, 16, 21);
+    padding: 20px 20px;
+}
+.header-bar h1 {
+    margin: 0;
+    color: rgb(106, 106, 104)
+}
+nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+nav a {
+    background:rgb(14, 16, 21);
+    color: rgb(126, 168, 252);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+img {
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+</style>
 </head>
 <body>
-      <h1>Welcome to MONDO GLOBAL!</h1>
-    <img src="./imgs/seaside.png" title="Blue seaside"/>
-    <div>
-    <p>Introduction</p>
-    <p>Category</p>
-    <p>Our story</p>
+    <div class="header-bar">
+        <h1>MONDO GLOBAL</h1>
+        <nav>
+            <a href="Product.html">Product</a>
+            <a href="Industries.html">Industries</a>
+            <a href="Technology.html">Technology</a>
+            <a href="Why us.html">Why us</a>
+            <a href="Career.html">Career
+            </a>
+           <p>Get in Touch <a href="mailto:alex@mondoglobal">Get in touch</a></p>
+        </nav>
     </div>
-    <a href="second.html">second page</a>
-    <a href="third.html">third page</a>
-    <a href="forth.html">forth page</a>
+    <img src="imgs/seaside.jpg" title="Blue seaside" >
 <footer>
     <address>
         <h2>Mondo Global</h2>
         <p>Winchester,UK</p>
     </address>
     <p>All rights reserved&copy;</p>
-    <p>Contact us via email</p>
 </footer>
 </body>
 </html>
