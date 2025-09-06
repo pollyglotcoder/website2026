@@ -10,20 +10,21 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: black;
+    background: #0B0C10;
 }
 .header-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: black;
-    padding: 20px 20px;
+    background: #0B0C10;
+    padding: 1rem 2rem;
     position: relative; 
     z-index: 10;
+    overflow: visible !important;
 }    
 .header-bar h1 {
     margin: 0;
-    color: rgb(106, 106, 104);
+    color: #A6A9B3;
 }
 nav {
     display: flex;
@@ -38,8 +39,8 @@ nav {
 }
 nav a {
     position: relative;
-    color: white;
-    background: rgb(24, 25, 27);
+    color:#E6E7EB;
+    background: #0B0C10;
     padding: 6px 10px;
     border-radius: 6px;
     text-decoration: none;
@@ -55,7 +56,7 @@ nav a::after {
   bottom: 0; 
   width: 0; 
   height: 2px; 
-  background-color: white;
+  background-color: #E6E7EB;
   transition: width 0.5s ease; 
 }
 
@@ -72,14 +73,88 @@ nav p a {
     font-size: 0.85rem !important; 
 }
 
-nav a:last-child {
-  color: #faf7f7;
-  border: 1px solid #706e6e;
-    &:hover {
-    background: #2e0f0f;
-    color:#706e6e;
-  }
+.main-nav {
+    display: flex;
+    gap: 1.5rem; 
+    align-items: center;
+    overflow: visible !important;
 }
+
+.main-nav a {
+    position: relative;
+    color: #E6E7EB;
+    background: #0B0C10;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+    z-index: 10;
+}
+
+.main-nav a:hover {
+    background: #49A6FF;
+    color: #0B0C10;
+}
+
+.main-nav a.active {
+    background: #FF8C42;
+    color: #0B0C10;
+}
+.nav-item {
+    position: relative; 
+    overflow: visible !important;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    min-width: 200px;
+    background-color: #1A1D24;
+    border-radius: 6px;
+    padding: 0.5rem 0;
+    margin-top: 5px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px); 
+    transition: all 0.3s ease; 
+    z-index: 1000; 
+    display:block;
+}
+
+.dropdown a {
+    display: block; 
+    padding: 8px 15px;
+    background: transparent; 
+    color: #E6E7EB;
+    border-radius: 0; 
+}
+
+.dropdown a:hover {
+    background: #49A6FF;
+    color: #0B0C10;
+}
+
+.nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+}
+.contact-link {
+    background: #49A6FF;
+    color:#E6E7EB;
+    padding: 8px 16px;
+    border-radius: 6px;
+    &:hover {
+    background: #49A6FF;
+    border-radius: 6px
+  }
+    
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -89,7 +164,7 @@ nav a:last-child {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background:rgb(106, 106, 104); 
+    background: #1A1D24; 
     border-radius: 3px;
     transition: all 0.3s; 
 }
@@ -113,13 +188,13 @@ nav a:last-child {
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px  #1A1D24;
 }
 
 .video-wrapper2 {
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px  #1A1D24;
     width: 100%;
     max-width: 400px; 
     aspect-ratio: 16/9;
@@ -157,7 +232,7 @@ video {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: #E6E7EB;
     font-size: 4em;
     text-shadow: 2px 2px 8px #000;
     pointer-events: none;
@@ -174,7 +249,7 @@ video {
 }
 @keyframes strokeUp {
     to {
-        background-position: 0 0; /* 结束位置：背景在上，文字完全显示 */
+        background-position: 0 0; 
     }
 }
 .image-text span:nth-child(1) { animation-delay: 0.1s; }
@@ -198,9 +273,10 @@ video {
 .image-text span:nth-child(19) { animation-delay: 1.9s; }
 .image-text span:nth-child(20) { animation-delay: 2.0s; }
 .image-text span:nth-child(21) { animation-delay: 2.1s; }
+
 h2 {
     text-align: center;
-    color: rgb(241, 240, 240);
+    color: #E6E7EB;
     margin: 20px 0;
     font-size: 3em;
 }
@@ -214,7 +290,7 @@ h2 {
     font-size: clamp(1.2rem, 3vw, 2.5rem); 
     font-weight: 100;
     opacity: 0.9; 
-    color: white;
+    color: #E6E7EB;
     padding: 200px 20px 10px 20px;
 }
   
@@ -229,7 +305,7 @@ h2 {
     padding-left: 6rem;
     padding-right: 6rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color: white;
+    color:#E6E7EB;
     max-width: 100vw;
     box-sizing: border-box;
     font-weight: bold;
@@ -245,7 +321,7 @@ h2 {
     padding-left: 6rem;
     padding-right: 6rem;
     font-size: clamp(1.2rem, 3vw, 2.5rem);
-    color: white;
+    color: #E6E7EB;
     max-width: 100vw;
     box-sizing: border-box;
 }
@@ -270,7 +346,7 @@ h2 {
                 position: absolute;
                 top: 100%; 
                 right: 0; 
-                background: rgb(14, 16, 21); 
+                background: #0B0C10;
                 flex-direction: column; 
                 gap: 10px;
                 padding: 20px;
@@ -311,10 +387,12 @@ h2 {
     }
             .grid-container1 {
             grid-template-columns: 1fr !important;
-
-    }
+       
+    }       
             .video-wrapper2 {
             max-width: 250px;
+    }       .grid-containerFeatures {   
+            grid-template-columns: 1fr;
     }
 }
 
@@ -333,6 +411,87 @@ h2 {
         gap: 8px;
     }
 }
+
+.grid-containerFeatures {   
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:500px 1fr 500px;
+    gap: 10px;
+    padding: 20px;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    color:  #E6E7EB;
+    max-width: 100vw;
+    box-sizing: border-box; 
+    min-height: 400px;
+    background: #0B0C10
+}
+.grid-containerFeatures > div {
+    background:#0B0C10;
+    padding: 30px 15px;
+    border-radius: 8px;
+    height: auto;
+}
+.itemFeatures-title  {
+    font-weight: bold;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.itemFeatures-des {
+    text-align: center;
+    margin-top: 10px;
+    font-size: clamp(0.8rem, 3vw, 1.2rem); 
+    line-height: 1.8;
+}
+
+.flexbox-itemFeatures1 {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 2;
+    font-weight: bold;
+    font-size: clamp(1.2rem, 3vw, 4rem);
+    padding: 30px 15px;
+    text-align: center;
+    background: #0B0C10 !important;
+}
+.feature-img {
+  width: 300px; 
+  max-width: 300px; 
+  height: auto; 
+  margin: 15px 0; 
+  padding: 60px -10px;
+  border-radius: 4px; 
+}
+.flexbox-itemFeatures2 {
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2;    
+}
+.flexbox-itemFeatures3 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3; 
+}
+.flexbox-itemFeatures4 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+.flexbox-itemFeatures5{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4; 
+}
+.flexbox-itemFeatures6 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.flexbox-itemFeatures1,
+.flexbox-itemFeatures2,
+.flexbox-itemFeatures3,
+.flexbox-itemFeatures4,
+.flexbox-itemFeatures5,
+.flexbox-itemFeatures6 {
+    box-shadow: 0 0 10px 3px rgba(59, 130, 246, 0.7),
+                0 0 20px 8px rgba(59, 130, 246, 0.5),  
+                0 0 30px 12px rgba(59, 130, 246, 0.3); 
+}
 .grid-container1 {
     text-align: center;
     display: grid;
@@ -341,24 +500,17 @@ h2 {
     gap: 10px;
     padding: 20px;
     font-size: clamp(1rem, 5vw, 1.5rem);
-    color: white;
+    color: #E6E7EB;
     max-width: 200vw;
     box-sizing: border-box; 
     min-height: 400px;
 }
 .grid-container1 > div {
-    background: rgb(24, 25, 27);
+    background: #0B0C10;
     padding: 30px 15px;
     border-radius: 8px;
     height: 600px;
 }
-
-.feature-title  {
-    grid-column: 1 / 2;
-    font-weight: bold;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-}
-
 .flexbox-item1,
 .flexbox-item2,
 .flexbox-item3 {
@@ -366,44 +518,37 @@ h2 {
                 0 0 20px 8px rgba(59, 130, 246, 0.5),  
                 0 0 30px 12px rgba(59, 130, 246, 0.3); 
 }
+.feature-title  {
+    grid-column: 1 / 2;
+    font-weight: bold;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
 
-
-.flexbox-item1-des .flexbox-item2-des .flexbox-item3-des {
+.flexbox-des {
     grid-column: 1 / 2;
     text-align: left;
     margin-top: 10px;
-    font-size: clamp(0.8rem, 3vw, 1.2rem); 
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: clamp(1.2rem, 3vw, 1.2rem);
 }
-
 .grid-container2 {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 15px;
     padding: 20px;
-    background: rgb(24, 25, 27);
+    background:#0B0C10;
     font-size: clamp(0.8rem, 3vw, 1.2rem);
-    color: rgb(106, 106, 104);
+    color: #1A1D24;
     max-width: 100vw;
     box-sizing: border-box; 
 }
 
 .sidenav {
     border-radius: 8px;
-    color: white;
+    color:#E6E7EB;
     font-size: 2rem;
     text-align: right;
-}
-.footer-row--large {
-    font-size: clamp(1.1rem, 4vw, 1.6rem);
-    font-weight: bold; 
-    line-height: 1.5; 
-}
-.footer-row--small {
-    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
-    line-height: 1.4; 
 }
 .layout {
     display:grid;
@@ -411,7 +556,7 @@ h2 {
     gap:0.5em;
     background: rgb(14, 16, 21);
     font-size: clamp(1rem, 5vw, 1.5rem);
-    color: white;
+    color: #E6E7EB;
     padding:0.5em;
     max-width: 100vw;
     box-sizing: border-box;
@@ -454,17 +599,25 @@ header {
     height:100%;
     object-fit:cover;
 }
+.footer-row--large {
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    font-weight: bold; 
+    line-height: 1.5; 
+    color:  #A6A9B3;
 
+}
 .footer-row--small {
-      color: #333; 
-    }
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    line-height: 1.4; 
+    color:  #A6A9B3; 
+}
     .footer-row--small a {
-      color: #666; 
+      color:  #A6A9B3; 
       text-decoration: none; 
-    }
+}
     .footer-row--small a:hover {
       color: #007bff; 
-    }
+}
 </style>
 </head>
 
@@ -472,27 +625,50 @@ header {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <div class="header-bar">
         <h1>MONDO GLOBAL</h1>
-        <nav>
-            <a href="Product.html">Product</a>
-            <a href="Industries.html">Industries</a>
-            <a href="Technology.html">Technology</a>
-            <a href="Why us.html">Why us</a>
-            <a href="Career.html">Career</a>
-           <p><a href="mailto:alex@mondoglobal">Get in touch</a></p>
+        <nav class="main-nav">
+             <div class="nav-item">
+                 <a href="services.html">Services</a>
+                 <div class="dropdown">
+                    <a href="services/advisory&strategy.html">Advisory & Strategy</a>
+                    <a href="services/data&model-development.html">Data & Model Development</a>
+                    <a href="services/infrastructure&deployment.html">Infrastructure & Deployment</a>
+                    <a href="services/integration&applications.html">Integration & Applications</a>
+                    <a href="services/training&support.html">Training & Support</a>
+                 </div>
+             </div>
+             <div class="nav-item">
+                 <a href="solutions.html">Solutions</a>
+                    <div class="dropdown">
+                    <a href="regulated-industries.html">On-Premise AI</a>
+                    <a href="edge&on-device-ai.html">Edge & On-Device AI</a>
+                    <a href="regulatedindustries.html">Regulated Industries</a>
+                 </div>
+             </div>
+                  <a href="pricing.html">Pricing</a>
+                  <a href="about-us.html">About Us</a>
+              <div class="nav-item">
+                  <a href="insights.html">Insights</a>
+                    <div class="dropdown">
+                    <a href="blogs.html">Blogs</a>
+                    <a href="case-studies.html">Case Studies</a>
+              </div>
+             </div>
+             <a><p href="mailto:alex@mondoglobal" class="contact-link">Contact</p></a>
         </nav>
         <div class="menu-toggle" id="menuToggle">
             <span></span> 
             <span></span> 
             <span></span> 
         </div>
+    </div>
 
 <div class="nav-container" id="navContainer">
-            <a href="Product.html">Product</a>
-            <a href="Industries.html">Industries</a>
-            <a href="Technology.html">Technology</a>
-            <a href="Why us.html">Why us</a>
-            <a href="Career.html">Career</a>
-            <p><a href="mailto:alex@mondoglobal">Get in touch</a></p>
+            <a href="services.html">Services</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="about-Us.html">About Us</a>
+            <a href="insights.html">Insights</a>
+            <p><a href="mailto:alex@mondoglobal" class="contact-link">Contact</a></p>
         </div>      
     </div>
         <div class="video-container1">
@@ -571,18 +747,41 @@ header {
   <span class="main-title">Our AI Foundations</span><br>
   <span class="sub-title">Security, Reliability, Sustainability</span>
 </h2>
+    <div class="grid-containerFeatures">
+         <div class="flexbox-itemFeatures1">     
+                 <header><p><img src="imgs/security.jpg" class="feature-img"></p></header>
+                 <footer><p>Security</p></footer>
+         </div>
+         <div class="flexbox-itemFeatures2">
+             <p class="itemFeatures-des">Mondol Global's AI solutions embed robust security foundations: end-to-end encryption for data at rest/in transit, IAM-based access controls, and real-time threat detection. Regular penetration testing and compliance with GDPR/ISO 27001 reflect a zero-trust model, ensuring your AI workloads stay protected against evolving cyber risks.</p>
+         </div>
+         <div class="flexbox-itemFeatures3">
+             <p class="itemFeatures-des">Built to deliver 99.99% uptime, our AI infrastructure uses multi-region redundancy and auto-scaling. Built-in failover mechanisms and predictive maintenance prevent downtime, while consistent performance monitoring ensures your AI systems deliver stable outputs, even during peak demand—meeting industry-leading resilience standards.</p>
+         </div>
+         <div class="flexbox-itemFeatures4">
+             <div class="itemFeatures-title">Reliabity</div>
+         </div>
+         <div class="flexbox-itemFeatures5">
+              <div class="itemFeatures-title">Sustainability</div>
+         </div>
+         <div class="flexbox-itemFeatures6">
+             <p class="itemFeatures-des">Mondol Global's AI solutions embed robust security foundations: end-to-end encryption for data at rest/in transit, IAM-based access controls, and real-time threat detection. Regular penetration testing and compliance with GDPR/ISO 27001 reflect a zero-trust model, ensuring your AI workloads stay protected against evolving cyber risks.</p>
+         </div>
+    </div>
+
+
     <div class="grid-container1">
       <div class="flexbox-item1">
           <div class="feature-title">Security</div>
-          <p class="flexbox-item1-des">Our AI solutions embed robust security foundations: end-to-end encryption for data at rest/in transit, IAM-based access controls, and real-time threat detection. Regular penetration testing and compliance with GDPR/ISO 27001 reflect a zero-trust model, ensuring your AI workloads stay protected against evolving cyber risks.</p>
+          <p class="flexbox-des">Mondol Global's AI solutions embed robust security foundations: end-to-end encryption for data at rest/in transit, IAM-based access controls, and real-time threat detection. Regular penetration testing and compliance with GDPR/ISO 27001 reflect a zero-trust model, ensuring your AI workloads stay protected against evolving cyber risks.</p>
       </div>
       <div class="flexbox-item2">
         <div class="feature-title">Reliabity</div>
-          <p class="flexbox-item2-des">Built to deliver 99.99% uptime, our AI infrastructure uses multi-region redundancy and auto-scaling. Built-in failover mechanisms and predictive maintenance prevent downtime, while consistent performance monitoring ensures your AI systems deliver stable outputs, even during peak demand—meeting industry-leading resilience standards.</p>
+          <p class="flexbox-des">Built to deliver 99.99% uptime, our AI infrastructure uses multi-region redundancy and auto-scaling. Built-in failover mechanisms and predictive maintenance prevent downtime, while consistent performance monitoring ensures your AI systems deliver stable outputs, even during peak demand—meeting industry-leading resilience standards.</p>
     </div>
       <div class="flexbox-item3">
         <div class="feature-title">Sustainability</div>
-          <p class="flexbox-item3-des">Aligned with carbon-neutral goals, our AI optimizes compute efficiency via algorithmic refinements and energy-efficient processors, cutting energy use by 40%. We leverage renewable energy-powered regions, reducing your AI’s carbon footprint while maintaining performance—aligning innovation with planetary responsibility.</p>
+          <p class="flexbox-des">Aligned with carbon-neutral goals, Mondol Global AI optimizes compute efficiency via algorithmic refinements and energy-efficient processors, cutting energy use by 40%, leverage renewable energy-powered regions, reducing your AI’s carbon footprint while maintaining performance—aligning innovation with planetary responsibility.</p>
     </div>
     </div>
     <div class="layout">
