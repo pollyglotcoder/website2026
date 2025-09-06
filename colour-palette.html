@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mondo Global Colour Palette — Dark UX</title>
+  <style>
+    :root{
+      /* Core Palette */
+      --bg:#0B0C10;           /* Soft black */
+      --bg-2:#1A1D24;         /* Dark grey surface */
+      --text:#E6E7EB;         /* Off-white text */
+      --muted:#A6A9B3;        /* Secondary text */
+      --blue:#49A6FF;         /* Brand blue */
+      --blue-2:#8AD0FF;       /* Blue hover/light */
+      --blue-deep:#0E4D92;    /* Deep blue accents */
+      --orange:#FF8C42;       /* Primary CTA */
+      --orange-2:#FFB273;     /* CTA hover/soft */
+      --border:#2A2F3C;       /* Dividers */
+      --focus:#FFD166;        /* Focus ring */
+      --radius:16px;
+    }
+    *{ box-sizing:border-box }
+    body{ margin:0; background:var(--bg); color:var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; }
+    .container{ width:min(1100px, 92%); margin: 32px auto; }
+    h1{ margin:0 0 6px; font-size: clamp(26px, 4vw, 44px); line-height:1.05 }
+    .lead{ color:var(--muted); margin:0 0 22px }
+    section{ margin: 28px 0 }
+
+    .grid{ display:grid; gap:14px; grid-template-columns: repeat(4, 1fr) }
+    .grid-3{ display:grid; gap:14px; grid-template-columns: repeat(3, 1fr) }
+    .grid-2{ display:grid; gap:14px; grid-template-columns: repeat(2, 1fr) }
+    @media (max-width: 860px){ .grid, .grid-3, .grid-2 { grid-template-columns: 1fr 1fr } }
+    @media (max-width: 560px){ .grid, .grid-3, .grid-2 { grid-template-columns: 1fr } }
+
+    .card{ background: var(--bg-2); border:1px solid var(--border); border-radius: var(--radius); padding:16px }
+    .swatch{ height:92px; border-radius: 12px; border:1px solid var(--border); display:flex; align-items:flex-end; justify-content:space-between; padding:10px }
+    .swatch small{ color: var(--text); background: rgba(0,0,0,.25); padding:4px 8px; border-radius: 8px; font-weight:600 }
+    .meta{ color: var(--muted); font-size: 14px; margin-top:8px }
+
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 16px; border-radius: 14px; border:1px solid var(--border); cursor:pointer; text-decoration:none; font-weight:600 }
+    .btn:disabled{ opacity:.6; cursor:not-allowed }
+    .btn.primary{ background: var(--orange); color:#1b1008; border-color: transparent }
+    .btn.primary:hover{ background: var(--orange-2) }
+    .btn.secondary{ background: transparent; color: var(--text) }
+    .btn.secondary:hover{ background: rgba(255,255,255,.06) }
+    .btn.blue{ background: var(--blue); color:#04121f; border-color: transparent }
+    .btn.blue:hover{ background: var(--blue-2) }
+
+    .link{ color: var(--blue); text-underline-offset:3px }
+    .link:hover{ color: var(--blue-2) }
+
+    input, textarea, select{
+      width:100%; padding:12px 12px; border-radius:12px; background:#0F1116; color:var(--text);
+      border:1px solid var(--border); outline:none; transition: box-shadow .15s ease, border-color .15s ease;
+    }
+    input::placeholder, textarea::placeholder{ color: #848a97 }
+    input:focus, textarea:focus, select:focus{ border-color: var(--blue); box-shadow: 0 0 0 3px rgba(73,166,255,.25) }
+    .hint{ color:var(--muted); font-size:12px; margin-top:6px }
+
+    .badge{ display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700 }
+    .badge.blue{ background: rgba(73,166,255,.15); color: var(--blue) }
+    .badge.orange{ background: rgba(255,140,66,.15); color: var(--orange) }
+
+    .kpi{ display:flex; align-items:center; gap:10px }
+    .kpi .dot{ width:10px; height:10px; border-radius:50% }
+
+    .alert{ padding:14px; border-radius:12px; border:1px solid var(--border); background: #10131a }
+    .alert.info{ border-color: rgba(73,166,255,.4) }
+    .alert.cta{ border-color: rgba(255,140,66,.45) }
+
+    :focus-visible{ outline:3px solid var(--focus); outline-offset:2px; border-radius:8px }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Mondo Global Colour Palette Preview</h1>
+      <p class="lead">Dark background with white, grey/blues, and orange accent. This page demonstrates buttons, links, cards, forms, and messaging using the palette.</p>
+    </header>
+
+    <!-- Swatches -->
+    <section>
+      <h2>Swatches</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="swatch" style="background:#0B0C10"><small>#0B0C10</small><small>bg</small></div>
+          <div class="meta">Background (soft black)</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#1A1D24"><small>#1A1D24</small><small>surface</small></div>
+          <div class="meta">Card / surface</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#E6E7EB; color:#0B0C10"><small>#E6E7EB</small><small>text</small></div>
+          <div class="meta">Primary text (shown on dark)</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#A6A9B3"><small>#A6A9B3</small><small>muted</small></div>
+          <div class="meta">Secondary text</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#49A6FF"><small>#49A6FF</small><small>blue</small></div>
+          <div class="meta">Brand blue (links, accents)</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#8AD0FF; color:#0B0C10"><small>#8AD0FF</small><small>blue‑2</small></div>
+          <div class="meta">Hover/light blue</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#0E4D92"><small>#0E4D92</small><small>blue‑deep</small></div>
+          <div class="meta">Deep blue for headings or emphasis</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#FF8C42; color:#1b1008"><small>#FF8C42</small><small>orange</small></div>
+          <div class="meta">Primary CTA</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#FFB273; color:#24160a"><small>#FFB273</small><small>orange‑2</small></div>
+          <div class="meta">CTA hover / soft</div>
+        </div>
+        <div class="card">
+          <div class="swatch" style="background:#2A2F3C"><small>#2A2F3C</small><small>border</small></div>
+          <div class="meta">Borders & separators</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTAs & Links -->
+    <section>
+      <h2>Buttons & Links</h2>
+      <div class="card">
+        <div style="display:flex; flex-wrap:wrap; gap:10px">
+          <button class="btn primary">Primary CTA</button>
+          <button class="btn primary" disabled>Primary (disabled)</button>
+          <button class="btn blue">Secondary (Blue)</button>
+          <a class="btn secondary" href="#">Ghost Button</a>
+          <a class="link" href="#">Inline link using brand blue →</a>
+        </div>
+        <p class="meta" style="margin-top:10px">Hover and focus each element to evaluate states. Focus rings use <code>--focus</code> (#FFD166).</p>
+      </div>
+    </section>
+
+    <!-- Cards & Content -->
+    <section>
+      <h2>Cards & Content</h2>
+      <div class="grid-3">
+        <article class="card">
+          <span class="badge blue">Info</span>
+          <h3 style="margin:10px 0 6px; color:var(--text)">Blue‑accent Card</h3>
+          <p style="color:var(--muted); margin:0 0 10px">Use blue for trust cues, links, and secondary CTAs. Great for technical highlights.</p>
+          <a class="link" href="#">Learn more</a>
+        </article>
+        <article class="card">
+          <span class="badge orange">Action</span>
+          <h3 style="margin:10px 0 6px; color:var(--text)">Orange‑accent Card</h3>
+          <p style="color:var(--muted); margin:0 0 10px">Use orange sparingly to draw attention to primary actions and promotions.</p>
+          <button class="btn primary">Call to action</button>
+        </article>
+        <article class="card">
+          <div class="kpi"><span class="dot" style="background:var(--blue)"></span><strong>99.98%</strong><span class="meta">Uptime</span></div>
+          <p style="color:var(--muted); margin:10px 0 0">Neutral surfaces and borders keep focus on content while color communicates status.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section>
+      <h2>Form Elements</h2>
+      <form class="card" onsubmit="event.preventDefault()">
+        <div class="grid-2">
+          <label> Name
+            <input placeholder="Jamie Doe" required />
+          </label>
+          <label> Email
+            <input type="email" placeholder="you@company.com" required />
+          </label>
+        </div>
+        <label style="display:block; margin-top:12px">Message
+          <textarea rows="4" placeholder="Your goals…"></textarea>
+        </label>
+        <div class="hint">Focus to see blue outline and gentle glow. Disabled states reduce opacity.</div>
+        <div style="margin-top:12px; display:flex; gap:10px">
+          <button class="btn primary" type="submit">Send</button>
+          <button class="btn blue" type="button">Secondary</button>
+          <button class="btn secondary" type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Alerts -->
+    <section>
+      <h2>Messages</h2>
+      <div class="grid-2">
+        <div class="alert info">
+          <strong style="color:var(--blue)">Information:</strong>
+          <p class="meta">Blue tones convey trust and are ideal for non-urgent system notices.</p>
+        </div>
+        <div class="alert cta">
+          <strong style="color:var(--orange)">Action required:</strong>
+          <p class="meta">Orange directs attention for primary tasks or next steps.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
