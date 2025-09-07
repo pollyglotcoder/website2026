@@ -17,7 +17,7 @@ html, body {
     align-items: center;
     justify-content: space-between;
     background: #0B0C10;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 0 2rem;
     position: relative; 
     z-index: 10;
     overflow: visible !important;
@@ -75,7 +75,7 @@ nav p a {
 
 .main-nav {
     display: flex;
-    gap: 1.5rem; 
+    gap: 1rem; 
     align-items: center;
     overflow: visible !important;
 }
@@ -148,12 +148,11 @@ nav p a {
     color:#E6E7EB;
     padding: 8px 16px;
     border-radius: 6px;
-    &:hover {
+}
+.contact-link:hover {
     background: #49A6FF;
     border-radius: 6px
   }
-    
-}
 
 .menu-toggle {
     display: none;
@@ -164,20 +163,36 @@ nav p a {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background: #1A1D24; 
+    background:#A6A9B3;
     border-radius: 3px;
     transition: all 0.3s; 
-}
-.nav-container {
-    display: none; 
-    align-items: center;
-    gap: 10px;
 }
 
 .video-container1 {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: -0.8rem auto 0 auto;
     padding: 0 1rem;
+    position: relative;
+}
+.video-text {
+  position: absolute; 
+  top: 60%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  text-align: center; 
+  color: white; 
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  padding: 0 20px; 
+  z-index: 10; 
+}
+
+.video-text h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.video-text p {
+  font-size: 1.2rem;
 }
 .video-container2 {
     max-width: 1200px;
@@ -277,7 +292,7 @@ video {
 h2 {
     text-align: center;
     color: #E6E7EB;
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 3em;
 }
 .main-title {
@@ -329,19 +344,24 @@ h2 {
             .header-bar h1 {
                 text-align: center;
                 width: 100%; 
-             margin: 0;
-    }   
+                margin: 0;
+            }   
             .header-bar {
                 flex-direction: row; 
                 justify-content: center;
                 padding: 20px 10px;
+                position: absolute; 
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 20
             }
             .menu-toggle {
                 display: flex;
                 position: absolute; 
                 right: 20px;
             }
-            .nav-container {
+            #mainNav {
                 display: none; 
                 position: absolute;
                 top: 100%; 
@@ -352,16 +372,71 @@ h2 {
                 padding: 20px;
                 border-radius: 0 0 0 8px; 
                 box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
-                width: 50px; 
+                width: 100%; 
                 z-index: 100; 
             }
 
-            .nav-container.active {
+            #mainNav.active {
                 display: flex;
             }
             nav {
             display: none;
-    } 
+            }
+            .dropdown {
+            position: static;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(0);
+            }
+            .nav-item.active .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            }
+            .video-container1 {
+            position: relative;
+            width: 100vw;
+            height: 100vh; 
+            margin: 0;
+            padding: 0;
+}
+
+            .video-wrapper1 {
+            width: 100%;
+            height: 80%;
+            border-radius: 0;
+            transform: translateY(10%)
+}
+
+            video {width: 100%;
+            height: 100%;
+            object-fit: cover;
+}
+            .video-text {
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            color: white; 
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            padding: 20px 20px; 
+            z-index: 10;
+            max-width: 90%; 
+            text-align: center; 
+}
+            
+            .video-text h2 {
+            margin-bottom: 0;
+            font-size: clamp(1.5rem, 5vw, 2rem); 
+            margin-bottom: 0;
+            line-height: 1.2;
+            white-space: nowrap;
+}
+
+            .video-text p {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+}
             .image-text {
             font-size: 1.5em;
             text-align: center;
@@ -625,7 +700,7 @@ header {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <div class="header-bar">
         <h1>MONDO GLOBAL</h1>
-        <nav class="main-nav">
+        <nav class="main-nav" id="mainNav">
              <div class="nav-item">
                  <a href="services.html">Services</a>
                  <div class="dropdown">
@@ -662,22 +737,18 @@ header {
         </div>
     </div>
 
-<div class="nav-container" id="navContainer">
-            <a href="services.html">Services</a>
-            <a href="solutions.html">Solutions</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="about-Us.html">About Us</a>
-            <a href="insights.html">Insights</a>
-            <p><a href="mailto:alex@mondoglobal" class="contact-link">Contact</a></p>
-        </div>      
-    </div>
         <div class="video-container1">
+           <div class="video-text">
+           <h2>Own Your AI.</h2>
+           <h2> Private. Secure. On-Premise.</h2>
+           <p>Mondo Global helps businesses build, train, and run Large Language Models (LLMs) on local hardware — giving you full control over your data, costs, and future.</p>
+    </div>
           <div class="video-wrapper1">
             <video autoplay muted loop>
             <source src="imgs/Video3.mp4" type="video/mp4">
             Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
             </video>
-        </div>
+          </div>
     </div>
     <div class="image-container">
     <img src="imgs/Background.jpg">
@@ -703,12 +774,30 @@ header {
     </div>
 <script>
         const menuToggle = document.getElementById('menuToggle');
-        const navContainer = document.getElementById('navContainer');
-        
+        const navContainer = document.getElementById('mainNav');
+        const navItems = document.querySelectorAll('.nav-item');
+
         menuToggle.addEventListener('click', () => {
             navContainer.classList.toggle('active');
         });
-    </script>
+
+        navItems.forEach(item => {
+        if (window.innerWidth <= 768) {
+            item.addEventListener('click', (e) => {
+               e.stopPropagation();
+               item.classList.toggle('active');
+             });
+        }
+    });
+        document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+           if (!e.target.closest('.main-nav') && !e.target.closest('.menu-toggle')) {
+              navContainer.classList.remove('active');
+              navItems.forEach(item => item.classList.remove('active'));
+        }
+    }
+});
+</script>
 
 
 <div class="container-fluid">
@@ -795,30 +884,22 @@ header {
 <h2>More about us</h2>
         <div class="grid-container2">
         <div class="flexbox-Main footer-row--large">MONDO GLOBAL</div>
-        <div class="flexbox-Product footer-row--large">Product</div>
-        <div class="flexbox-About footer-row--large">About</div>
-        <div class="flexbox-Company footer-row--large">Company</div>
+        <div class="flexbox-Privacy policy footer-row--large">Privacy policy</div>
+        <div class="flexbox-Accessibility Statement footer-row--large">Accessibility Statement</div>
+        <div class="flexbox-Cookies footer-row--large">Cookies</div>
         <div class="flexbox-Connect footer-row--large">Connect</div>
         
         <div class="flexbox-Main2 footer-row--small"></div>
-        <div class="flexbox-Product2 footer-row--small"><a href="AI solutions.html">AI solutions</a></div>
-        <div class="flexbox-About2 footer-row--small"><a href="Privacy Policy.html">Privacy Policy</a></div>
-        <div class="flexbox-Company2 footer-row--small"><a href="Career.html">Career</a></div>
+        <div class="flexbox-Privacy policy2 footer-row--small"><a href="Privacy policy.html">Privacy policy</a></div>
+        <div class="flexbox-Accessibility Statement2 footer-row--small"><a href="Accessibility Statement.html">Accessibility Statement</a></div>
+        <div class="flexbox-Cookies2 footer-row--small"><a href="Cookies.html">Cookies</a></div>
         <div class="flexbox-Connect2 footer-row--small"><a href="Linkedin.html">Linkedin</a></div>
-        
+
         <div class="flexbox-Main3 footer-row--small"></div>
-        <div class="flexbox-Product3 footer-row--small"></div>
-        <div class="flexbox-About3 footer-row--small"><a href="Terms of Service.html">Terms of Service</a></div>
-        <div class="flexbox-Company3 footer-row--small"></div>
+        <div class="flexbox-Privacy policy3 footer-row--small"></div>
+        <div class="flexbox-Accessibility Statement3 footer-row--small"></div>
+        <div class="flexbox-Cookies3 footer-row--small"></div>
         <div class="flexbox-Connect3 footer-row--small"><a href="Github.html">Github</a></div>
-
-
-        <div class="flexbox-Main4 footer-row--small"></div>
-        <div class="flexbox-Product4 footer-row--small"></div>
-        <div class="flexbox-About4 footer-row--small"><a href="API Reference.html">API Reference</a></div>
-        <div class="flexbox-Company4 footer-row--small"></div>
-        <div class="flexbox-Connect4 footer-row--small"></div>
-        <div class="flexbox-About4 footer-row--small"></div>
       </div>   
     <p>&copy;2025 MONDO GLOBAL. All rights reserved</p>
 </body>
