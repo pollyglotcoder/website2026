@@ -582,7 +582,7 @@ div.grid-container3-text > a:hover {
     max-width: 100vw;
     box-sizing: border-box; 
     min-height: 400px;
-    background: #0B0C10
+    background: #0B0C10;
 }
 .grid-containerFeatures > div {
     background:#0B0C10;
@@ -597,11 +597,43 @@ div.grid-container3-text > a:hover {
 
 .itemFeatures-des {
     text-align: center;
-    margin-top: 10px;
-    font-size: clamp(0.8rem, 3vw, 1.2rem); 
+    margin-top: 40PX;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: clamp(0.8rem, 3vw, 1.4rem); 
     line-height: 1.8;
 }
 
+.flexbox-itemboxR {
+    display: grid;
+    grid-template-columns: 1fr;
+    top: 0; 
+    left: 0; 
+    width: 80%; 
+    height: 80%; 
+    background:  #1A1D24; 
+    border-radius: 8px; 
+    box-shadow: inset 0 0 10px 3px rgba(59, 130, 246, 0.7);
+    transition: transform 2s;
+}
+.flexbox-itemboxR:hover {
+    transform: perspective(800px) translateX(-40px) translateY(40px);
+}
+.flexbox-itemboxL {
+    display: grid;
+    grid-template-columns: 1fr;
+    top: 0; 
+    left: 0; 
+    width: 80%; 
+    height: 80%; 
+    background:  #1A1D24; 
+    border-radius: 8px; 
+    box-shadow: inset 0 0 10px 3px rgba(59, 130, 246, 0.7);
+    transition: transform 2s;
+}
+.flexbox-itemboxL:hover {
+    transform: perspective(800px) translateX(40px) translateY(40px);
+}
 .flexbox-itemFeatures1 {
     grid-column: 1 / 2; 
     grid-row: 1 / 2;
@@ -622,10 +654,18 @@ div.grid-container3-text > a:hover {
 .flexbox-itemFeatures2 {
     grid-column: 2 / 3; 
     grid-row: 1 / 2;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 .flexbox-itemFeatures3 {
     grid-column: 1 / 2;
     grid-row: 2 / 3; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 .flexbox-itemFeatures4 {
     grid-column: 2 / 3;
@@ -638,10 +678,18 @@ div.grid-container3-text > a:hover {
 .flexbox-itemFeatures6 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 .flexbox-itemFeatures7 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 .flexbox-itemFeatures8 {
     grid-column: 2 / 3;
@@ -654,22 +702,12 @@ div.grid-container3-text > a:hover {
 .flexbox-itemFeatures10 {
     grid-column: 2 / 3;
     grid-row: 5 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 
-.flexbox-itemFeatures1,
-.flexbox-itemFeatures2,
-.flexbox-itemFeatures3,
-.flexbox-itemFeatures4,
-.flexbox-itemFeatures5,
-.flexbox-itemFeatures6,
-.flexbox-itemFeatures7,
-.flexbox-itemFeatures8,
-.flexbox-itemFeatures9,
-.flexbox-itemFeatures10{
-    box-shadow: 0 0 10px 3px rgba(59, 130, 246, 0.7),
-                0 0 20px 8px rgba(59, 130, 246, 0.5),  
-                0 0 30px 12px rgba(59, 130, 246, 0.3); 
-}
 .grid-container1 {
     text-align: center;
     display: grid;
@@ -944,10 +982,17 @@ header {
                  <footer><p>Advisory & Strategy</p></footer>
          </div>
          <div class="flexbox-itemFeatures2">
-             <p class="itemFeatures-des">Cut through the noise. We assess your readiness, recommend the right models, and ensure compliance with regulations like GDPR and HIPAA.</p>
+             <div class="flexbox-itemboxR">
+                 <p class="itemFeatures-des">
+                     Cut through the noise.<br>
+                     We assess your readiness, recommend the right models, and ensure compliance with regulations like GDPR and HIPAA.
+                 </p>
+             </div>
          </div>
          <div class="flexbox-itemFeatures3">
-             <p class="itemFeatures-des">Turn your proprietary data into intelligence. We fine-tune or pretrain LLMs for your domain and build private retrieval-augmented pipelines.</p>
+              <div class="flexbox-itemboxL">
+                  <p class="itemFeatures-des">Turn your proprietary data into intelligence. We fine-tune or pretrain LLMs for your domain and build private retrieval-augmented pipelines.</p>
+               </div>
          </div>
          <div class="flexbox-itemFeatures4">
                  <header><p><img src="imgs/security.jpg" class="feature-img"></p></header>
@@ -958,10 +1003,17 @@ header {
                 <footer><div class="itemFeatures-title">Infrastructure & Deployment</div></footer>
          </div>
          <div class="flexbox-itemFeatures6">
-             <p class="itemFeatures-des">From GPUs in your datacenter to lightweight edge devices, we design, optimize, and deploy AI stacks that you fully control.</p>
+                 <div class="flexbox-itemboxR">
+                   <p class="itemFeatures-des">From GPUs in your datacenter to lightweight edge devices, we design, optimize, and deploy AI stacks that you fully control.</p>
+                 </div>
          </div>
          <div class="flexbox-itemFeatures7">
-             <p class="itemFeatures-des">Your AI, your way. Secure chat interfaces, copilots for employees, or integrations with ERP and CRM systems.</p>
+              <div class="flexbox-itemboxL">
+                 <p class="itemFeatures-des">
+                Your AI, your way.<br>
+                Secure chat interfaces, copilots for employees, or integrations with ERP and CRM systems.
+             </p>
+              </div>
          </div>
          <div class="flexbox-itemFeatures8">
                 <header><p><img src="imgs/security.jpg" class="feature-img"></p></header>
@@ -972,7 +1024,9 @@ header {
                 <footer><div class="itemFeatures-title">Training & Support</div></footer>
          </div>
          <div class="flexbox-itemFeatures10">
-             <p class="itemFeatures-des">We train your teams to run AI confidently and provide ongoing monitoring, optimization, and SLA-based support.</p>
+                 <div class="flexbox-itemboxR">
+                   <p class="itemFeatures-des">We train your teams to run AI confidently and provide ongoing monitoring, optimization, and SLA-based support.</p>
+                 </div>
          </div>
     </div>
 
