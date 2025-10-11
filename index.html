@@ -218,6 +218,99 @@ nav p a {
     position: relative;
 
 }
+
+.grid-container-customers{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: 60px;
+    gap: 10px;
+    padding: 20px 20px 20px 20px;
+    padding: 6rem 6rem 6rem 6rem;
+    font-size: clamp(1.2rem, 3vw, 5rem);
+    color: #0B0C10;
+    max-width: 100vw;
+    box-sizing: border-box; 
+    background: linear-gradient(to bottom, #0B0C10, #E6E7EB);
+    font-weight: bold;
+}
+
+.grid-container-customers2{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-height: 60px;
+    gap: 10px;
+    padding: 20px 20px 20px 20px;
+    padding: 6rem 6rem 6rem 6rem;
+    font-size: clamp(1.2rem, 3vw, 5rem);
+    color: #E6E7EB;
+    max-width: 100vw;
+    box-sizing: border-box; 
+    background: linear-gradient(to bottom, #1A1D24,#0B0C10);
+    font-weight: bold;
+}
+
+.grid-container-customersp{
+    text-align: left;
+    display: grid;
+    position:relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 30px;
+    padding: 30px 15px 30px 80px;
+    font-size: clamp(1.8rem, 5vw, 2rem);
+    color: #E6E7EB;
+    max-width: 100vw;
+    box-sizing: border-box; 
+    min-height: 400px;
+    background: linear-gradient(to bottom, #E6E7EB,#1A1D24);
+    z-index:10;
+}
+
+.grid-container-customersp > div {
+    position: relative;
+    border-radius: 10px;
+    height: 400px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.img-container {
+    position: relative; 
+    width: 100%;       
+    height: 400px;   
+    overflow: hidden; 
+}
+
+.customersp-img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    position: absolute;
+    transition: transform 0.4s ease;
+}
+
+.img-container:hover .customersp-img {
+    transform: scale(1.15);
+}
+
+.image-text-customersp{
+    position:relative;
+    z-index: 50;
+    padding: 30px 15px 30px 30px;
+}
+
+.customer-title {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+.customer-desc {
+    font-size: clamp(0.8rem, 2vw, 1.4rem);
+}
+
+
 .video-container2 {
     max-width: 1200px;
     margin: 2rem auto;
@@ -867,7 +960,7 @@ header {
             />
          </svg>
                  <div class="absolute inset-0 flex items-center justify-center p-4">
-                        <h2 class="text-7xl text-left font-semibold text-[#1A1D24] z-2">
+                        <h2 class="text-7xl text-left font-semibold text-[#E6E7EB] z-2">
                                Why <br>
                                on device <br>
                                LLMs?</h2>
@@ -881,13 +974,82 @@ header {
                     text-[#E6E7EB]">
                    Sensitive industries can’t always send data outside their network.<br>
                    Enterprises with predictable, heavy workloads running inference on optimized open-source LLMs can be far cheaper per token.<br>
-                   Low latency on device inference ensures functionality without internet connectivity,which is crucial when every  millisecond matters.<br>
+                   Low latency on device inference ensures functionality without internet connectivity,which is critical when every  millisecond matters.<br>
                    Most importantly<br>
                    <br>
                    Business get full control over model architecture, deployment and future.
 
                 </h2>
      </div>
+<div class="grid-container-customers">
+    <p>Who we are looking for?</p>
+</div>
+<div class="grid-container-customersp">
+          <div class="col-start-1 row-start-1">
+             <div class="img-container">
+               <img src="imgs/finance.jpg" class="customersp-img">
+                 <div class="image-text-customersp">
+                 <div class="customer-title">Finance</div>
+                 <p class="customer-desc">Ensures that raw data, embeddings, and prompts never leave their infrastructure.</p>
+             </div>
+            </div>
+          </div>
+          
+          <div class="col-start-2  row-start-1">
+            <div class="img-container">
+              <img src="imgs/health.jpg" class="customersp-img">
+                 <div class="image-text-customersp">
+                 <div class="customer-title">Healthcare</div>
+                 <p class="customer-desc">Fine-tuned models designed for your business domain.</p>
+             </div>  
+            </div>
+          </div>
+
+          <div class="col-start-1 row-start-2">
+           <div class="img-container">
+             <img src="imgs/defense.jpg" class="customersp-img">
+                 <div class="image-text-customersp">
+                 <div class="customer-title">Defense</div>
+                 <p class="customer-desc">Real-time applications with low-latency inference.</p>
+             </div>
+            </div>
+           </div>
+
+            <div class="col-start-2 row-start-2">
+             <div class="img-container">
+               <img src="imgs/goverment.jpg" class="customersp-img">
+                  <div class="image-text-customersp">
+                  <div class="customer-title">Government</div>
+                  <p class="customer-desc">Keep sensitive data in-house, never exposed to cloud APIs.</p>
+             </div> 
+            </div>
+           </div>
+
+          <div class="col-start-1 row-start-3">
+             <div class="img-container">
+               <img src="imgs/legal.jpg" class="customersp-img">
+                 <div class="image-text-customersp">
+                 <div class="customer-title">Legal service</div>
+                 <p class="customer-desc">Helps with compliance (GDPR, HIPAA, SOC 2, national security laws, etc.).</p>
+             </div>  
+           </div>     
+          </div>
+
+          <div class="col-start-2 row-start-3">
+            <div class="img-container">
+            <img src="imgs/energy.jpg" class="customersp-img">
+                  <div class="image-text-customersp">
+                  <div class="customer-title">Energy</div>
+                  <p class="customer-desc">On-device inference ensures functionality without internet connectivity.</p>
+             </div>
+           </div>
+          </div>
+</div>
+<div class="grid-container-customers2">
+    <p>What we can provide?</p>
+</div>
+
+
          <div class="video-container2">
            <div class="video-wrapper2">
             <video autoplay muted loop >
@@ -1033,7 +1195,7 @@ header {
         <footer><p>Footer</p></footer>
     </div>   
 <footer>
-<h2>More about us</h2>
+<h2 class="text-4xl">More about us</h2>
         <div class="grid-container2">
         <div class="flexbox-Main footer-row--large">MONDO GLOBAL</div>
         <div class="flexbox-Privacy policy footer-row--large">Privacy policy</div>
