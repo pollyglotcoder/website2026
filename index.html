@@ -273,19 +273,11 @@ nav p a {
     z-index: 1;
 }
 
-.intro {
-    font-size: clamp(1.2rem, 3vw, 5rem);
-    font-weight: 700;
-    font-family: Arial, sans-serif;
-    padding: 20px 20px 20px 20px;
-    color: #E6E7EB;
-}
-
 .grid-container-selfintro {   
-    text-align: center;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows:auto;
+    font-family: Arial, sans-serif;
     gap: 10px;
     padding: 80px;
     font-size: clamp(1rem, 5vw, 1.5rem);
@@ -294,12 +286,31 @@ nav p a {
     box-sizing: border-box; 
     height: 100%;
 }
+
 .grid-container-selfintro > div {
-    padding: 180px 15px;
+    padding: 200px 15px;
     border-radius: 8px;
-    height: auto;
+    height: 100%;
 }
 
+.selfintro-img {
+  width: 300px; 
+  height: 500px; 
+  margin: 15px 15px 15px 60px;
+  border-radius: 4px; 
+  padding: 20px 15px;
+  position: absolute;
+}
+
+.flexbox-selfintrotitle {
+    grid-column: 1 / 2;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 1.8;
+    font-size: clamp(2rem, 3vw, 1.2rem);
+    color: #A6A9B3;
+    padding: 60px 35px;
+}
 
 
 .grid-containerintro {
@@ -313,6 +324,7 @@ nav p a {
     box-sizing: border-box; 
     min-height: 400px;
 }
+
 .grid-containerintro > div {
     position: relative;
     padding: 30px 15px;
@@ -1026,10 +1038,7 @@ header {
       </div> 
     </div>
 
-    <div class="video-container2">
-           <div class="video-text">
-           <h2>.</h2>
-    </div>    
+    <div class="video-container2">   
     <div class="video-wrapper2"> 
         <video autoplay muted loop> 
          <source src="imgs/Video7.mp4" type="video/mp4"> 
@@ -1039,14 +1048,12 @@ header {
     <div class="overlay">
         <div class="grid-container-selfintro">
       <div class="flexbox-keyvalueitem1">
-          <div class="feature-keyvaluetitle">Privacy First</div>
-          <p class="flexbox-keyvaluedes">Keep sensitive data in-house, never exposed to third-party platforms..</p>
+        <img src="imgs/Image1.jpeg" class="selfintro-img">
       </div>
           <div class="flexbox-keyvalueitem2">
-        <div class="feature-keyvaluetitle">Hi there! I am Xueke,or you can call me Polly,a business analytics graduate,A master student at Bournemouth University,UK.
-            I am a part time front-end developer and a barista!Let's explore the world of data together!
+        <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK based business analytics graduate,enthusiastic about data science and machine learning.
+            I am a part time front-end developer and a barista.&nbsp;Let's explore the world of data together!
         </div>
-          <p class="flexbox-keyvaluedes">Scale smarter with efficient on-prem & cloud data infrastructure.</p>
       </div>
     </div>
     <div class="grid-containerintro">
