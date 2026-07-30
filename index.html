@@ -18,13 +18,24 @@ html, body {
     width: 100%;
     height:100vh;
     position: relative;
-    transition: opacity 0.8s ease;    opacity: 1;
+    transition: opacity 0.8s ease; 
+    opacity: 1;
 }
 
 .hero-section.hide-page {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+body.lock-scroll {
+    overflow: hidden !important;
+    height: 100vh !important;
+    touch-action: none;
+}
+
+.hero-section.hidden{
+    display: none !important;
 }
 
 .video-wrapper {
@@ -294,9 +305,9 @@ nav p a {
 }
 
 .selfintro-img {
-  width: 300px; 
-  height: 500px; 
-  margin: 15px 15px 15px 60px;
+  width: 280px; 
+  height: 360px; 
+  margin: 15px 15px 15px 70px;
   border-radius: 4px; 
   padding: 20px 15px;
   position: absolute;
@@ -319,10 +330,12 @@ nav p a {
     grid-template-rows: auto;
     gap: 30px;
     padding: 20px;
+    margin-top: 80px;
     font-size: clamp(1rem, 5vw, 1.5rem);
     max-width: 100vw;
     box-sizing: border-box; 
-    min-height: 400px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .grid-containerintro > div {
@@ -332,13 +345,89 @@ nav p a {
     min-height: 680px;
 }
 
+.grid-container-introup{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 6rem 6rem 2rem 6rem;
+    font-size: clamp(1.2rem, 3vw, 5rem);
+    color: white;
+    max-width: 100vw;
+    box-sizing: border-box; 
+    background-color: #000;
+    font-weight: bold;
+    position:relative;
+    z-index: 10; 
+}
+
+.grid-container-introup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2; 
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #222 0,
+    #222 1px,
+    transparent 1px,
+    transparent 40px
+  );
+} 
+
+.line-grid-container {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  display: grid;
+  grid-template-rows: 40px 40px 40px 40px;
+}
+
+.grid-flow-line {
+  width: 200%;
+  height: 1px;
+  align-self: center;
+  background: linear-gradient(90deg, transparent, #9922ff, transparent);
+  background-size: 50% 100%;
+  animation: scroll-line 12s linear infinite;
+  opacity: 0.8;
+}
+.grid-flow-line.orange {
+  background:linear-gradient(90deg, transparent, #ff5522, transparent);
+  background-size: 50% 100%;
+  animation-duration: 15s;
+}
+
+@keyframes scroll-line {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 0; }
+}
 
 .flexbox-intro{
     position: relative;
-
 }
 
-.grid-container-customers{
+.grid-container-introdown{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 6rem 6rem 2rem 6rem;
+    font-size: clamp(1.2rem, 3vw, 5rem);
+    color:black;
+    max-width: 100vw;
+    box-sizing: border-box; 
+    background: linear-gradient(to bottom, #0B0C10 25%, #E6E7EB );
+    font-weight: bold;
+    position: relative;
+    z-index: 10; 
+}
+
+.grid-container-domain{
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
@@ -348,53 +437,37 @@ nav p a {
     padding: 20px 20px 20px 20px;
     padding: 6rem 6rem 6rem 6rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color: #0B0C10;
+    color: #c02626;
     max-width: 100vw;
     box-sizing: border-box; 
-    background: linear-gradient(to bottom, #0B0C10, #E6E7EB);
+    background: linear-gradient(to bottom, #E6E7EB,#0B0C10);
     font-weight: bold;
 }
 
-.grid-container-customers2{
+.grid-container-domaindown{
     text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    min-height: 60px;
-    gap: 10px;
-    padding: 20px 20px 20px 20px;
-    padding: 6rem 6rem 6rem 6rem;
-    font-size: clamp(1.2rem, 3vw, 5rem);
-    color: #E6E7EB;
-    max-width: 100vw;
-    box-sizing: border-box; 
-    background: linear-gradient(to bottom, #1A1D24,#0B0C10);
-    font-weight: bold;
-}
-
-.grid-container-customersp{
-    text-align: left;
     display: grid;
     position:relative;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     gap: 30px;
-    padding: 30px 15px 30px 80px;
-    font-size: clamp(1.8rem, 5vw, 2rem);
+    padding: 50px 15px 30px 50px;
+    font-size: clamp(2.5rem, 5vw, 2rem);
     color: #E6E7EB;
     max-width: 100vw;
     box-sizing: border-box; 
-    min-height: 400px;
-    background: linear-gradient(to bottom, #E6E7EB,#1A1D24);
+    height: 200px;
+    background: linear-gradient(to bottom,#1A1D24,black);
     z-index:10;
 }
 
-.grid-container-customersp > div {
+.grid-container-domain > div {
     position: relative;
     border-radius: 10px;
     height: 400px;
     width: 500px;
     overflow: hidden;
+    text-align: center;
 }
 
 .img-container {
@@ -404,7 +477,7 @@ nav p a {
     overflow: hidden; 
 }
 
-.customersp-img {
+.domain-img {
     width: 100%; 
     height: 100%; 
     object-fit: cover;
@@ -412,20 +485,20 @@ nav p a {
     transition: transform 0.4s ease;
 }
 
-.img-container:hover .customersp-img {
+.img-container:hover .domain-img {
     transform: scale(1.15);
 }
 
-.image-text-customersp{
+.image-text-domain{
     position:relative;
     z-index: 50;
     padding: 30px 15px 30px 30px;
 }
 
-.customer-title {
+.domain-title {
     font-size: clamp(1.2rem, 3vw, 2rem);
 }
-.customer-desc {
+.domain-desc {
     font-size: clamp(0.8rem, 2vw, 1.4rem);
 }
 
@@ -941,16 +1014,19 @@ header {
     color:  #A6A9B3;
 
 }
+
 .footer-row--small {
     font-size: clamp(0.8rem, 2.5vw, 1.1rem);
     line-height: 1.4; 
     color:  #A6A9B3; 
 }
-    .footer-row--small a {
+
+.footer-row--small a {
       color:  #A6A9B3; 
       text-decoration: none; 
 }
-    .footer-row--small a:hover {
+
+.footer-row--small a:hover {
       color: #007bff; 
 }
 
@@ -972,7 +1048,7 @@ header {
 </style>
 </head>
 
-<body>
+<body class="lock-scroll">
 <section class="hero-section">
     <div class="video-wrapper">
         <video id="hero-video" autoplay muted playsinline>
@@ -1028,7 +1104,7 @@ header {
            <div class="video-text">
            <h2>Unlock Your Numbers.</h2>
            <h2> Maxmium the power of information.</h2>
-           <p>We help businesses build statistical models, interactive dashboards and predictive analytics workflows - granting complete ownership of your raw data, operational spend, and data-driven business decisions.</p>
+           <p>Behind Numbers helps businesses build statistical models, interactive dashboards and predictive analytics workflows - granting complete ownership of your raw data, operational spend, and data-driven business decisions.</p>
     </div>    
     <div class="video-wrapper1"> 
         <video autoplay muted loop> 
@@ -1048,14 +1124,26 @@ header {
     <div class="overlay">
         <div class="grid-container-selfintro">
       <div class="flexbox-keyvalueitem1">
-        <img src="imgs/Image1.jpeg" class="selfintro-img">
+        <img src="imgs/Image1.jpg" class="selfintro-img">
       </div>
           <div class="flexbox-keyvalueitem2">
-        <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK based business analytics graduate,enthusiastic about data science and machine learning.
-            I am a part time front-end developer and a barista.&nbsp;Let's explore the world of data together!
+        <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based business analytics graduate,&nbsp;enthusiastic about data science and machine learning.
+            I am a part-time front-end developer and a barista.&nbsp;Let's explore the world of data together!
         </div>
       </div>
     </div>
+
+
+<div class="grid-container-introup">
+  <div class="line-grid-container">
+  <div class="grid-flow-line"></div>
+  <div class="grid-flow-line"></div>
+  <div class="grid-flow-line orange"></div>
+  <div class="grid-flow-line"></div>
+  </div> 
+    <p>What I have learnt matters most</p>
+</div>
+
     <div class="grid-containerintro">
          <div class="flexbox-intro"> 
                   <svg width="0" height="0">
@@ -1102,92 +1190,92 @@ header {
                  </div>
          </div>
          <h2 class="font-['Inter', 'system-ui'] 
-                    text-[clamp(0.7rem,48px,2.8rem)] 
-                    tracking-[-0.06em] 
-                    leading-[1em] 
+                    text-[clamp(0.5rem,48px,2.8rem)] 
+                    tracking-[0.06em] 
+                    leading-[1.0em] 
                     text-left 
                     text-[#E6E7EB]">
                    Behind Numbers’ mission is to empower businesses with secure, cost-effective, and high-performance business analytics by building and deploying scalable data pipelines, predictive dashboards and statistical modeling tools on-premise and cloud. We combine open-source data frameworks with deep analytical expertise to deliver private, scalable, and tailored BA solutions that drive measurable business value while ensuring full data governance, operational efficiency, and stakeholder trust.<br>
                    <br>
                    Business get full control over model architecture, deployment and future.
-
                 </h2>
      </div>
-<div class="grid-container-customers">
-    <p>Who we are looking for?</p>
+
+<div class="grid-container-introdown">
+  <div class="line-grid-container">
+  <div class="grid-flow-line"></div>
+  <div class="grid-flow-line"></div>
+  <div class="grid-flow-line orange"></div>
+  <div class="grid-flow-line"></div>
+  </div> 
+    <p>Projects</p>
 </div>
-<div class="grid-container-customersp">
+
+<div class="grid-container-domain">
           <div class="col-start-1 row-start-1">
              <div class="img-container">
-               <img src="imgs/finance.jpg" class="customersp-img">
-                 <div class="image-text-customersp">
-                 <div class="customer-title">Finance</div>
-                 <p class="customer-desc">All financial raw data, performance metrics and predictive analytics stay fully within your internal secure infrastructure.</p>
+               <img src="imgs/finance.jpg" class="domain-img">
+                 <div class="image-text-domain">
+                 <div class="domain-title">Finance</div>
+                 <p class="domain-desc">All financial raw data, performance metrics and predictive analytics stay fully within your internal secure infrastructure.</p>
              </div>
             </div>
           </div>
           
           <div class="col-start-2  row-start-1">
             <div class="img-container">
-              <img src="imgs/health.jpg" class="customersp-img">
-                 <div class="image-text-customersp">
-                 <div class="customer-title">Healthcare</div>
-                 <p class="customer-desc">Custom analytics models built exclusively for healthcare operational workflows.</p>
+              <img src="imgs/health.jpg" class="domain-img">
+                 <div class="image-text-domain">
+                 <div class="domain-title">Healthcare</div>
+                 <p class="domain-desc">Custom analytics models built exclusively for healthcare operational workflows.</p>
              </div>  
             </div>
           </div>
 
           <div class="col-start-1 row-start-2">
            <div class="img-container">
-             <img src="imgs/defense.jpg" class="customersp-img">
-                 <div class="image-text-customersp">
-                 <div class="customer-title">Defense</div>
-                 <p class="customer-desc">Instant situational dashboards with ultra-fast metric computation.</p>
+             <img src="imgs/defense.jpg" class="domain-img">
+                 <div class="image-text-domain">
+                 <div class="domain-title">Defense</div>
+                 <p class="domain-desc">Instant situational dashboards with ultra-fast metric computation.</p>
              </div>
             </div>
            </div>
 
             <div class="col-start-2 row-start-2">
              <div class="img-container">
-               <img src="imgs/goverment.jpg" class="customersp-img">
-                  <div class="image-text-customersp">
-                  <div class="customer-title">Government</div>
-                  <p class="customer-desc">Secure all sensitive public-sector data on-premise, with zero external cloud exposure.</p>
+               <img src="imgs/goverment.jpg" class="domain-img">
+                  <div class="image-text-domain">
+                  <div class="domain-title">Government</div>
+                  <p class="domain-desc">Secure all sensitive public-sector data on-premise, with zero external cloud exposure.</p>
              </div> 
             </div>
            </div>
 
           <div class="col-start-1 row-start-3">
              <div class="img-container">
-               <img src="imgs/legal.jpg" class="customersp-img">
-                 <div class="image-text-customersp">
-                 <div class="customer-title">Legal service</div>
-                 <p class="customer-desc">Ensures regulated data compliance across global and local legal frameworks.</p>
+               <img src="imgs/legal.jpg" class="domain-img">
+                 <div class="image-text-domain">
+                 <div class="domain-title">Legal service</div>
+                 <p class="domain-desc">Ensures regulated data compliance across global and local legal frameworks.</p>
              </div>  
            </div>     
           </div>
 
           <div class="col-start-2 row-start-3">
             <div class="img-container">
-            <img src="imgs/energy.jpg" class="customersp-img">
-                  <div class="image-text-customersp">
-                  <div class="customer-title">Energy</div>
-                  <p class="customer-desc">On-site data processing ensures reliable analytics without internet dependency.</p>
+            <img src="imgs/energy.jpg" class="domain-img">
+                  <div class="image-text-domain">
+                  <div class="domain-title">Energy</div>
+                  <p class="domain-desc">On-site data processing ensures reliable analytics without internet dependency.</p>
              </div>
            </div>
           </div>
 </div>
-<div class="grid-container-customers2">
+<div class="grid-container-domaindown">
     <p>What we can provide?</p>
 </div>
-         <div class="video-container2">
-           <div class="video-wrapper2">
-            <video autoplay muted loop >
-            <source src="imgs/Video3.mp4" type="video/mp4">
-            Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
-            </video>
-        </div>
-    </div>
+    
     <div class="grid-container1-1">
     <p>Key Value Propositions</p>
     </div>
@@ -1315,6 +1403,13 @@ header {
           <p class="flexbox-des">We specialize in compliance-heavy sectors like healthcare, defense, and law — ensuring AI meets strict privacy and regulatory standards.</p>
       </div>
     </div>
+             <div class="video-container2">
+           <div class="video-wrapper2">
+            <video autoplay muted loop >
+            <source src="imgs/Video3.mp4" type="video/mp4">
+            Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
+            </video>
+        </div>
     <div class="layout">
         <header><p>Header</p></header>
         <div class="sidenav"><p>Latest work from Behind Numbers</p></div>
@@ -1347,29 +1442,70 @@ header {
     </div>
 
 <script>
+(function (){
     const heroSection = document.querySelector('.hero-section');
     const heroVideo = document.getElementById('hero-video');
-    const secondPage = document.getElementById('second-page');
 
     let hasSwitched = false;
+    let isLocked = true;
 
-    if (heroVideo && heroSection) {
-      heroVideo.addEventListener('timeupdate',function() {
-        if (this.currentTime >= 10 && !hasSwitched) {
-          hasSwitched = true;
-          this.pause();        
-
-          heroSection.classList.add('hide-page');
-
-          setTimeout(() => {
-            heroSection.style.display = 'none';
-          if (secondPage) { 
-            secondPage.scrollIntoView({ behavior:'smooth' });
-          }
-         }, 800);
+    function preventScroll(e){
+        if (isLocked) e.preventDefault();
      }
-    });
-}
+
+    function goToMainPage(){
+        if (hasSwitched) return;
+        hasSwitched = true;
+
+     window.addEventListener('wheel',preventScroll, {passive:false });
+     window.addEventListener('touchmove',preventScroll,{passive:false});
+
+    document.body.classList.remove('lock-scroll');
+    heroSection.classList.add('hide-page');
+
+    setTimeout(() => {
+        heroSection.style.display = 'none';
+        window.scrollTo(0,0);
+        isLocked = false;
+        window.removeEventListener('wheel',preventScroll);
+        window.removeEventListener('touchmove',preventScroll);
+    },800);
+ }
+
+ function tryPlay() {
+        const p = heroVideo.play();
+        if (p !== undefined) {
+            p.catch(err => {
+                console.warn('Video play is stopped', err);
+            });
+        }
+    }
+
+   if(heroVideo){
+        heroVideo.currentTime = 0;
+        heroVideo.load();
+
+        tryPlay();
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible' && !hasSwitched && heroVideo.paused) {
+                tryPlay();
+            }
+        });
+
+    heroVideo.addEventListener('ended',goToMainPage);
+    heroVideo.addEventListener('error',goToMainPage);
+
+
+    const maxWait = (heroVideo.duration && isFinite(heroVideo.duration))
+        ?(heroVideo.duration + 2) * 1000
+        : 15000;
+        setTimeout(goToMainPage, maxWait);
+     } else {
+        document.body.classList.remove('lock-scroll');
+     }  
+
+    })();
+
 
 </script></body>
 </html>
