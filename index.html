@@ -368,13 +368,6 @@ nav p a {
   inset: 0;
   z-index: -2; 
   pointer-events: none;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #222 0,
-    #222 1px,
-    transparent 1px,
-    transparent 40px
-  );
 } 
 
 .line-grid-container {
@@ -383,20 +376,21 @@ nav p a {
   z-index: -1;
   pointer-events: none;
   display: grid;
-  grid-template-rows: 40px 40px 40px 40px;
+  grid-template-rows: 20px 20px 20px 20px;
 }
 
 .grid-flow-line {
-  width: 200%;
+  width: 100%;
   height: 1px;
   align-self: center;
-  background: linear-gradient(90deg, transparent, #9922ff, transparent);
+  background: linear-gradient(90deg, transparent, #1a3b70, transparent);
   background-size: 50% 100%;
   animation: scroll-line 12s linear infinite;
   opacity: 0.8;
+  
 }
 .grid-flow-line.orange {
-  background:linear-gradient(90deg, transparent, #ff5522, transparent);
+  background:linear-gradient(90deg, transparent, #57595b, transparent);
   background-size: 50% 100%;
   animation-duration: 15s;
 }
@@ -428,7 +422,7 @@ nav p a {
 }
 
 .grid-container-domain{
-    text-align: center;
+    text-align: left;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -437,7 +431,7 @@ nav p a {
     padding: 20px 20px 20px 20px;
     padding: 6rem 6rem 6rem 6rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color: #c02626;
+    color: white;
     max-width: 100vw;
     box-sizing: border-box; 
     background: linear-gradient(to bottom, #E6E7EB,#0B0C10);
@@ -1201,6 +1195,35 @@ header {
                 </h2>
      </div>
 
+<section class="scroll-box relative overflow-visible h-[300vh]">
+  <div class="sticky top-0 min-h-screen flex items-center justify-center relative">
+    <div class="absolute inset-0 z-2 overflow-visible pointer-events-none">
+      <div class="absolute top-[10%] left-[38%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
+     data-cx="80" data-cy="40">标签内容1</div>
+      <div class="absolute top-[19%] left-[53%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
+     data-cx="70" data-cy="35">标签内容2</div>
+      <div class="absolute top-[26%] left-[16%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
+     data-cx="90" data-cy="-30">标签内容3</div>
+      <div class="absolute top-[36%] left-[78%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
+     data-cx="85" data-cy="-25">标签内容4</div>
+      <div class="absolute top-[68%] left-[16%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
+     data-cx="60" data-cy="20">标签内容5</div>
+      <div class="absolute top-[78%] left-[10%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
+     data-cx="60" data-cy="20">标签内容6</div>
+     <div class="absolute top-[85%] left-[55%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
+     data-cx="60" data-cy="20">标签内容7</div>
+      <div class="absolute top-[80%] left-[75%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
+     data-cx="60" data-cy="20">标签内容8</div>
+    </div>
+
+    <div class="relative z-3 text-center text-4xl font-bold">
+      Financial institutions process<br>
+      billions of transactions every<br>
+      day, <span class="text-[#426890]">but most of that data is<span class="text-[#1a3b70]"><br>hard to use.</span></span>
+    </div>
+  </div>
+</section>
+
 <div class="grid-container-introdown">
   <div class="line-grid-container">
   <div class="grid-flow-line"></div>
@@ -1506,6 +1529,40 @@ header {
 
     })();
 
+const scrollBox = document.querySelector('.scroll-box');
+const tags = document.querySelectorAll('.tag-item');
+const n = tags.length;
+
+const COLLAPSE_SCALE = 0.55;
+const COLLAPSE_OPACITY = 0.12;
+
+function lerp(a, b, t) { return a + (b - a) * t; }
+function clamp01(v) { return Math.min(1, Math.max(0, v)); } 
+
+window.addEventListener('scroll', ()=>{
+  const boxTop = scrollBox.getBoundingClientRect().top;
+  const totalDistance = scrollBox.clientHeight - window.innerHeight;
+  const progress = Math.max(0, Math.min(1, (-boxTop) / totalDistance));
+
+
+ tags.forEach((tag, idx) => {
+    const cx = parseFloat(tag.dataset.cx);
+    const cy = parseFloat(tag.dataset.cy);
+
+
+    const start = 0.05 + idx * (0.7 / n);
+    const end = start + 0.25;
+    const t = clamp01((progress - start) / (end - start));
+
+    const scale = lerp(COLLAPSE_SCALE, 1, t);
+    const opacity = lerp(COLLAPSE_OPACITY, 1, t);
+    const tx = lerp(cx, 0, t);
+    const ty = lerp(cy, 0, t);
+
+    tag.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+    tag.style.opacity = opacity;
+  })
+})
 
 </script></body>
 </html>
