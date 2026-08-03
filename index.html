@@ -253,37 +253,6 @@ nav p a {
   bottom: -50%;
 }
 
-.video-container2 {
-    width: 100%;
-    margin: 0 auto 0 auto;
-    padding: 0 1rem;
-    position: relative;
-    height: auto;
-}
-
-.video-wrapper2 {
-    width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 100%;
-}
-
-.video-wrapper2 video {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
 .grid-container-selfintro {   
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -297,10 +266,11 @@ nav p a {
     box-sizing: border-box; 
     height: 100%;
     margin-bottom: 60px;
+    position:relative
 }
 
 .grid-container-selfintro > div {
-    padding: 80px 30px;
+    padding: 10px 30px 10px 30px;
     border-radius: 8px;
     height: 100%;
 }
@@ -313,6 +283,7 @@ nav p a {
     font-size: clamp(2rem, 3vw, 1.2rem);
     color: #A6A9B3;
     padding: 60px 35px;
+    min-height: 100vh
 }
 
 
@@ -365,7 +336,7 @@ nav p a {
 .line-grid-container {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 2;
   pointer-events: none;
   display: grid;
   grid-template-rows: 20px 20px 20px 20px;
@@ -375,7 +346,7 @@ nav p a {
   width: 100%;
   height: 5px;
   align-self: center;
-  background: linear-gradient(90deg, transparent, #1a3b70, transparent);
+  background: linear-gradient(90deg, transparent, #3468af, transparent);
   background-size: 50% 100%;
   animation: scroll-line 12s linear infinite;
   opacity: 0.8;
@@ -390,6 +361,30 @@ nav p a {
 @keyframes scroll-line {
   0% { background-position: 0 0; }
   100% { background-position: 100% 0; }
+}
+
+.grid-flow-line-vertical-1 {
+  position: absolute;
+  left: 35%;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(180deg, transparent, #3468af, transparent);
+  animation: scroll-line 12s linear infinite;
+  opacity: 0.8;
+  background-size: 100% 200px;
+}
+
+.grid-flow-line-vertical-2 {
+  position: absolute;
+  left: 37%;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(180deg, transparent, #2666a7, transparent);
+  animation: scroll-line 12s linear infinite;
+  opacity: 0.8;
+  background-size: 100% 200px;
 }
 
 .flexbox-intro{
@@ -422,7 +417,7 @@ nav p a {
     gap: 10px;
     padding: 6rem 6rem 6rem 6rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color: white;
+    color: #4a4b4e;
     max-width: 100vw;
     box-sizing: border-box; 
     background: linear-gradient(to bottom, #E6E7EB,#0B0C10);
@@ -557,11 +552,13 @@ h2 {
     border-radius: 8px;
     height: 380px;
 }
+
 .flexbox-keyvalueitem1,
 .flexbox-keyvalueitem2,
 .flexbox-keyvalueitem3 {
     box-shadow: 0 0 10px 3px #A6A9B3; 
 }
+
 .feature-keyvaluetitle  {
     grid-column: 1 / 2;
     font-weight: bold;
@@ -1066,40 +1063,60 @@ header {
       </div> 
     </div>
 
-    <div class="video-container2">   
-    <div class="video-wrapper2"> 
-        <video autoplay muted loop> 
-         <source src="imgs/Video7.mp4" type="video/mp4"> 
-         Your browser does not support the MP4 video format. Please update your browser or change your device to watch. 
-        </video> 
-      </div> 
-    <div class="overlay">
+
         <div class="grid-container-selfintro">
-      <div class="flexbox-keyvalueitem1">
-      <h3 class="text-[#4cd1c0] text-[clamp(1.3rem,2vw,1.8rem)] font-medium mb-6 tracking-wide">Foundational Knowledge Areas</h3>
+               <div class="line-grid-container">
+               <div class="grid-flow-line"></div>
+               <div class="grid-flow-line"></div>
+               <div class="grid-flow-line-vertical-1"></div>
+               <div class="grid-flow-line-vertical-2"></div>
+       </div> 
+
+      <div class="[transform:translateZ(0)]">
+      <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide">Foundational Knowledge Areas</h3>
       <div class="grid grid-cols-2 gap-4 w-full max-w-none">
-      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Data Driven Management</div>
-      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Statistics and Data Modelling</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Data Driven Management</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Statistics and Data Modelling</div>
       
-      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Business Intelligence</div>
-      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Marketing and Strategy</div>
-      <div class="border border-gray-400 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Accounting and Financial Management</div>
-      <div class="border border-gray-400 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Leadership</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Business Intelligence</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Marketing and Strategy</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Accounting and Financial Management</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Leadership</div>
       
         </div>
-      <h3 class="text-[#4cd1c0] text-[clamp(1.3rem,2vw,1.8rem)] font-medium mb-6 tracking-wide">Skills</h3> 
+      <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Skills</h3> 
       <div class="grid grid-cols-2 gap-4 w-full max-w-none">
-      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Data Driven Management</div>
-      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Statistics and Data Modelling</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+        <img src="imgs/R.png" alt="R language" class="w-5 h-5 inline-block mr-2">R</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+        <img src="imgs/Stata.png" alt="Stata" class="w-5 h-5 inline-block mr-2">Stata</div>
       
-      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Business Intelligence</div>
-      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Marketing and Strategy</div>
-      <div class="border border-gray-400 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Accounting and Financial Management</div>
-      <div class="border border-gray-400 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Leadership</div>
-      
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/SQL.png" alt="SQL" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">SQL</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/Tableau.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">Tableau</div>
+         
+        </div>
+      <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Certificates</h3> 
+      <div class="grid grid-cols-2 gap-4 w-full max-w-none">
+      <div class="border !border-[#3468af] py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.2rem)] text-center 
+                  group transition-all duration-300 hover:shadow-[0_0_10px_2px_#3468af] hover:!border-[#548cd6]">
+        <a href="https://www.credly.com/badges/4b3d197a-c34b-43d9-a63f-bf41c5a387f7/linked_in_profile" target="_blank"
+            class="group-hover:text-white transition-colors duration-300">
+            <img src="imgs/Cloud.png" alt="AWS Cloud Practitioner" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">AWS Cloud Practitioner
+        </a>
+    </div>
+      <div class="border !border-[#3468af] py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.2rem)] text-center
+                  group transition-all duration-300 hover:shadow-[0_0_10px_2px_#3468af] hover:!border-[#548cd6]">
+        <a href="https://www.credly.com/badges/3f42e5a8-d67b-4faf-a948-43331481b7a6/linked_in_profile" target="_blank"
+            class="group-hover:text-white transition-colors duration-300">
+            <img src="imgs/AI.png" alt="AWS AI Practitioner" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">AWS AI Practitioner
+        </a>
+    </div>
         </div>
     </div>
-          <div class="flexbox-keyvalueitem2">
+      
+          <div class="[transform:translateZ(0)]">
         <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based business analytics graduate,&nbsp;enthusiastic about data science and machine learning.
             I am a part-time front-end developer and a barista.&nbsp;Let's explore the world of data together!
         </div>
@@ -1111,7 +1128,7 @@ header {
   <div class="line-grid-container">
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
-  <div class="grid-flow-line orange"></div>
+  <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
   </div> 
     <p>What I have learnt matters most</p>
@@ -1206,7 +1223,7 @@ header {
   <div class="line-grid-container">
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
-  <div class="grid-flow-line orange"></div>
+  <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
   </div> 
     <p>Projects</p>

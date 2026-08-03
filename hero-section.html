@@ -1,0 +1,90 @@
+<!-- 这里写注释 -->
+<body class="lock-scroll">
+<section class="hero-section">
+    <div class="video-wrapper">
+        <video id="hero-video" autoplay muted playsinline>
+            <source src="imgs/Video8.mp4" type="video/mp4">
+            Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
+        </video>
+    </div>
+</section>
+<script>
+(function (){
+    const heroSection = document.querySelector('.hero-section');
+    const heroVideo = document.getElementById('hero-video');
+
+    let hasSwitched = false;
+    let isLocked = true;
+
+    function preventScroll(e){
+        if (isLocked) e.preventDefault();
+     }
+
+    function goToMainPage(){
+        if (hasSwitched) return;
+        hasSwitched = true;
+
+     window.addEventListener('wheel',preventScroll, {passive:false });
+     window.addEventListener('touchmove',preventScroll,{passive:false});
+
+    document.body.classList.remove('lock-scroll');
+    heroSection.classList.add('hide-page');
+
+    history.replaceState({}, "", window.location.href);
+
+
+    window.addEventListener('popstate', () => {
+
+   if(hasSwitched === true){
+
+    heroSection.classList.add('hide-page');
+    heroSection.style.display = 'none';
+    window.scrollTo(0,0);
+  }
+})
+
+    setTimeout(() => {
+        heroSection.style.display = 'none';
+        window.scrollTo(0,0);
+        isLocked = false;
+        window.removeEventListener('wheel',preventScroll);
+        window.removeEventListener('touchmove',preventScroll);
+    },800);
+ }
+
+ function tryPlay() {
+        const p = heroVideo.play();
+        if (p !== undefined) {
+            p.catch(err => {
+                console.warn('Video play is stopped', err);
+            });
+        }
+    }
+
+   if(heroVideo){
+        heroVideo.currentTime = 0;
+        heroVideo.load();
+
+        tryPlay();
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible' && !hasSwitched && heroVideo.paused) {
+                tryPlay();
+            }
+        });
+
+    heroVideo.addEventListener('ended',goToMainPage);
+    heroVideo.addEventListener('error',goToMainPage);
+
+
+    const maxWait = (heroVideo.duration && isFinite(heroVideo.duration))
+        ?(heroVideo.duration + 2) * 1000
+        : 15000;
+        setTimeout(goToMainPage, maxWait);
+     } else {
+        document.body.classList.remove('lock-scroll');
+     }  
+
+    })();
+
+    //
+</script>
