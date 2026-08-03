@@ -290,27 +290,19 @@ nav p a {
     grid-template-rows:auto;
     font-family: Arial, sans-serif;
     gap: 10px;
-    padding: 80px;
+    padding: 60px 80px 60px 80px;
     font-size: clamp(1rem, 5vw, 1.5rem);
-    color:  #f2eaf1;
+    color:  #1a3b70;
     max-width: 100%;
     box-sizing: border-box; 
     height: 100%;
+    margin-bottom: 60px;
 }
 
 .grid-container-selfintro > div {
-    padding: 200px 15px;
+    padding: 80px 30px;
     border-radius: 8px;
     height: 100%;
-}
-
-.selfintro-img {
-  width: 280px; 
-  height: 360px; 
-  margin: 15px 15px 15px 70px;
-  border-radius: 4px; 
-  padding: 20px 15px;
-  position: absolute;
 }
 
 .flexbox-selfintrotitle {
@@ -329,8 +321,8 @@ nav p a {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     gap: 30px;
-    padding: 20px;
-    margin-top: 80px;
+    padding: 10px 20px 20px 20px;
+    margin-top: 20px;
     font-size: clamp(1rem, 5vw, 1.5rem);
     max-width: 100vw;
     box-sizing: border-box; 
@@ -340,7 +332,7 @@ nav p a {
 
 .grid-containerintro > div {
     position: relative;
-    padding: 30px 15px;
+    padding: 10px 15px;
     border-radius: 8px;
     min-height: 680px;
 }
@@ -351,7 +343,7 @@ nav p a {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 10px;
-    padding: 6rem 6rem 2rem 6rem;
+    padding: 2rem 2rem 2rem 2rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
     color: white;
     max-width: 100vw;
@@ -381,7 +373,7 @@ nav p a {
 
 .grid-flow-line {
   width: 100%;
-  height: 1px;
+  height: 5px;
   align-self: center;
   background: linear-gradient(90deg, transparent, #1a3b70, transparent);
   background-size: 50% 100%;
@@ -428,7 +420,6 @@ nav p a {
     grid-template-rows: auto;
     min-height: 60px;
     gap: 10px;
-    padding: 20px 20px 20px 20px;
     padding: 6rem 6rem 6rem 6rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
     color: white;
@@ -1042,49 +1033,16 @@ header {
 </style>
 </head>
 
-<body class="lock-scroll">
-<section class="hero-section">
-    <div class="video-wrapper">
-        <video id="hero-video" autoplay muted playsinline>
-            <source src="imgs/Video8.mp4" type="video/mp4">
-            Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
-        </video>
-    </div>
-</section>
+<body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <div class="header-bar" id="second-page">
         <h1>Behind Numbers</h1>
         <nav class="main-nav" id="mainNav">
-             <div class="nav-item">
                  <a href="services.html">Services</a>
-                 <div class="dropdown">
-                    <a href="services/advisory&amp;strategy.html">Advisory & Strategy</a>
-                    <a href="services/data&amp;model-development.html">Data & Model Development</a>
-                    <a href="services/infrastructure&amp;deployment.html">Infrastructure & Deployment</a>
-                    <a href="services/integration&amp;applications.html">Integration & Applications</a>
-                    <a href="services/training&amp;support.html">Training & Support</a>
-                 </div>
-             </div>
-             <div class="nav-item">
-                 <a href="solutions.html">Solutions</a>
-                    <div class="dropdown">
-                    <a href="solutions/on-premiseai.html">On-Premise AI</a>
-                    <a href="solutions/edge&amp;on-device-ai.html">Edge & On-Device AI</a>
-                    <a href="solutions/regulatedindustries.html">Regulated Industries</a>
-                    </div>
-             </div>
-                  <a href="pricing.html">Pricing</a>
                   <a href="about.html">About</a>
-              <div class="nav-item">
-                  <a href="insights.html">Insights</a>
-                    <div class="dropdown">
-                    <a href="insights/blogs.html">Blogs</a>
-                    <a href="insights/case-studies.html">Case Studies</a>
-              </div>
-             </div>
-                   <a href="Contact.html">Contact</a>
-
+                  <a href="projects.html">Projects</a>
+                  <a href="Contact.html">Contact</a>
         </nav>
     </div>
         <div class="menu-toggle" id="menuToggle">
@@ -1118,8 +1076,29 @@ header {
     <div class="overlay">
         <div class="grid-container-selfintro">
       <div class="flexbox-keyvalueitem1">
-        <img src="imgs/Image1.jpg" class="selfintro-img">
-      </div>
+      <h3 class="text-[#4cd1c0] text-[clamp(1.3rem,2vw,1.8rem)] font-medium mb-6 tracking-wide">Foundational Knowledge Areas</h3>
+      <div class="grid grid-cols-2 gap-4 w-full max-w-none">
+      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Data Driven Management</div>
+      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Statistics and Data Modelling</div>
+      
+      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Business Intelligence</div>
+      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Marketing and Strategy</div>
+      <div class="border border-gray-400 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Accounting and Financial Management</div>
+      <div class="border border-gray-400 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Leadership</div>
+      
+        </div>
+      <h3 class="text-[#4cd1c0] text-[clamp(1.3rem,2vw,1.8rem)] font-medium mb-6 tracking-wide">Skills</h3> 
+      <div class="grid grid-cols-2 gap-4 w-full max-w-none">
+      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Data Driven Management</div>
+      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Statistics and Data Modelling</div>
+      
+      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Business Intelligence</div>
+      <div class="border border-gray-500 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Marketing and Strategy</div>
+      <div class="border border-gray-400 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Accounting and Financial Management</div>
+      <div class="border border-gray-400 py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.5rem)] text-center">Leadership</div>
+      
+        </div>
+    </div>
           <div class="flexbox-keyvalueitem2">
         <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based business analytics graduate,&nbsp;enthusiastic about data science and machine learning.
             I am a part-time front-end developer and a barista.&nbsp;Let's explore the world of data together!
@@ -1191,7 +1170,6 @@ header {
                     text-[#E6E7EB]">
                    Behind Numbers’ mission is to empower businesses with secure, cost-effective, and high-performance business analytics by building and deploying scalable data pipelines, predictive dashboards and statistical modeling tools on-premise and cloud. We combine open-source data frameworks with deep analytical expertise to deliver private, scalable, and tailored BA solutions that drive measurable business value while ensuring full data governance, operational efficiency, and stakeholder trust.<br>
                    <br>
-                   Business get full control over model architecture, deployment and future.
                 </h2>
      </div>
 
@@ -1465,69 +1443,6 @@ header {
     </div>
 
 <script>
-(function (){
-    const heroSection = document.querySelector('.hero-section');
-    const heroVideo = document.getElementById('hero-video');
-
-    let hasSwitched = false;
-    let isLocked = true;
-
-    function preventScroll(e){
-        if (isLocked) e.preventDefault();
-     }
-
-    function goToMainPage(){
-        if (hasSwitched) return;
-        hasSwitched = true;
-
-     window.addEventListener('wheel',preventScroll, {passive:false });
-     window.addEventListener('touchmove',preventScroll,{passive:false});
-
-    document.body.classList.remove('lock-scroll');
-    heroSection.classList.add('hide-page');
-
-    setTimeout(() => {
-        heroSection.style.display = 'none';
-        window.scrollTo(0,0);
-        isLocked = false;
-        window.removeEventListener('wheel',preventScroll);
-        window.removeEventListener('touchmove',preventScroll);
-    },800);
- }
-
- function tryPlay() {
-        const p = heroVideo.play();
-        if (p !== undefined) {
-            p.catch(err => {
-                console.warn('Video play is stopped', err);
-            });
-        }
-    }
-
-   if(heroVideo){
-        heroVideo.currentTime = 0;
-        heroVideo.load();
-
-        tryPlay();
-        document.addEventListener('visibilitychange', () => {
-            if (document.visibilityState === 'visible' && !hasSwitched && heroVideo.paused) {
-                tryPlay();
-            }
-        });
-
-    heroVideo.addEventListener('ended',goToMainPage);
-    heroVideo.addEventListener('error',goToMainPage);
-
-
-    const maxWait = (heroVideo.duration && isFinite(heroVideo.duration))
-        ?(heroVideo.duration + 2) * 1000
-        : 15000;
-        setTimeout(goToMainPage, maxWait);
-     } else {
-        document.body.classList.remove('lock-scroll');
-     }  
-
-    })();
 
 const scrollBox = document.querySelector('.scroll-box');
 const tags = document.querySelectorAll('.tag-item');
