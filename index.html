@@ -259,13 +259,12 @@ nav p a {
     grid-template-rows:auto;
     font-family: Arial, sans-serif;
     gap: 10px;
-    padding: 60px 80px 60px 80px;
+    padding: 60px 80px 10px 80px;
     font-size: clamp(1rem, 5vw, 1.5rem);
     color:  #1a3b70;
     max-width: 100%;
     box-sizing: border-box; 
     height: 100%;
-    margin-bottom: 60px;
     position:relative
 }
 
@@ -280,9 +279,9 @@ nav p a {
     text-align: left;
     margin-top: 10px;
     line-height: 1.8;
-    font-size: clamp(2rem, 3vw, 1.2rem);
+    font-size: clamp(1rem, 3vw, 1.2rem);
     color: #A6A9B3;
-    padding: 60px 35px;
+    padding: 60px 35px 10px 35px;
     min-height: 100vh
 }
 
@@ -314,7 +313,7 @@ nav p a {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 10px;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
     color: white;
     max-width: 100vw;
@@ -372,7 +371,6 @@ nav p a {
   background: linear-gradient(180deg, transparent, #3468af, transparent);
   animation: scroll-line 12s linear infinite;
   opacity: 0.8;
-  background-size: 100% 200px;
 }
 
 .grid-flow-line-vertical-2 {
@@ -384,7 +382,6 @@ nav p a {
   background: linear-gradient(180deg, transparent, #2666a7, transparent);
   animation: scroll-line 12s linear infinite;
   opacity: 0.8;
-  background-size: 100% 200px;
 }
 
 .flexbox-intro{
@@ -424,6 +421,15 @@ nav p a {
     font-weight: bold;
 }
 
+.grid-container-domain > div {
+    position: relative;
+    border-radius: 10px;
+    height: auto;
+    width: 500px;
+    overflow: hidden;
+    text-align: center;
+}
+
 .grid-container-domaindown{
     text-align: center;
     display: grid;
@@ -441,14 +447,6 @@ nav p a {
     z-index:10;
 }
 
-.grid-container-domain > div {
-    position: relative;
-    border-radius: 10px;
-    height: 400px;
-    width: 500px;
-    overflow: hidden;
-    text-align: center;
-}
 
 .img-container {
     position: relative; 
@@ -1085,7 +1083,7 @@ header {
       
         </div>
       <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Skills</h3> 
-      <div class="grid grid-cols-2 gap-4 w-full max-w-none">
+      <div class="grid grid-cols-3 gap-4 w-full max-w-none">
       <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
         <img src="imgs/R.png" alt="R language" class="w-5 h-5 inline-block mr-2">R</div>
       <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
@@ -1095,6 +1093,13 @@ header {
          <img src="imgs/SQL.png" alt="SQL" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">SQL</div>
       <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
          <img src="imgs/Tableau.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">Tableau</div>
+
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/Html.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">HTML</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/Css.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">CSS</div>
+      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/Js.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">JS</div>
          
         </div>
       <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Certificates</h3> 
@@ -1117,13 +1122,67 @@ header {
     </div>
       
           <div class="[transform:translateZ(0)]">
-        <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based business analytics graduate,&nbsp;enthusiastic about data science and machine learning.
-            I am a part-time front-end developer and a barista.&nbsp;Let's explore the world of data together!
+            <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide px-10">About</h3>
+               <div class="grid grid-cols-2 gap-1 items-center">
+                <a href="https://www.aacsb.edu/about-us" target="_blank">
+                <img src="./imgs/AACSB.png" class="w-[200px] h-auto mx-auto px-10 pr-2 pl-0">
+                </a>
+                <a href="https://businessgraduatesassociation.com/" target="_blank">
+                <img src="./imgs/BG.png" class="w-[200px] h-auto mx-auto px-10 pl-0 pr-2"> 
+                </a>
+                </div>
+            <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based business analytics graduate,&nbsp;enthusiastic about data science and machine learning.
+            I am a part-time front-end developer and a barista.&nbsp;Let's explore the world of data together!<br>
+            This course is delivered by the AACSB-accredited Business School, an accreditation that places us within the top institutions globally for business degrees. Less than 6% of business schools worldwide have attained this hallmark of excellence which recognises a focus on excellence in all areas, including teaching and students learning.
         </div>
       </div>
     </div>
 
+<div class="grid grid-cols-2 gap-8">
+     <div class="flex flex-col">
+  <div class="text-Left text-[#1a3b70] text-[clamp(5.0rem,2vw,4rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
+    <p>Credential Verified</p>
+  </div>
+  <div class="text-left text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
+    <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. They can determine the correct types of AI/ML technologies to apply to specific use cases and know how to use AI, ML, and generative AI technologies responsibly. They are familiar with the AWS Global Infrastructure, core AWS services and use cases, AWS service pricing models, and the AWS shared responsibility model for security and compliance in the AWS Cloud.</p>
+  </div> 
 
+    <div class="grid grid-cols-2 gap-4 items-start">
+      <div class="flex flex-wrap gap-3 content-start ml-4">   
+      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">AI and ML on AWS‑Foundational</div>
+      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Amazon Web Services</div>
+      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Artificial Intelligence(AI)</div>
+      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Foundation Models</div>
+      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Generative AI</div>
+      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Machine Learning (ML)</div>
+    </div>
+    
+    <img src="./imgs/AWS1.png" class="w-[400px] h-auto p-4 mx-auto">
+  </div>
+ </div>
+
+    <div class="flex flex-col">
+    <div class="text-Left text-[#1a3b70] text-[clamp(5.0rem,2vw,4rem)] font-medium mb-6 tracking-wide mt-10" >
+    <p>Credential</p>
+</div>
+      <div class="text-left text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">
+    <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
+</div>
+    <div class="grid grid-cols-2 gap-4 items-start">
+
+    <img src="./imgs/AWS2.png" class="w-[400px] h-auto p-4 mx-auto">
+    <div class="flex flex-wrap gap-3 items-start content-start">
+      <div class="border !border-[#3468af] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">AWS Cloud</div>
+      <div class="border !border-[#3468af] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Computing</div>
+      <div class="border !border-[#3468af] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Platform</div>
+      <div class="border !border-[#3468af] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Services</div>
+    </div>
+   </div>
+ </div>
+</div>
+
+
+ </div>
 <div class="grid-container-introup">
   <div class="line-grid-container">
   <div class="grid-flow-line"></div>
@@ -1291,7 +1350,7 @@ header {
           </div>
 </div>
 <div class="grid-container-domaindown">
-    <p>What we can provide?</p>
+    <p>What I bring</p>
 </div>
     
     <div class="grid-container1-1">
@@ -1304,6 +1363,7 @@ header {
       <div class="flexbox-keyvalueitem1">
           <div class="feature-keyvaluetitle">Privacy First</div>
           <p class="flexbox-keyvaluedes">Keep sensitive data in-house, never exposed to third-party platforms..</p>
+          <img src="imgs/Sales1.jpeg" class="w-40 h-40 p-1 block mx-auto">
       </div>
       <div class="flexbox-keyvalueitem2">
         <div class="feature-keyvaluetitle">Cost Optimized</div>
