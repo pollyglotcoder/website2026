@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Behind Numbers</title>
@@ -38,6 +40,14 @@ body.lock-scroll {
     display: none !important;
 }
 
+:root {
+  --color-primary: #1a3b70;
+  --color-accent: #3468af;
+  --color-bg-dark: #0B0C10;
+  --color-text-muted: #A6A9B3;
+  --color-text-light: #E6E7EB;
+}
+
 .video-wrapper {
     width: 100%;
     height: 100%;
@@ -65,14 +75,14 @@ body.lock-scroll {
 }    
 .header-bar h1 {
     margin: 0;
-    color: #A6A9B3;
+    color: var(--color-text-muted);
     font-size: 2rem;
 }
 
 nav a {
     position: relative;
-    color:#E6E7EB;
-    background: #0B0C10;
+    color: var(--color-text-light);
+    background: var(--color-bg-dark);
     padding: 8px 16px;
     border-radius: 6px;
     text-decoration: none;
@@ -88,7 +98,7 @@ nav a::after {
   bottom: 0; 
   width: 0; 
   height: 2px; 
-  background-color: #E6E7EB;
+  background-color: var(--color-text-light);
   transition: width 0.5s ease; 
 }
 
@@ -116,8 +126,8 @@ nav p a {
 
 .main-nav a {
     position: relative;
-    color: #E6E7EB;
-    background: #0B0C10;
+    color: var(--color-text-light);
+    background: var(--color-bg-dark);
     padding: 6px 10px;
     border-radius: 6px;
     text-decoration: none;
@@ -127,14 +137,10 @@ nav p a {
 }
 
 .main-nav a:hover {
-    background: #49A6FF;
-    color: #0B0C10;
+    background: #1a3b70;
+    color: var(--color-bg-dark);
 }
 
-.main-nav a.active {
-    background: #FF8C42;
-    color: #0B0C10;
-}
 .nav-item {
     position: relative; 
     overflow: visible !important;
@@ -161,14 +167,14 @@ nav p a {
     display: block; 
     padding: 8px 15px;
     background: transparent; 
-    color: #E6E7EB;
+    color: var(--color-text-light);
     border-radius: 0;
     font-size: 0.80rem;
 }
 
 .dropdown a:hover {
     background: #49A6FF;
-    color: #0B0C10;
+    color: var(--color-bg-dark);
     z-index: 30;
 }
 
@@ -185,7 +191,7 @@ nav p a {
 }
 .contact-link {
     background: #49A6FF;
-    color:#E6E7EB;
+    color:var(--color-text-light);
     padding: 8px 16px;
     border-radius: 6px;
 }
@@ -203,7 +209,7 @@ nav p a {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background:#A6A9B3;
+    background: var(--color-text-muted);
     border-radius: 3px;
     transition: all 0.3s; 
 }
@@ -261,7 +267,7 @@ nav p a {
     gap: 10px;
     padding: 60px 80px 10px 80px;
     font-size: clamp(1rem, 5vw, 1.5rem);
-    color:  #1a3b70;
+    color: var(--color-primary);
     max-width: 100%;
     box-sizing: border-box; 
     height: 100%;
@@ -280,7 +286,7 @@ nav p a {
     margin-top: 10px;
     line-height: 1.8;
     font-size: clamp(1rem, 3vw, 1.2rem);
-    color: #A6A9B3;
+    color: var(--color-text-muted);
     padding: 60px 35px 10px 35px;
 }
 
@@ -331,7 +337,7 @@ nav p a {
 .line-grid-container {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  z-index: 20;
   pointer-events: none;
   display: grid;
   grid-template-rows: 20px 20px 20px 20px;
@@ -384,23 +390,36 @@ nav p a {
     position: relative;
 }
 
-.grid-container-introdown{
+.flex-container-introdown{
     text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    display: flex;
     gap: 10px;
     padding: 6rem 6rem 2rem 6rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
     color:black;
     max-width: 100vw;
     box-sizing: border-box; 
-    background: linear-gradient(to bottom, #0B0C10 25%, #E6E7EB );
+    background: linear-gradient(to bottom, var(--color-bg-dark) 0%, white 100% );
     font-weight: bold;
     position: relative;
-    z-index: 10; 
-}
+    z-index: 10;
+    align-items: center;
 
+}.flex-container-introdown2{
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    padding: 6rem 6rem 2rem 6rem;
+    font-size: clamp(1.2rem, 3vw, 5rem);
+    color:black;
+    max-width: 100vw;
+    box-sizing: border-box; 
+    background: linear-gradient(to bottom,white 0%,black 100% );
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+    align-items: center;
+}
 
 .grid-container1-1 {
     text-align: center;
@@ -413,7 +432,7 @@ nav p a {
     padding-left: 6rem;
     padding-right: 6rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color:#E6E7EB;
+    color: var(--color-text-light);
     max-width: 100vw;
     box-sizing: border-box;
     font-weight: bold;
@@ -429,7 +448,7 @@ nav p a {
     padding-left: 6rem;
     padding-right: 6rem;
     font-size: clamp(1.2rem, 3vw, 2.5rem);
-    color: #E6E7EB;
+    color: var(--color-text-light);
     max-width: 100vw;
     box-sizing: border-box;
 }
@@ -441,39 +460,21 @@ nav p a {
     gap: 30px;
     padding: 20px;
     font-size: clamp(1rem, 5vw, 1.5rem);
-    color: #E6E7EB;
+    color: var(--color-text-light);
     max-width: 200vw;
     box-sizing: border-box; 
     min-height: 400px;
+    position: relative;
+    z-index: 25;
 }
+
+
 .grid-containerkeyvalue > div {
-    background: #0B0C10;
     padding: 30px 15px;
     border-radius: 8px;
     height: 380px;
 }
 
-.flexbox-keyvalueitem1,
-.flexbox-keyvalueitem2,
-.flexbox-keyvalueitem3 {
-    box-shadow: 0 0 10px 3px #A6A9B3; 
-}
-
-.feature-keyvaluetitle  {
-    grid-column: 1 / 2;
-    font-weight: bold;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-}
-
-.flexbox-keyvaluedes {
-    grid-column: 1 / 2;
-    text-align: left;
-    margin-top: 10px;
-    line-height: 1.8;
-    font-size: clamp(1.2rem, 3vw, 1.2rem);
-    color:#A6A9B3;
-    padding: 30px 35px;
-}
 
 .grid-container3{
     text-align: center;
@@ -482,7 +483,7 @@ nav p a {
     grid-template-rows: auto;
     padding: 20px;
     font-size: clamp(1rem, 5vw, 1.5rem);
-    color: #E6E7EB;
+    color: var(--color-text-light);
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box; 
@@ -492,15 +493,15 @@ nav p a {
 .grid-container3-text{
     font-weight: bold;
     font-size: clamp(1.2rem, 3vw, 1rem);
-    color: #E6E7EB;
-    background:  #1A1D24;
+    color: var(--color-text-light);
+    background:  var(--color-primary);
     padding: 8px 15px;
     border-radius: 6px;
     display: inline-block;
 }
 
 .grid-container3-text a {
-    color:   #E6E7EB; 
+    color: var(--color-text-light); 
     text-decoration: none; 
     position: relative;
     z-index: 100;
@@ -537,7 +538,7 @@ div.grid-container3-text > a:hover {
                 position: absolute;
                 top: 100%; 
                 right: 0; 
-                background: #0B0C10;
+                background: var(--color-bg-dark);
                 flex-direction: column; 
                 gap: 10px;
                 padding: 20px;
@@ -661,255 +662,46 @@ padding: 0 8px;
         gap: 8px;
     }
 }
-
-.grid-containerFeatures {   
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:500px 500px 500px 500px 500px;
-    gap: 10px;
-    padding: 20px;
-    font-size: clamp(1rem, 5vw, 1.5rem);
-    color:  #E6E7EB;
-    max-width: 100vw;
-    box-sizing: border-box; 
-    min-height: 400px;
-    background: #0B0C10;
-}
-.grid-containerFeatures > div {
-    background:#0B0C10;
-    padding: 30px 15px;
-    border-radius: 8px;
-    height: auto;
-}
-.itemFeatures-title  {
-    font-weight: bold;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-}
-
-.itemFeatures-des {
-    text-align: center;
-    margin-top: 40PX;
-    margin-left: 80px;
-    margin-right: 80px;
-    font-size: clamp(0.8rem, 3vw, 1.4rem); 
-    line-height: 1.8;
-}
-
-.flexbox-itemboxR {
-    display: grid;
-    grid-template-columns: 1fr;
-    top: 0; 
-    left: 0; 
-    width: 80%; 
-    height: 80%; 
-    background:  #1A1D24; 
-    border-radius: 8px; 
-    box-shadow: inset 0 0 10px 3px  #A6A9B3;
-    transition: transform 2s;
-}
-.flexbox-itemboxR:hover {
-    transform: perspective(800px) translateX(-40px) translateY(40px);
-}
-.flexbox-itemboxL {
-    display: grid;
-    grid-template-columns: 1fr;
-    top: 0; 
-    left: 0; 
-    width: 80%; 
-    height: 80%; 
-    background:  #1A1D24; 
-    border-radius: 8px; 
-    box-shadow: inset 0 0 10px 3px  #A6A9B3;
-    transition: transform 2s;
-}
-.flexbox-itemboxL:hover {
-    transform: perspective(800px) translateX(40px) translateY(40px);
-}
-.flexbox-itemFeatures1 {
-    grid-column: 1 / 2; 
-    grid-row: 1 / 2;
-    font-weight: bold;
-    font-size: clamp(1.2rem, 3vw, 4rem);
-    padding: 30px 15px;
-    text-align: center;
-    background: #0B0C10 !important;
-}
-.feature-img {
-  width: 500px; 
-  height: auto; 
-  margin: 15px 15px 15px 100px;
-  border-radius: 4px; 
-}
-.flexbox-itemFeatures2 {
-    grid-column: 2 / 3; 
-    grid-row: 1 / 2;    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-.flexbox-itemFeatures3 {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-.flexbox-itemFeatures4 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-.flexbox-itemFeatures5{
-    grid-column: 1 / 2;
-    grid-row: 3 / 4; 
-}
-.flexbox-itemFeatures6 {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-.flexbox-itemFeatures7 {
-    grid-column: 1 / 2;
-    grid-row: 4 / 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-.flexbox-itemFeatures8 {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-}
-.flexbox-itemFeatures9 {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
-}
-.flexbox-itemFeatures10 {
-    grid-column: 2 / 3;
-    grid-row: 5 / 6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.grid-container1 {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 30px;
-    padding: 20px;
-    font-size: clamp(1rem, 5vw, 1.5rem);
-    color: #E6E7EB;
-    max-width: 200vw;
-    box-sizing: border-box; 
-    min-height: 200px;
-}
-.grid-container1 > div {
-    background: #0B0C10;
-    padding: 30px 15px;
-    border-radius: 8px;
-    height: 400px;
-}
-.flexbox-item1,
-.flexbox-item2,
-.flexbox-item3 {
-    box-shadow: 0 0 10px 3px #A6A9B3; 
-}
-.feature-title  {
-    grid-column: 1 / 2;
-    font-weight: bold;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-}
-
-.flexbox-des {
-    grid-column: 1 / 2;
-    text-align: left;
-    margin-top: 10px;
-    line-height: 1.8;
-    font-size: clamp(1.2rem, 3vw, 1.2rem);
-}
 .grid-container2 {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 15px;
     padding: 20px;
-    background:#0B0C10;
+    background: var(--color-bg-dark);
     font-size: clamp(0.8rem, 3vw, 1.2rem);
     color: #1A1D24;
     max-width: 100vw;
     box-sizing: border-box; 
 }
-
 .sidenav {
     border-radius: 8px;
-    color:#E6E7EB;
+    color: var(--color-text-light);
     font-size: 2rem;
     text-align: right;
 }
-.layout {
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:0.5em;
-    background: rgb(14, 16, 21);
-    font-size: clamp(1rem, 5vw, 1.5rem);
-    color: #E6E7EB;
-    padding:0.5em;
-    max-width: 100vw;
-    box-sizing: border-box;
-}
-header {
-    grid-column:1 / 4;
-}
-.max-width {
-    width:100%;
-    max-width: 1024px;
-    padding: 1em;
-}
-.max-width-container{
-    display: flex;
-    justify-content:center;
-}
-
-  nav {
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 8px; 
-  }
-
-  nav a {
-    padding: 6px 12px; 
-    font-size: 0.9rem;
-  }
 
 .footer-row--large {
     font-size: clamp(1.1rem, 4vw, 1.6rem);
     font-weight: bold; 
     line-height: 1.5; 
-    color:  #A6A9B3;
+    color: var(--color-text-muted);
 
 }
 
 .footer-row--small {
     font-size: clamp(0.8rem, 2.5vw, 1.1rem);
     line-height: 1.4; 
-    color:  #A6A9B3; 
+    color: var(--color-text-muted); 
 }
 
 .footer-row--small a {
-      color:  #A6A9B3; 
+      color: var(--color-text-muted); 
       text-decoration: none; 
 }
 
 .footer-row--small a:hover {
-      color: #007bff; 
+      color: var(--color-primary); 
 }
 
 ::-webkit-scrollbar {
@@ -947,7 +739,7 @@ header {
             <span></span> 
             <span></span> 
         </div>
-    </div>
+
 
     <div class="video-container1">
            <div class="video-text">
@@ -972,59 +764,57 @@ header {
                <div class="grid-flow-line-vertical-2"></div>
        </div> 
 
-      <div class="[transform:translateZ(0)]">
-      <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide">Foundational Knowledge Areas</h3>
+    <div class="[transform:translateZ(0)]">
+      <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide">Foundational Knowledge Areas</h3>
       <div class="grid grid-cols-2 gap-4 w-full max-w-none">
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Data Driven Management</div>
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Statistics and Data Modelling</div>
-      
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Business Intelligence</div>
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Marketing and Strategy</div>
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Accounting and Financial Management</div>
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Leadership</div>
-      
-        </div>
-      <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Language&nbsp;&&nbsp;Skills</h3> 
-      <div class="grid grid-cols-3 gap-4 w-full max-w-none">
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-        <img src="imgs/R.png" alt="R language" class="w-5 h-5 inline-block mr-2">R</div>
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-        <img src="imgs/Stata.png" alt="Stata" class="w-5 h-5 inline-block mr-2">Stata</div>
-      
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/SQL.png" alt="SQL" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">SQL</div>
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/Tableau.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">Tableau</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Data Driven Management</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Statistics and Data Modelling</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Business Intelligence</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Marketing and Strategy</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Accounting and Financial Management</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Leadership</div>
+    </div>
 
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/Html.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">HTML</div>
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/Css.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">CSS</div>
-      <div class="border !border-[#3468af] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/Js.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">JS</div>
+      <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Language&nbsp;&&nbsp;Skills</h3> 
+      <div class="grid grid-cols-3 gap-4 w-full max-w-none">
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+        <img src="imgs/R.png" alt="R language" class="w-5 h-5 inline-block mr-2">R</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+        <img src="imgs/Stata.png" alt="Stata" class="w-5 h-5 inline-block mr-2">Stata</div> 
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/SQL.png" alt="SQL" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">SQL</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/Tableau.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">Tableau</div>
+
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/Html.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">HTML</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/Css.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">CSS</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+         <img src="imgs/Js.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">JS</div>
          
         </div>
-      <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Certificates</h3> 
+      <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Certificates</h3> 
       <div class="grid grid-cols-2 gap-4 w-full max-w-none">
-      <div class="border !border-[#3468af] py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.2rem)] text-center 
-                  group transition-all duration-300 hover:shadow-[0_0_10px_2px_#3468af] hover:!border-[#548cd6]">
+      <div class="border !border-[var(--color-accent)] py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.2rem)] text-center 
+                  group transition-all duration-300 hover:shadow-[0_0_10px_2px_var(--color-accent)] hover:!border-[#548cd6]">
         <a href="https://www.credly.com/badges/4b3d197a-c34b-43d9-a63f-bf41c5a387f7/linked_in_profile" target="_blank"
             class="group-hover:text-white transition-colors duration-300">
-            <img src="imgs/Cloud.png" alt="AWS Cloud Practitioner" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">AWS Cloud Practitioner
+            <img src="imgs/Cloud.png" alt="AWS Cloud Practitioner" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS Cloud Practitioner
         </a>
     </div>
-      <div class="border !border-[#3468af] py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.2rem)] text-center
-                  group transition-all duration-300 hover:shadow-[0_0_10px_2px_#3468af] hover:!border-[#548cd6]">
+      <div class="border !border-[var(--color-accent)] py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.2rem)] text-center
+                  group transition-all duration-300 hover:shadow-[0_0_10px_2px_var(--color-accent)] hover:!border-[#548cd6]">
         <a href="https://www.credly.com/badges/3f42e5a8-d67b-4faf-a948-43331481b7a6/linked_in_profile" target="_blank"
             class="group-hover:text-white transition-colors duration-300">
-            <img src="imgs/AI.png" alt="AWS AI Practitioner" class="w-5 h-5 inline-block mr-2 bg-[#3468af]">AWS AI Practitioner
+            <img src="imgs/AI.png" alt="AWS AI Practitioner" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS AI Practitioner
         </a>
     </div>
         </div>
     </div>
       
           <div class="[transform:translateZ(0)]">
-            <h3 class="text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide px-10">About</h3>
+            <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide px-10">About</h3>
                <div class="grid grid-cols-2 gap-1 items-center">
                 <a href="https://www.aacsb.edu/about-us" target="_blank">
                 <img src="./imgs/AACSB.png" class="w-[150px] h-auto mx-auto px-10 pr-0 pl-5">
@@ -1042,21 +832,21 @@ header {
 
 <div class="grid grid-cols-2 gap-8">
      <div class="flex flex-col">
-  <div class="text-Left text-[#1a3b70] text-[clamp(5.0rem,2vw,4rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
+  <div class="text-Left text-[var(--color-primary)] text-[clamp(4.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
     <p>Credential Verified</p>
   </div>
-  <div class="text-left text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
+  <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
     <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. They can determine the correct types of AI/ML technologies to apply to specific use cases and know how to use AI, ML, and generative AI technologies responsibly. They are familiar with the AWS Global Infrastructure, core AWS services and use cases, AWS service pricing models, and the AWS shared responsibility model for security and compliance in the AWS Cloud.</p>
   </div> 
 
     <div class="grid grid-cols-2 gap-4 items-start">
       <div class="flex flex-wrap gap-3 content-start ml-4">   
-      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">AI and ML on AWS‑Foundational</div>
-      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Amazon Web Services</div>
-      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Artificial Intelligence(AI)</div>
-      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Foundation Models</div>
-      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Generative AI</div>
-      <div class="border !border-[#3468af] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Machine Learning (ML)</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">AI and ML on AWS‑Foundational</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Amazon Web Services</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Artificial Intelligence(AI)</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Foundation Models</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Generative AI</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Machine Learning (ML)</div>
     </div>
     
     <img src="./imgs/AWS1.png" class="w-[400px] h-auto p-4 mx-auto">
@@ -1064,20 +854,20 @@ header {
  </div>
 
     <div class="flex flex-col">
-    <div class="text-Left text-[#1a3b70] text-[clamp(5.0rem,2vw,4rem)] font-medium mb-6 tracking-wide mt-10" >
+    <div class="text-Left text-[var(--color-primary)] text-[clamp(4.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10" >
     <p>Credential</p>
 </div>
-      <div class="text-left text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">
+      <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">
     <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
 </div>
     <div class="grid grid-cols-2 gap-4 items-start">
 
     <img src="./imgs/AWS2.png" class="w-[400px] h-auto p-4 mx-auto">
     <div class="flex flex-wrap gap-3 items-start content-start">
-      <div class="border !border-[#3468af] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">AWS Cloud</div>
-      <div class="border !border-[#3468af] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Computing</div>
-      <div class="border !border-[#3468af] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Platform</div>
-      <div class="border !border-[#3468af] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Services</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">AWS Cloud</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Computing</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Platform</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Services</div>
    </div>
  </div>
 </div>
@@ -1090,7 +880,7 @@ header {
   <div class="grid-flow-line"></div>
   </div> 
 
-  <div class="text-left text-[#1a3b70] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" ></div>
+  <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" ></div>
   <p>Credential Verified</p> 
 
 <div class="flex justify-center items-center gap-2 py-10 perspective-[800px]">
@@ -1144,33 +934,33 @@ header {
         <svg class="absolute top-1/2 right-[50px] -translate-y-1/2  w-[340px] h-[680px] z-1" viewBox="0 0 340 680">
              <circle 
                 cx="0" cy="340" r="330" 
-                stroke="#A6A9B3" stroke-width="4" fill="none" 
+                stroke="var(--color-text-muted)" stroke-width="4" fill="none" 
                 clip-path="url(#rightSemicircleClip)"
              />
         </svg>
         <svg class="absolute top-1/2 right-[70px] -translate-y-1/2 w-[320px] h-[660px] z-1" viewBox="0 0 300 600">
             <circle 
                 cx="0" cy="300" r="290" 
-                stroke=" #A6A9B3" stroke-width="4" fill="none"  
+                stroke=" var(--color-text-muted)" stroke-width="4" fill="none"  
                 clip-path="url(#rightSemicircleClip)"
             />
         </svg>
         <svg class="absolute top-1/2 right-[90px] -translate-y-1/2 w-[300px] h-[640px] z-1" viewBox="0 0 260 520">
             <circle 
                 cx="0" cy="260" r="250"  
-                stroke=" #A6A9B3" stroke-width="4" fill="none"  
+                stroke=" var(--color-text-muted)" stroke-width="4" fill="none"  
                 clip-path="url(#rightSemicircleClip)"
             />
         </svg>
          <svg class="absolute top-1/2 right-[110px] -translate-y-1/2 w-[280px] h-[620px] z-1" viewBox="0 0 220 480">
             <circle 
                 cx="0" cy="240" r="210"  
-                stroke=" #A6A9B3" stroke-width="4" fill="none"  
+                stroke=" var(--color-text-muted)" stroke-width="4" fill="none"  
                 clip-path="url(#rightSemicircleClip)"
             />
          </svg>
                  <div class="absolute inset-0 flex items-center justify-center p-4">
-                        <h2 class="text-7xl text-left font-semibold text-[#E6E7EB] z-2">
+                        <h2 class="text-7xl text-left font-semibold text-[var(--color-text-light)] z-2">
                                Why <br>
                                Behind Numbers? <br>
                                </h2>
@@ -1181,7 +971,7 @@ header {
                     tracking-[0.06em] 
                     leading-[1.0em] 
                     text-left 
-                    text-[#E6E7EB]">
+                    text-[var(--color-text-light)]">
                    Behind Numbers’ mission is to empower businesses with secure, cost-effective, and high-performance business analytics by building and deploying scalable data pipelines, predictive dashboards and statistical modeling tools on-premise and cloud. We combine open-source data frameworks with deep analytical expertise to deliver private, scalable, and tailored BA solutions that drive measurable business value while ensuring full data governance, operational efficiency, and stakeholder trust.<br>
                    <br>
                 </h2>
@@ -1190,59 +980,96 @@ header {
 <section class="scroll-box relative overflow-visible h-[300vh]">
   <div class="sticky top-0 min-h-screen flex items-center justify-center relative">
     <div class="absolute inset-0 z-2 overflow-visible pointer-events-none">
-      <div class="absolute top-[10%] left-[38%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
-     data-cx="80" data-cy="40">标签内容1</div>
-      <div class="absolute top-[19%] left-[53%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
-     data-cx="70" data-cy="35">标签内容2</div>
-      <div class="absolute top-[26%] left-[16%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
-     data-cx="90" data-cy="-30">标签内容3</div>
-      <div class="absolute top-[36%] left-[78%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
-     data-cx="85" data-cy="-25">标签内容4</div>
-      <div class="absolute top-[68%] left-[16%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
-     data-cx="60" data-cy="20">标签内容5</div>
-      <div class="absolute top-[78%] left-[10%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
-     data-cx="60" data-cy="20">标签内容6</div>
-     <div class="absolute top-[85%] left-[55%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
-     data-cx="60" data-cy="20">标签内容7</div>
-      <div class="absolute top-[80%] left-[75%] border-3 border-gray-500 px-6 py-2 text-xs font-mono text-[#2666a7] rounded-sm tag-item"
-     data-cx="60" data-cy="20">标签内容8</div>
+      <div class="absolute top-[10%] left-[38%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item 
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="80" data-cy="40">标签内容1</div>
+
+      <div class="absolute top-[19%] left-[53%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="70" data-cy="35">标签内容2</div>
+
+      <div class="absolute top-[26%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="90" data-cy="-30">标签内容3</div>
+
+      <div class="absolute top-[36%] left-[78%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="85" data-cy="-25">标签内容4</div>
+
+      <div class="absolute top-[68%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容5</div>
+
+      <div class="absolute top-[78%] left-[10%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容6</div>
+
+      <div class="absolute top-[85%] left-[55%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容7</div>
+
+      <div class="absolute top-[80%] left-[75%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容8</div>
     </div>
 
     <div class="relative z-3 text-center text-4xl font-bold">
       Financial institutions process<br>
       billions of transactions every<br>
-      day, <span class="text-[#426890]">but most of that data is<span class="text-[#1a3b70]"><br>hard to use.</span></span>
+      day, <span class="text-[#426890]">but most of that data is<span class="text-[var(--color-primary)]"><br>hard to use.</span></span>
     </div>
   </div>
 </section>
 
-<div class="grid-container-introdown">
+<div class="flex-container-introdown">
   <div class="line-grid-container">
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
-  </div> 
+  </div>
+  <div class="flex w-full justify-center">
+     <div class="text-center text-black text-[clamp(3.0rem,2vw,4rem)] font-medium mb-6 tracking-wide mt-10" >
     <p>Projects</p>
+     </div>
+  </div>
 </div>
 <div class="bg-[linear-gradient(to_bottom,#ffffff_85%,#ffffff_100%)]">
-<div class="grid grid-cols-[2fr_4fr] gap-0 p-6 rounded-3xl border border-gray-600 mx-40 bg-pink-300 overflow-hidden">
-     <div class="flex flex-col bg-sky-400 p-4">
-  <div class="text-left text-[black] text-[clamp(2.0rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+<div class="grid grid-cols-[2fr_4fr] gap-0 p-6 rounded-3xl mx-40 bg-white overflow-hidden">
+
+     <div class="flex flex-col bg-[black] rounded-l-md border-r border-r-white p-4">
+  <div class="text-left text-[var(--color-primary)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
     <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
   </div>
-  <div class="text-left text-[black] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
+
+  <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
     <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
   </div> 
      </div>
-  <div class="flex flex-col bg-[#121212] p-4">
-    <div class="text-left text-[white] text-[clamp(3.0rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+
+  <div class="flex flex-col bg-black rounded-r-md p-4 ">
+    <div class="text-left text-[white] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
     <p>Credential</p>
 </div>
-      <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide">
+
+      <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide ">
     <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
 </div>
-    <div class="grid grid-cols-2 gap-4 items-start">
-    </div>
+  </div>
+</div>
+
+
+    <div class="grid grid-cols-[2fr_4fr] gap-0 p-6 rounded-3xl mx-40 bg-white overflow-hidden">
+
+     <div class="flex flex-col bg-[black] rounded-l-md border-r border-r-white p-4">
+  <div class="text-left text-[var(--color-primary)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+    <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
+  </div>
+
+  <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
+    <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
+  </div> 
+     </div>
+
+  <div class="flex flex-col bg-black rounded-r-md p-4 ">
+    <div class="text-left text-[white] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
+    <p>Credential</p>
+</div>
+
+      <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide ">
+    <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
+</div>
   </div>
      </div>
 </div>
@@ -1272,116 +1099,45 @@ header {
     }
 });
 </script>
- 
-<div class="flex flex-col  bg-black p-4 text-center text-[white] text-[clamp(3.0rem,2vw,6rem)] font-medium mb-6 tracking-wide">
+<div class="flex flex-col  bg-white p-4 text-center text-[black] text-[clamp(3.0rem,2vw,6rem)] font-medium tracking-wide">
     <p>What I bring</p>
 </div>
-
+  </div>
+<div class="bg-white">
 <div class="grid-containerkeyvalue">
-      <div class="flexbox-keyvalueitem1">
-          <div class="feature-keyvaluetitle">Privacy First</div>
-          <p class="flexbox-keyvaluedes">Keep sensitive data in-house, never exposed to third-party platforms..</p>
-          <img src="imgs/Sales1.jpeg" class="w-40 h-40 p-1 block mx-auto">
-      </div>
-      <div class="flexbox-keyvalueitem2">
-        <div class="feature-keyvaluetitle">Cost Optimized</div>
-          <p class="flexbox-keyvaluedes">Scale smarter with efficient on-prem & cloud data infrastructure.</p>
+      <div class="flexbox-keyvalueitem1 relative overflow-hidden z-10">
+        <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
+          <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Privacy First</div>
+          <p class="relative z-10 text-[var(--color-text-light)] mt-2">Keep sensitive data in-house, never exposed to third-party platforms..</p>
     </div>
-      <div class="flexbox-keyvalueitem3">
-        <div class="feature-keyvaluetitle">Tailored Business Analytics</div>
-          <p class="flexbox-keyvaluedes">Custom data models built for your industry.</p>
+      <div class="flexbox-keyvalueitem2 relative overflow-hidden z-10">
+        <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
+        <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Cost Optimized</div>
+          <p class="relative z-10 text-[var(--color-text-light)] mt-2">Scale smarter with efficient on-prem & cloud data infrastructure.</p>
+    </div>
+      <div class="flexbox-keyvalueitem3 relative overflow-hidden z-10">
+        <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
+        <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Tailored Business Analytics</div>
+          <p class="relative z-10 text-[var(--color-text-light)] mt-2">Custom data models built for your industry.</p>
       </div>
 </div>
-</h2>
-    <div class="grid-containerFeatures">
-         <div class="flexbox-itemFeatures1">     
-                 <header><p><img src="imgs/security.jpg" class="feature-img"></p></header>
-                 <footer><p>Advisory & Strategy</p></footer>
-         </div>
-         <div class="flexbox-itemFeatures2">
-             <div class="flexbox-itemboxR">
-                 <p class="itemFeatures-des">
-                     Cut through the noise.<br>
-                     We evaluate your data infrastructure, build customized analytics strategies, and enforce full regulatory compliance for your business data operations.
-                 </p>
-             </div>
-         </div>
-         <div class="flexbox-itemFeatures3">
-              <div class="flexbox-itemboxL">
-                  <p class="itemFeatures-des">We process and structure your exclusive business data, build customized analytical models, and design private end-to-end data analysis pipelines for industry-specific business insights.</p>
-               </div>
-         </div>
-         <div class="flexbox-itemFeatures4">
-                 <header><p><img src="imgs/security.jpg" class="feature-img"></p></header>
-                 <footer><div class="itemFeatures-title">Data & Model Development</div></footer>
-         </div>
-         <div class="flexbox-itemFeatures5">
-                <header><p><img src="imgs/security.jpg" class="feature-img"></p></header>
-                <footer><div class="itemFeatures-title">Infrastructure & Deployment</div></footer>
-         </div>
-         <div class="flexbox-itemFeatures6">
-                 <div class="flexbox-itemboxR">
-                   <p class="itemFeatures-des">From on-prem datacenter hardware to lightweight edge devices, we design, optimize, and deploy private data analytics stacks that you fully control.</p>
-                 </div>
-         </div>
-         <div class="flexbox-itemFeatures7">
-              <div class="flexbox-itemboxL">
-                 <p class="itemFeatures-des">
-                Secure data interfaces, custom business analytics workflows, and seamless integrations with ERP and CRM systems..</p>
-              </div>
-         </div>
-         <div class="flexbox-itemFeatures8">
-                <header><p><img src="imgs/security.jpg" class="feature-img"></p></header>
-                <footer><div class="itemFeatures-title">Integration & Applications</div></footer>
-         </div>
-         <div class="flexbox-itemFeatures9">
-                <header><p><img src="imgs/security.jpg" class="feature-img"></p></header>
-                <footer><div class="itemFeatures-title">Training & Support</div></footer>
-         </div>
-         <div class="flexbox-itemFeatures10">
-                 <div class="flexbox-itemboxR">
-                   <p class="itemFeatures-des">We upskill your teams to operate analytical workflows confidently and deliver continuous data monitoring, performance optimization, and guaranteed SLA support.</p>
-                 </div>
-         </div>
-    </div>
+</div>
+  <div class="flex-container-introdown2"></div>
+</div>
 
-<h2>
-  <span class="main-title">Our Analytics Deployment</span><br>
-  <span class="sub-title">Industry-focused analytics deployments that work where cloud platforms can’t.</span>
-</h2>
-    <div class="grid-container1">
-      <div class="flexbox-item1">
-          <div class="feature-title">On-Premise Analytics</div>
-          <p class="flexbox-des">Enterprise-scale data analytics running in your private data center. Ideal for financial services, government, and organizations protecting sensitive intellectual property.</p>
-      </div>
-      <div class="flexbox-item2">
-        <div class="feature-title">Edge & On-Device Analytics</div>
-          <p class="flexbox-des">LLMs optimized for laptops, phones, and IoT devices. Critical for real-time, low-latency, or offline environments.</p>
-      </div>
-      <div class="flexbox-item3">
-        <div class="feature-title">Regulated Industries</div>
-          <p class="flexbox-des">We specialize in compliance-heavy sectors like healthcare, defense, and law — ensuring AI meets strict privacy and regulatory standards.</p>
-      </div>
-    </div>
-             <div class="video-container2">
-           <div class="video-wrapper2">
-            <video autoplay muted loop >
-            <source src="imgs/Video3.mp4" type="video/mp4">
-            Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
-            </video>
+<div class="video-container2">
+    <div class="video-wrapper2">
+       <video autoplay muted loop >
+        <source src="imgs/Video3.mp4" type="video/mp4">
+        Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
+        </video>
         </div>
     <div class="grid-container3">
-     <div class="grid-container3-text"><a href="bookaconsultation.html">Book a Consultation</a></div>
+     <div class="grid-container3-text"><a href="requestaCV.html">Request a CV</a></div>
 </div>
-    <div class="layout">
-        <header><p>Header</p></header>
-        <div class="sidenav"><p>Latest work from Behind Numbers</p></div>
-        <main><p>Main Content: Core information about behind numbers, such as AI solutions, service advantages, etc.</p></main>
-        <div class="sidebar"><p>Sidebar: Latest news or related resources</p></div>
-        <footer><p>Footer</p></footer>
-    </div>   
+
 <footer>
-<h2 class="text-4xl">More about us</h2>
+<h2 class="text-white text-4xl text-center">More about us</h2>
         <div class="grid-container2">
         <div class="flexbox-Main footer-row--large">Behind Numbers</div>
         <div class="flexbox-Privacy policy footer-row--large">Privacy policy</div>
@@ -1393,13 +1149,13 @@ header {
         <div class="flexbox-Privacy policy2 footer-row--small"><a href="Privacy policy.html">Privacy policy</a></div>
         <div class="flexbox-Accessibility Statement2 footer-row--small"><a href="Accessibility Statement.html">Accessibility Statement</a></div>
         <div class="flexbox-Cookies2 footer-row--small"><a href="Cookies.html">Cookies</a></div>
-        <div class="flexbox-Connect2 footer-row--small"><a href="Linkedin.html">Linkedin</a></div>
+        <div class="flexbox-Connect2 footer-row--small"><a href="https://www.linkedin.com/in/xueke-hou">Linkedin</a></div>
 
         <div class="flexbox-Main3 footer-row--small"></div>
         <div class="flexbox-Privacy policy3 footer-row--small"></div>
         <div class="flexbox-Accessibility Statement3 footer-row--small"></div>
         <div class="flexbox-Cookies3 footer-row--small"></div>
-        <div class="flexbox-Connect3 footer-row--small"><a href="Github.html">Github</a></div>
+        <div class="flexbox-Connect3 footer-row--small"><a href="https://github.com/pollyglotcoder">Github</a></div>
       </div>   
     <p>&copy;2026 Behind Numbers. All rights reserved</p>
     </div>
@@ -1416,6 +1172,13 @@ const COLLAPSE_OPACITY = 0.12;
 function lerp(a, b, t) { return a + (b - a) * t; }
 function clamp01(v) { return Math.min(1, Math.max(0, v)); } 
 
+function smoothstep(min, max, value) {
+  const x = Math.max(0, Math.min(1, (value - min) / (max - min)));
+  return x * x * (3 - 2 * x); 
+}
+
+let ticking = false; 
+
 window.addEventListener('scroll', ()=>{
   const boxTop = scrollBox.getBoundingClientRect().top;
   const totalDistance = scrollBox.clientHeight - window.innerHeight;
@@ -1429,14 +1192,16 @@ window.addEventListener('scroll', ()=>{
 
     const start = 0.05 + idx * (0.7 / n);
     const end = start + 0.25;
-    const t = clamp01((progress - start) / (end - start));
+    const rawT = clamp01((progress - start) / (end - start));
+    
+    const t = smoothstep(0, 1, rawT); 
 
     const scale = lerp(COLLAPSE_SCALE, 1, t);
     const opacity = lerp(COLLAPSE_OPACITY, 1, t);
     const tx = lerp(cx, 0, t);
     const ty = lerp(cy, 0, t);
 
-    tag.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+    tag.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${scale})`;
     tag.style.opacity = opacity;
   })
 })
