@@ -14,6 +14,7 @@ html, body {
     padding: 0;
     font-family: Arial, sans-serif;
     background: black;
+    overflow-x: hidden;
 }
 
 .hero-section {
@@ -421,37 +422,6 @@ nav p a {
     align-items: center;
 }
 
-.grid-container1-1 {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100%;
-    min-height: 60px;
-    gap: 10px;
-    padding: 20px 20px 20px 20px;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    font-size: clamp(1.2rem, 3vw, 5rem);
-    color: var(--color-text-light);
-    max-width: 100vw;
-    box-sizing: border-box;
-    font-weight: bold;
-}
-.grid-container1-2 {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100%;
-    min-height: 60px;
-    gap: 10px;
-    padding: 20px 20px 40px 20px;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    font-size: clamp(1.2rem, 3vw, 2.5rem);
-    color: var(--color-text-light);
-    max-width: 100vw;
-    box-sizing: border-box;
-}
 .grid-containerkeyvalue {
     text-align: center;
     display: grid;
@@ -512,6 +482,45 @@ div.grid-container3-text > a:hover {
     padding: 8px 15px;
     border-radius: 4px;
 }
+.video-text h2 {
+margin-bottom: 0;
+font-size: clamp(1.5rem, 5vw, 2rem); 
+margin-bottom: 0;
+line-height: 1.2;
+white-space: nowrap;
+}
+
+.video-text p {
+font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+
+.image-text {
+font-size: 1.5em;
+text-align: center;
+white-space: normal; 
+word-wrap: break-word;
+width: 100%;
+padding: 0 8px;
+}
+
+h2 {
+font-size: 2.0em;
+white-space: normal;
+word-wrap: break-word;
+width: 100%;
+padding: 0 8px;
+}
+
+.video-wrapper2 {
+max-width: 250px;
+}       
+
+.grid-containerFeatures {   
+grid-template-columns: 1fr;
+}
+
+
 @media (max-width: 768px) {       
             .header-bar h1 {
                 text-align: center;
@@ -551,9 +560,11 @@ div.grid-container3-text > a:hover {
             #mainNav.active {
                 display: flex;
             }
+            
             nav {
             display: none;
             }
+            
             .dropdown {
             position: static;
             width: 100%;
@@ -561,6 +572,7 @@ div.grid-container3-text > a:hover {
             visibility: hidden;
             transform: translateY(0);
             }
+            
             .nav-item.active .dropdown {
             opacity: 1;
             visibility: visible;
@@ -573,19 +585,50 @@ div.grid-container3-text > a:hover {
             height: 100vh; 
             margin: 0;
             padding: 0;
-}
+            }
+            
+            .grid-container-selfintro {
+            grid-template-columns: 1fr;
+            padding: 40px 20px 10px 20px;
+            }
+            
+            .flexbox-selfintrotitle {
+            padding: 30px 10px 10px 10px;
+            }
+    
+            .grid-containerintro {
+            grid-template-columns: 1fr;
+            padding: 10px 16px 20px 16px;
+            }
+
+            .grid-containerkeyvalue {
+            grid-template-columns: 1fr;
+            padding: 16px;
+            min-height: auto;
+            }
+
+            .grid-containerkeyvalue > div {
+            height: auto;
+            min-height: 220px;
+            }
+            
+            .flex-container-introdown,
+            .flex-container-introdown2 {
+            padding: 3rem 1.5rem 1.5rem 1.5rem;
+            }
 
             .video-wrapper1 {
             width: 100%;
             height: 80%;
             border-radius: 0;
             transform: translateY(10%)
-}
+            }
 
             video {width: 100%;
             height: 100%;
             object-fit: cover;
-}
+            }
+
             .video-text {
             position: absolute; 
             top: 50%; 
@@ -597,55 +640,22 @@ div.grid-container3-text > a:hover {
             z-index: 10;
             max-width: 90%; 
             text-align: center; 
-}
-            
-.video-text h2 {
-margin-bottom: 0;
-font-size: clamp(1.5rem, 5vw, 2rem); 
-margin-bottom: 0;
-line-height: 1.2;
-white-space: nowrap;
-}
+            }
 
-.video-text p {
-font-size: clamp(1rem, 3vw, 1.2rem);
-}
+            .grid-container2 {
+            grid-template-columns: 1fr 1fr;
+            text-align: center;
+            }
 
+            .flexbox-intro svg {
+            display: none;
+            }
 
-.image-text {
-font-size: 1.5em;
-text-align: center;
-white-space: normal; 
-word-wrap: break-word;
-width: 100%;
-padding: 0 8px;
-}
-
-            h2 {
-            font-size: 2.0em;
-            white-space: normal;
-            word-wrap: break-word;
-            width: 100%;
-            padding: 0 8px;
-    }
-            .grid-container1-1 {
-            padding-top: 30px;
-    }
-            .grid-container1-2 {
-            padding-left: 3.5rem;
-            padding-right: 3.5rem;
-            padding-bottom: 30px;
-    }
-            .grid-container1 {
-            grid-template-columns: 1fr !important;
-       
-    }       
-            .video-wrapper2 {
-            max-width: 250px;
-    }       .grid-containerFeatures {   
-            grid-template-columns: 1fr;
-    }
-}
+            .flexbox-intro h2 {
+            font-size: clamp(2rem, 8vw, 3rem) !important;
+            text-align: center !important;
+            }
+        }
 
 @media (min-width: 769px) and (max-width: 900px) {
     .header-bar { 
@@ -740,7 +750,7 @@ padding: 0 8px;
             <span></span> 
         </div>
 
-
+    <video autoplay muted loop playsinline></video>
     <div class="video-container1">
            <div class="video-text">
            <h2>Unlock Your Numbers.</h2>
@@ -766,7 +776,7 @@ padding: 0 8px;
 
     <div class="[transform:translateZ(0)]">
       <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide">Foundational Knowledge Areas</h3>
-      <div class="grid grid-cols-2 gap-4 w-full max-w-none">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-none">
       <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Data Driven Management</div>
       <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Statistics and Data Modelling</div>
       <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Business Intelligence</div>
@@ -830,7 +840,7 @@ padding: 0 8px;
       </div>
     </div>
 
-<div class="grid grid-cols-2 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-0">
      <div class="flex flex-col">
   <div class="text-Left text-[var(--color-primary)] text-[clamp(4.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
     <p>Credential Verified</p>
@@ -849,7 +859,7 @@ padding: 0 8px;
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Machine Learning (ML)</div>
     </div>
     
-    <img src="./imgs/AWS1.png" class="w-[400px] h-auto p-4 mx-auto">
+    <img src="./imgs/AWS1.png" class="w-full max-w-[400px] h-auto p-4 mx-auto">
   </div>
  </div>
 
@@ -1026,9 +1036,9 @@ padding: 0 8px;
   </div>
 </div>
 <div class="bg-[linear-gradient(to_bottom,#ffffff_85%,#ffffff_100%)]">
-<div class="grid grid-cols-[2fr_4fr] gap-0 p-6 rounded-3xl mx-40 bg-white overflow-hidden">
+<div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
-     <div class="flex flex-col bg-[black] rounded-l-md border-r border-r-white p-4">
+     <div class="flex flex-col bg-[black] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
   <div class="text-left text-[var(--color-primary)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
     <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
   </div>
@@ -1038,7 +1048,7 @@ padding: 0 8px;
   </div> 
      </div>
 
-  <div class="flex flex-col bg-black rounded-r-md p-4 ">
+  <div class="flex flex-col bg-[black] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
     <div class="text-left text-[white] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
     <p>Credential</p>
 </div>
@@ -1050,7 +1060,7 @@ padding: 0 8px;
 </div>
 
 
-    <div class="grid grid-cols-[2fr_4fr] gap-0 p-6 rounded-3xl mx-40 bg-white overflow-hidden">
+    <div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
      <div class="flex flex-col bg-[black] rounded-l-md border-r border-r-white p-4">
   <div class="text-left text-[var(--color-primary)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
