@@ -237,29 +237,6 @@ nav p a {
     object-fit: cover;
 }
 
-.video-text {
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  text-align: center; 
-  color: white; 
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-  padding: 0 20px; 
-  z-index: 10; 
-}
-
-.video-text h2 {
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
-.video-text p {
-  font-size: 1.2rem;
-  position: absolute;
-  bottom: -50%;
-}
-
 .grid-container-selfintro {   
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -512,9 +489,29 @@ width: 100%;
 padding: 0 8px;
 }
 
-.video-wrapper2 {
-max-width: 250px;
-}       
+.overlay{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video-container2 {
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    height: auto;
+}      
+
+.video-wrapper2 video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
 
 .grid-containerFeatures {   
 grid-template-columns: 1fr;
@@ -750,20 +747,30 @@ grid-template-columns: 1fr;
             <span></span> 
         </div>
 
-    <video autoplay muted loop playsinline></video>
-    <div class="video-container1">
-           <div class="video-text">
-           <h2>Unlock Your Numbers.</h2>
-           <h2> Maxmium the power of information.</h2>
-           <p>Behind Numbers helps businesses build statistical models, interactive dashboards and predictive analytics workflows - granting complete ownership of your raw data, operational spend, and data-driven business decisions.</p>
-    </div>    
-    <div class="video-wrapper1"> 
-        <video autoplay muted loop> 
-         <source src="imgs/Video9.mp4" type="video/mp4"> 
-         Your browser does not support the MP4 video format. Please update your browser or change your device to watch. 
-        </video> 
-      </div> 
-    </div>
+   
+    <div class="relative w-full h-screen m-0 p-0 overflow-hidden">
+
+  <div class="absolute inset-0 w-full h-full z-0">
+    <video autoplay muted loop playsinline
+      class="w-full h-full object-cover object-[center_5%] sm:object-[center_10%] md:object-[center_20%] block">
+      <source src="imgs/Video9.mp4" type="video/mp4">
+      Your browser does not support the MP4 video format.
+    </video>
+  </div>
+
+
+  <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6 overflow-y-auto">
+    <h2 class="text-white text-[clamp(1.8rem,6vw,4rem)] mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+      Unlock Your Numbers.<br> Maximize the power of information.
+    </h2>
+    <p class="text-white text-[clamp(0.9rem,2.5vw,1.2rem)] leading-tight max-w-3xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+      Behind Numbers helps businesses build statistical models, interactive dashboards
+      and predictive analytics workflows - granting complete ownership of your raw data,
+      operational spend, and data-driven business decisions.
+    </p>
+  </div>
+
+</div>
 
 
         <div class="grid-container-selfintro">
@@ -1142,6 +1149,7 @@ grid-template-columns: 1fr;
         Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
         </video>
         </div>
+</div>
     <div class="grid-container3">
      <div class="grid-container3-text"><a href="requestaCV.html">Request a CV</a></div>
 </div>
