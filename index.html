@@ -56,6 +56,7 @@ body.lock-scroll {
     left:0;
     top: 0;
 }
+
 .video-wrapper video {
     width: 100%;
     height: 100%;
@@ -73,7 +74,8 @@ body.lock-scroll {
     position: relative; 
     z-index: 10;
     overflow: visible !important;
-}    
+}  
+ 
 .header-bar h1 {
     margin: 0;
     color: var(--color-text-muted);
@@ -93,24 +95,26 @@ nav a {
 }
 
 nav a::after {
-  content: ""; 
-  position: absolute; 
-  left: 0; 
-  bottom: 0; 
-  width: 0; 
-  height: 2px; 
-  background-color: var(--color-text-light);
-  transition: width 0.5s ease; 
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: var(--color-text-light);
+    transition: width 0.5s ease; 
 }
 
 nav a:hover::after {
-  width: 100%; 
+    width: 100%; 
 }
+
 nav p {
     margin: 0; 
     font-size: 0.85rem; 
     white-space: nowrap; 
 }
+
 nav p a {
     padding: 6px 10px !important; 
     font-size: 0.85rem !important; 
@@ -151,7 +155,7 @@ nav p a {
     position: absolute;
     top: 100%; 
     left: 0;
-    margin-top: 10;
+    margin-top: 10px;
     min-width: 200px;
     background-color: #1A1D24;
     border-radius: 6px;
@@ -185,21 +189,24 @@ nav p a {
     transform: translateY(0);
     z-index: 30;
 }
+
 .dropdown.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
+
 .contact-link {
     background: #49A6FF;
     color:var(--color-text-light);
     padding: 8px 16px;
     border-radius: 6px;
 }
+
 .contact-link:hover {
     background: #49A6FF;
     border-radius: 6px
-  }
+}
 
 .menu-toggle {
     display: none;
@@ -207,6 +214,7 @@ nav p a {
     gap: 5px;
     cursor: pointer;
 }
+
 .menu-toggle span {
     width: 25px;
     height: 3px;
@@ -214,7 +222,6 @@ nav p a {
     border-radius: 3px;
     transition: all 0.3s; 
 }
-
 
 .grid-container-selfintro > div {
     padding: 10px 30px 10px 30px;
@@ -226,12 +233,12 @@ nav p a {
     grid-column: 1 / 2;
     text-align: left;
     margin-top: 10px;
+    margin-left: 40px;
     line-height: 1.8;
     font-size: clamp(1rem, 3vw, 1.2rem);
     color: var(--color-text-muted);
     padding: 60px 35px 10px 35px;
 }
-
 
 .grid-containerintro {
     display: grid;
@@ -269,55 +276,54 @@ nav p a {
 }
  
 .grid-container-introup::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2; 
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2; 
+    pointer-events: none;
 } 
 
-
 .grid-flow-line {
-  width: 100%;
-  height: 5px;
-  align-self: center;
-  background: linear-gradient(90deg, transparent, #3468af, transparent);
-  background-size: 50% 100%;
-  animation: scroll-line 12s linear infinite;
-  opacity: 0.8;
-  
+    width: 100%;
+    height: 5px;
+    align-self: center;
+    background: linear-gradient(90deg, transparent, #3468af, transparent);
+    background-size: 50% 100%;
+    animation: scroll-line 12s linear infinite;
+    opacity: 0.8;
 }
+
 .grid-flow-line.orange {
-  background:linear-gradient(90deg, transparent, #57595b, transparent);
-  background-size: 50% 100%;
-  animation-duration: 15s;
+    background:linear-gradient(90deg, transparent, #57595b, transparent);
+    background-size: 50% 100%;
+    animation-duration: 15s;
 }
 
 @keyframes scroll-line {
-  0% { background-position: 0 0; }
-  100% { background-position: 100% 0; }
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
 }
 
 .grid-flow-line-vertical-1 {
-  position: absolute;
-  left: 35%;
-  top: 0;
-  height: 100%;
-  width: 5px;
-  background: linear-gradient(180deg, transparent, #3468af, transparent);
-  animation: scroll-line 12s linear infinite;
-  opacity: 0.8;
+    position: absolute;
+    left: 35%;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(180deg, transparent, #3468af, transparent);
+    animation: scroll-line 12s linear infinite;
+    opacity: 0.8;
 }
 
 .grid-flow-line-vertical-2 {
-  position: absolute;
-  left: 37%;
-  top: 0;
-  height: 100%;
-  width: 5px;
-  background: linear-gradient(180deg, transparent, #2666a7, transparent);
-  animation: scroll-line 12s linear infinite;
-  opacity: 0.8;
+    position: absolute;
+    left: 37%;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(180deg, transparent, #2666a7, transparent);
+    animation: scroll-line 12s linear infinite;
+    opacity: 0.8;
 }
 
 .flexbox-intro{
@@ -371,13 +377,11 @@ nav p a {
     z-index: 25;
 }
 
-
 .grid-containerkeyvalue > div {
     padding: 30px 15px;
     border-radius: 8px;
     height: 380px;
 }
-
 
 .grid-container3{
     text-align: center;
@@ -418,33 +422,32 @@ div.grid-container3-text > a:hover {
 }
 
 .video-text h2 {
-margin-bottom: 0;
-font-size: clamp(1.5rem, 5vw, 2rem); 
-margin-bottom: 0;
-line-height: 1.2;
-white-space: nowrap;
+    margin-bottom: 0;
+    font-size: clamp(1.5rem, 5vw, 2rem); 
+    margin-bottom: 0;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .video-text p {
-font-size: clamp(1rem, 3vw, 1.2rem);
+    font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
-
 .image-text {
-font-size: 1.5em;
-text-align: center;
-white-space: normal; 
-word-wrap: break-word;
-width: 100%;
-padding: 0 8px;
+    font-size: 1.5em;
+    text-align: center;
+    white-space: normal; 
+    word-wrap: break-word;
+    width: 100%;
+    padding: 0 8px;
 }
 
 h2 {
-font-size: 2.0em;
-white-space: normal;
-word-wrap: break-word;
-width: 100%;
-padding: 0 8px;
+    font-size: 2.0em;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 100%;
+    padding: 0 8px;
 }
 
 .overlay{
@@ -471,173 +474,173 @@ padding: 0 8px;
     object-fit: cover;
 }
 
-.grid-containerFeatures {   
-grid-template-columns: 1fr;
-}
-
-
 @media (max-width: 768px) {       
-            .header-bar h1 {
-                text-align: center;
-                width: 100%; 
-                margin: 0;
-            }   
-            .header-bar {
-                flex-direction: row; 
-                justify-content: center;
-                padding: 20px 10px;
-                position: absolute; 
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 20
-            }
-            .menu-toggle {
-                display: flex;
-                position: absolute; 
-                right: 20px;
-            }
-            #mainNav {
-                display: none; 
-                position: absolute;
-                top: 100%; 
-                right: 0; 
-                background: var(--color-bg-dark);
-                flex-direction: column; 
-                gap: 10px;
-                padding: 20px;
-                border-radius: 0 0 0 8px; 
-                box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
-                width: 100%; 
-                z-index: 100; 
-            }
+     .header-bar h1 {
+        text-align: center;
+        width: 100%; 
+        margin: 0;
+        }   
 
-            #mainNav.active {
-                display: flex;
-            }
-            
-            nav {
-            display: none;
-            }
-            
-            .dropdown {
-            position: static;
-            width: 100%;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(0);
-            }
-            
-            .nav-item.active .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-            }
-            
-            .video-container1 {
-            position: relative;
-            width: 100vw;
-            height: 100vh; 
-            margin: 0;
-            padding: 0;
-            }
-            
-            .grid-container-selfintro {
-            grid-template-columns: 1fr;
-            padding: 40px 20px 10px 20px;
-            }
-            
-            .flexbox-selfintrotitle {
-            padding: 30px 10px 10px 10px;
-            }
-    
-            .grid-containerintro {
-            grid-template-columns: 1fr;
-            padding: 10px 16px 20px 16px;
-            }
-
-            .grid-containerkeyvalue {
-            grid-template-columns: 1fr;
-            padding: 16px;
-            min-height: auto;
-            }
-
-            .grid-containerkeyvalue > div {
-            height: auto;
-            min-height: 220px;
-            }
-            
-            .flex-container-introdown,
-            .flex-container-introdown2 {
-            padding: 3rem 1.5rem 1.5rem 1.5rem;
-            }
-
-            .video-wrapper1 {
-            width: 100%;
-            height: 80%;
-            border-radius: 0;
-            transform: translateY(10%)
-            }
-
-            video {width: 100%;
-            height: 100%;
-            object-fit: cover;
-            }
-
-            .video-text {
-            position: absolute; 
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            color: white; 
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-            padding: 20px 20px; 
-            z-index: 10;
-            max-width: 90%; 
-            text-align: center; 
-            }
-
-            .grid-container2 {
-            grid-template-columns: 1fr 1fr;
-            text-align: center;
-            }
-
-            .flexbox-intro svg {
-            display: none;
-            }
-
-            .flexbox-intro h2 {
-            font-size: clamp(2rem, 8vw, 3rem) !important;
-            text-align: center !important;
-            }
-
-            .grid-flow-line-vertical-1 {
-            display: none;
-            }
-
-             .grid-flow-line-vertical-2 {
-            display: none;
-            }
-
-
-
+     .header-bar {
+        flex-direction: row; 
+        justify-content: center;
+        padding: 20px 10px;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20
         }
+
+     .menu-toggle {
+        display: flex;
+        position: absolute; 
+        right: 20px;
+        }
+
+     #mainNav {
+        display: none; 
+        position: absolute;
+        top: 100%; 
+        right: 0; 
+        background: var(--color-bg-dark);
+        flex-direction: column; 
+        gap: 10px;
+        padding: 20px;
+        border-radius: 0 0 0 8px; 
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+        width: 100%; 
+        z-index: 100; 
+        }
+
+    #mainNav.active {
+        display: flex;
+        }    
+
+    nav {
+    display: none;
+        }
+
+    .dropdown {
+    position: static;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+        }
+            
+    .nav-item.active .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+        }
+            
+    .video-container1 {
+    position: relative;
+    width: 100vw;
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+        }
+            
+    .grid-container-selfintro {
+    grid-template-columns: 1fr;
+    padding: 40px 20px 10px 20px;
+        }
+            
+    .flexbox-selfintrotitle {
+    padding: 30px 10px 10px 10px;
+        }
+    
+    .grid-containerintro {
+    grid-template-columns: 1fr;
+    padding: 10px 16px 20px 16px;
+        }
+
+    .grid-containerkeyvalue {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    min-height: auto;
+        }
+
+    .grid-containerkeyvalue > div {
+    height: auto;
+    min-height: 220px;
+    }
+            
+    .flex-container-introdown,
+    .flex-container-introdown2 {
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .video-wrapper1 {
+    width: 100%;
+    height: 80%;
+    border-radius: 0;
+    transform: translateY(10%)
+    }
+
+    video {width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .video-text {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding: 20px 20px; 
+    z-index: 10;
+    max-width: 90%; 
+    text-align: center; 
+    }
+
+    .grid-container2 {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    }
+
+    .flexbox-intro svg {
+    display: none;
+    }
+
+    .flexbox-intro h2 {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    text-align: center !important;
+    }
+
+    .grid-flow-line-vertical-1 {
+    display: none;
+    }
+
+    .grid-flow-line-vertical-2 {
+    display: none;
+    }
+
+}
 
 @media (min-width: 769px) and (max-width: 900px) {
     .header-bar { 
-        padding: 15px 10px; 
+    padding: 15px 10px; 
     }
+
     .header-bar h1 {
-        font-size: 1.3rem;   
+    font-size: 1.3rem;   
     }
+
     nav a {
-        padding: 6px 10px; 
-        font-size: 0.85rem; 
+    padding: 6px 10px; 
+    font-size: 0.85rem; 
     }
+
     nav {
-        gap: 8px;
+    gap: 8px;
     }
 }
+
 .grid-container2 {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
@@ -650,6 +653,7 @@ grid-template-columns: 1fr;
     max-width: 100vw;
     box-sizing: border-box; 
 }
+
 .sidenav {
     border-radius: 8px;
     color: var(--color-text-light);
@@ -672,12 +676,12 @@ grid-template-columns: 1fr;
 }
 
 .footer-row--small a {
-      color: var(--color-text-muted); 
-      text-decoration: none; 
+    color: var(--color-text-muted); 
+     text-decoration: none; 
 }
 
 .footer-row--small a:hover {
-      color: var(--color-primary); 
+    color: var(--color-primary); 
 }
 
 ::-webkit-scrollbar {
@@ -694,128 +698,183 @@ grid-template-columns: 1fr;
     background:black;    
 }
 
-
 </style>
 </head>
+
 
 <body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <div class="header-bar" id="second-page">
-        <div class="mt-2 md:mt-0">
-            <h1>Behind Numbers</h1>
-        </div>
-        <nav class="main-nav" id="mainNav">
+<div class="header-bar" id="second-page">
+     <div class="mt-2 md:mt-0">
+             <h1>Behind Numbers</h1>
+     </div>
+             <nav class="main-nav" id="mainNav">
                  <a href="services.html">Services</a>
-                  <a href="about.html">About</a>
-                  <a href="projects.html">Projects</a>
-                  <a href="Contact.html">Contact</a>
-        </nav>
-    </div>
-        <div class="menu-toggle" id="menuToggle">
-            <span></span> 
-            <span></span> 
-            <span></span> 
-        </div>
+                 <a href="about.html">About</a>
+                 <a href="projects.html">Projects</a>
+                 <a href="Contact.html">Contact</a>
+             </nav>
+     </div>
 
-   
-    <div class="relative w-full h-screen m-0 p-0 overflow-hidden">
-  <div class="relative md:absolute md:inset-0 w-full h-auto md:h-full z-0 mt-40 md:mt-0 overflow-hidden">
-    <video autoplay muted loop playsinline
-      class="w-full h-full object-cover object-[center_5%] sm:object-[center_10%] md:object-[center_20%] block">
-      <source src="imgs/Video9.mp4" type="video/mp4">
-      Your browser does not support the MP4 video format.
-    </video>
-  </div>
+     <div class="menu-toggle" id="menuToggle">
+         <span></span> 
+         <span></span> 
+         <span></span> 
+     </div>
 
+     <div class="relative w-full h-screen m-0 p-0 overflow-hidden">
+         <div class="relative md:absolute md:inset-0 w-full h-auto md:h-full z-0 mt-40 md:mt-0 overflow-hidden">
+             <video autoplay muted loop playsinline
+                class="w-full h-full object-cover object-[center_5%] sm:object-[center_10%] md:object-[center_20%] 
+                block">
+                <source src="imgs/Video9.mp4" type="video/mp4">
+                Your browser does not support the MP4 video format.
+                </video>
+         </div>
+     </div>
 
-  <div class="absolute inset-0 z-10 flex flex-col items-center justify-end pb-40 md:justify-center md:pb-0 text-center px-6">
-    <h2 class="text-white text-[clamp(2rem,6vw,4rem)] mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-      Unlock Your Numbers.<br> Maximize the power of information.
-    </h2>
-    <p class="text-white text-[clamp(1.0rem,2.5vw,1.2rem)] leading-tight max-w-3xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-      Behind Numbers helps businesses build statistical models, interactive dashboards
-      and predictive analytics workflows - granting complete ownership of your raw data,
-      operational spend, and data-driven business decisions.
-    </p>
-  </div>
+ <div class="absolute inset-0 z-10 flex flex-col items-center justify-end pb-40 md:justify-center md:pb-0 
+            text-center px-6">
+
+             <h2 class="text-white text-[clamp(2rem,6vw,4rem)] mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                   Unlock Your Numbers.<br> Maximize the power of information.
+             </h2>
+              
+             <p class="text-white text-[clamp(1.0rem,2.5vw,1.2rem)] leading-tight max-w-3xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                  Behind Numbers helps businesses build statistical models, interactive dashboards
+                  and predictive analytics workflows - granting complete ownership of your raw data,
+                  operational spend, and data-driven business decisions.
+             </p>
+ </div>
 
 </div>
 
 
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[10px] pt-[30px] md:pt-[60px] px-4 md:px-[80px] pb-[10px] text-[clamp(1rem,5vw,1.5rem)] text-[var(--color-primary)] max-w-full h-full relative">
-               <div class="absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px]">
-               <div class="grid-flow-line"></div>
-               <div class="grid-flow-line"></div>
-               <div class="grid-flow-line-vertical-1"></div>
-               <div class="grid-flow-line-vertical-2"></div>
-       </div> 
+<div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[10px] pt-[30px] md:pt-[60px] px-4 md:px-[80px] pb-[10px] 
+             text-[clamp(1rem,5vw,1.5rem)] text-[var(--color-primary)] max-w-full h-full relative">
+
+             <div class="absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px]">
+                 
+                 <div class="grid-flow-line"></div>
+                 <div class="grid-flow-line"></div>
+                 <div class="grid-flow-line-vertical-1"></div>
+                 <div class="grid-flow-line-vertical-2"></div>
+
+             </div> 
 
     <div class="[transform:translateZ(0)]">
-      <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mt-8 md:mt-0 mb-6 tracking-wide">Foundational Knowledge Areas</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-none">
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Data Driven Management</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Statistics and Data Modelling</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Business Intelligence</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Marketing and Strategy</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Accounting and Financial Management</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Leadership</div>
-    </div>
-
-      <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Language&nbsp;&&nbsp;Skills</h3> 
-      <div class="grid grid-cols-3 gap-4 w-full max-w-none">
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-        <img src="imgs/R.png" alt="R language" class="w-5 h-5 inline-block mr-2">R</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-        <img src="imgs/Stata.png" alt="Stata" class="w-5 h-5 inline-block mr-2">Stata</div> 
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/SQL.png" alt="SQL" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">SQL</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/Tableau.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">Tableau</div>
-
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/Html.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">HTML</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/Css.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">CSS</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 text-white text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
-         <img src="imgs/Js.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">JS</div>
          
-        </div>
-      <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Certificates</h3> 
-      <div class="grid grid-cols-2 gap-4 w-full max-w-none">
-      <div class="border !border-[var(--color-accent)] py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.2rem)] text-center 
-                  group transition-all duration-300 hover:shadow-[0_0_10px_2px_var(--color-accent)] hover:!border-[#548cd6]">
-        <a href="https://www.credly.com/badges/4b3d197a-c34b-43d9-a63f-bf41c5a387f7/linked_in_profile" target="_blank"
-            class="group-hover:text-white transition-colors duration-300">
-            <img src="imgs/Cloud.png" alt="AWS Cloud Practitioner" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS Cloud Practitioner
-        </a>
-    </div>
-      <div class="border !border-[var(--color-accent)] py-1 px-2 tmax-w-noneext-gray-300 text-[clamp(0.9rem,1.8vw,1.2rem)] text-center
-                  group transition-all duration-300 hover:shadow-[0_0_10px_2px_var(--color-accent)] hover:!border-[#548cd6]">
-        <a href="https://www.credly.com/badges/3f42e5a8-d67b-4faf-a948-43331481b7a6/linked_in_profile" target="_blank"
-            class="group-hover:text-white transition-colors duration-300">
-            <img src="imgs/AI.png" alt="AWS AI Practitioner" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS AI Practitioner
-        </a>
-    </div>
-        </div>
-    </div>
+         <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mt-8 md:mt-0 mb-6 
+                    tracking-wide">Foundational Knowledge Areas</h3>
+
+                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-none">
+
+                     <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                      text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Data Driven Management</div>
+                     <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                      text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Statistics and Data Modelling</div>
+                     <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                      text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Business Intelligence</div>
+                     <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                      text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Marketing and Strategy</div>
+                     <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                      text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Accounting and Financial Management</div>
+                     <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                      text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">Leadership</div>
+    
+                 </div>
+
+         <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide 
+                mt-10">Language&nbsp;&&nbsp;Skills</h3> 
       
-          <div class="[transform:translateZ(0)]">
-            <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide px-10">About</h3>
-               <div class="grid grid-cols-2 gap-1 items-center">
-                <a href="https://www.aacsb.edu/about-us" target="_blank">
-                <img src="./imgs/AACSB.png" class="w-[150px] h-auto mx-auto px-10 pr-0 pl-5">
-                </a>
-                <a href="https://businessgraduatesassociation.com/" target="_blank">
-                <img src="./imgs/BG.png" class="w-[150px] h-auto mx-auto px-10 pl-0 pr-5"> 
-                </a>
-                </div>
-            <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based business analytics graduate,&nbsp;enthusiastic about data science and machine learning.
-            I am a part-time front-end developer and a barista.&nbsp;Let's explore the world of data together!<br>
-            This course is delivered by the AACSB-accredited Business School, an accreditation that places us within the top institutions globally for business degrees. Less than 6% of business schools worldwide have attained this hallmark of excellence which recognises a focus on excellence in all areas, including teaching and students learning.
-        </div>
-      </div>
+         <div class="grid grid-cols-3 gap-4 w-full max-w-none"> 
+             <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                    text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+                  <img src="imgs/R.png" alt="R language" class="w-5 h-5 inline-block mr-2">R
+             </div>
+
+             <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                    text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+                   <img src="imgs/Stata.png" alt="Stata" class="w-5 h-5 inline-block mr-2">Stata
+             </div> 
+
+             <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                    text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+                   <img src="imgs/SQL.png" alt="SQL" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">SQL
+             </div>
+
+             <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                    text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+                  <img src="imgs/Tableau.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">Tableau
+             </div>
+
+             <div class="border !border-[var(--color-accent)] py-1 px-2 text-white
+                    text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+                  <img src="imgs/Html.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">HTML
+             </div>
+         
+             <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                    text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+                  <img src="imgs/Css.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">CSS
+             </div>
+      
+             <div class="border !border-[var(--color-accent)] py-1 px-2 text-white 
+                    text-[clamp(0.9rem,1.8vw,1.2rem)] text-center">
+                  <img src="imgs/Js.png" alt="Tableau" class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">JS
+             </div>
+     </div>
+    
+     <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Certificates</h3> 
+      
+     <div class="grid grid-cols-2 gap-4 w-full max-w-none">
+
+             <div class="border !border-[var(--color-accent)] py-1 px-2 max-w-none text-[clamp(0.9rem,1.8vw,1.2rem)] text-center 
+                        
+                        group transition-all duration-300 hover:shadow-[0_0_10px_2px_var(--color-accent)] hover:!border-[#548cd6]">
+                     <a href="https://www.credly.com/badges/4b3d197a-c34b-43d9-a63f-bf41c5a387f7/linked_in_profile" target="_blank"
+                         class="group-hover:text-white transition-colors duration-300">
+                         <img src="imgs/Cloud.png" alt="AWS Cloud Practitioner" 
+                         class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS Cloud Practitioner
+                     </a>
+             </div>
+     
+             <div class="border !border-[var(--color-accent)] py-1 px-2 max-w-none text-[clamp(0.9rem,1.8vw,1.2rem)] text-center
+                       
+                        group transition-all duration-300 hover:shadow-[0_0_10px_2px_var(--color-accent)] hover:!border-[#548cd6]">
+                     <a href="https://www.credly.com/badges/3f42e5a8-d67b-4faf-a948-43331481b7a6/linked_in_profile" target="_blank"
+                         class="group-hover:text-white transition-colors duration-300">
+                         <img src="imgs/AI.png" alt="AWS AI Practitioner" 
+                         class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS AI <br>Practitioner
+                     </a>
+             </div>
+     </div>
     </div>
+     <div class="[transform:translateZ(0)]">
+         <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide px-10 md:ml-4">About</h3>
+               
+             <div class="grid grid-cols-2 gap-1 items-center">
+                 <a href="https://www.aacsb.edu/about-us" target="_blank">
+                     <img src="./imgs/AACSB.png" class="w-[150px] h-auto mx-auto px-10 pr-0 pl-5">
+                 </a>
+                 
+                 <a href="https://businessgraduatesassociation.com/" target="_blank">
+                     <img src="./imgs/BG.png" class="w-[150px] h-auto mx-auto px-10 pl-0 pr-5"> 
+                 </a>
+             </div>
+            
+             <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based business 
+                        analytics graduate,&nbsp;enthusiastic about data science and machine learning.
+                        I am a part-time front-end developer and a barista.&nbsp;Let's explore the world of 
+                        data together!<br>
+                        This course is delivered by the AACSB-accredited Business School, an accreditation 
+                        that places within the top institutions globally for business degrees. 
+                        Less than 6% of business schools worldwide have attained this hallmark of excellence 
+                        which recognises a focus on excellence in all areas, including teaching and students learning.
+             </div>
+     </div>
+    </div>
+</div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-0">
      <div class="flex flex-col">
@@ -867,77 +926,108 @@ grid-template-columns: 1fr;
   <div class="grid-flow-line"></div>
   </div> 
 
-  <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" ></div>
-  <p>Credential Verified</p> 
-
-
-<div id="slideWrap" class="flex justify-start md:justify-center items-center gap-2 py-10 perspective-[800px] w-full cert-swiper relative perspective-[800px] overflow-hidden md:overflow-x-visible snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
-    
-    <div class="group transition-all duration-300 flex-shrink-0 w-full flex justify-center">
-      <img src="./imgs/C1.png" 
-       class="w-56 opacity-60 rotate-y-12 transition-all duration-300 
-       group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
-    </div>
-
-    <div class="group transition-all duration-300 flex-shrink-0 w-full flex justify-center">
-    <img src="./imgs/C2.png" 
-       class="w-56 opacity-60 rotate-y-12 transition-all duration-300 
-       group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
-    </div>
-    
-    <div class="flex-shrink-0 md:flex-shrink snap-center md:snap-align-none">
-    <img src="./imgs/CC.png" class="w-72 z-10">
-    </div>
-
-    <div class="group transition-all duration-300 flex-shrink-0 w-full flex justify-center">
-    <img src="./imgs/C3.png" 
-       class="w-56 opacity-60 rotate-y-12 transition-all duration-300 
-       group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
-    </div>
-    
-    <div class="group transition-all duration-300 flex-shrink-0 w-full flex justify-center">
-    <img src="./imgs/C4.png" 
-       class="w-56 opacity-60 rotate-y-12 transition-all duration-300 
-       group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
-   
-
-    <div class="flex justify-center gap-2 pb-4">
-    <span data-index="0" class="dot w-2.5 h-2.5 rounded-full bg-gray-300 cursor-pointer"></span>
-    <span data-index="1" class="dot w-2.5 h-2.5 rounded-full bg-gray-300 cursor-pointer"></span>
-    <span data-index="2" class="dot w-2.5 h-2.5 rounded-full bg-blue-500 cursor-pointer"></span>
-    <span data-index="3" class="dot w-2.5 h-2.5 rounded-full bg-gray-300 cursor-pointer"></span>
-    <span data-index="4" class="dot w-2.5 h-2.5 rounded-full bg-gray-300 cursor-pointer"></span>
+<div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" ></div>
+      <p>Credential Verified</p> 
 </div>
+
+<div id="slideWrap" class="relative w-full">
+     <div class="hidden md:flex justify-center items-center gap-4 py-10 perspective-[800px]">
+          <div class="group transition-all duration-300">
+              <img src="./imgs/C1.png" class="w-56 opacity-60 rotate-y-12 transition-all duration-300 group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
+          </div>    
+  
+          <div class="group transition-all duration-300">
+              <img src="./imgs/C2.png" class="w-56 opacity-60 rotate-y-12 transition-all duration-300 group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
+          </div>
+
+           <img src="./imgs/CC.png" class="w-72 z-10">
+         
+          <div class="group transition-all duration-300">
+              <img src="./imgs/C3.png" class="w-56 opacity-60 rotate-y-12 transition-all duration-300 group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
+           </div>
+
+          <div class="group transition-all duration-300">
+              <img src="./imgs/C4.png" class="w-56 opacity-60 rotate-y-12 transition-all duration-300 group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
+          </div>
+     </div>
 </div>
- </div>
-  </div>
+
+<div class="flex md:hidden relative w-full overflow-hidden">
+     <div id="mobileSlideTrack" class="flex items-center gap-4 py-6">
+           <div class="flex-shrink-0 flex justify-center">
+           <img src="./imgs/C1.png" class="w-48">
+           </div>
+
+           <div class="flex-shrink-0 flex justify-center">
+           <img src="./imgs/C2.png" class="w-48">
+           </div>
+
+           <div class="flex-shrink-0 flex justify-center" data-center="true">
+           <img src="./imgs/CC.png" class="w-60">
+           </div>
+
+           <div class="flex-shrink-0 flex justify-center">
+           <img src="./imgs/C3.png" class="w-48">
+           </div>
+
+           <div class="flex-shrink-0 flex justify-center">
+           <img src="./imgs/C4.png" class="w-48">
+           </div>
+     </div>
+</div>
+
+
+<div class="flex md:hidden justify-center gap-2 pb-4">
+     <span data-index="0" class="dot w-2.5 h-2.5 rounded-full bg-blue-500 cursor-pointer"></span>
+     <span data-index="1" class="dot w-2.5 h-2.5 rounded-full bg-gray-300 cursor-pointer"></span>
+     <span data-index="2" class="dot w-2.5 h-2.5 rounded-full bg-gray-300 cursor-pointer"></span>
+     <span data-index="3" class="dot w-2.5 h-2.5 rounded-full bg-gray-300 cursor-pointer"></span>
+     <span data-index="4" class="dot w-2.5 h-2.5 rounded-full bg-gray-300 cursor-pointer"></span>
+</div>
+
 <script>
-const wrap = document.getElementById('slideWrap');
-const dots = document.querySelectorAll('.dot');
-const pageCount = 5;
-let cur = 2; // 默认下标2，打开直接显示中间CC.png
 
-function goTo(index){
+const wrapMobile = document.querySelector('.md\\:hidden.overflow-hidden');
+const track = document.getElementById('mobileSlideTrack');
+const centerImg = track.querySelector('[data-center="true"]');
+const items = Array.from(track.children);
+const dots = document.querySelectorAll('.dot');
+let cur = 2;
+
+track.style.transition = 'transform 0.4s ease';
+
+function centerOn(index){
     cur = index;
-    wrap.style.transform = `translateX(-${index * 100 / pageCount}%)`;
+    const wrapWidth = wrapMobile.offsetWidth;
+    const targetItem = items[index];
+    const itemCenter = targetItem.offsetLeft + targetItem.offsetWidth / 2;
+    const offset = wrapWidth / 2 - itemCenter;
+    track.style.transform = `translateX(${offset}px)`;
+
     dots.forEach((d,i)=>{
-        d.classList.toggle('bg-blue-500',i===cur);
-        d.classList.toggle('bg-gray-300',i!==cur);
-    })
+        d.classList.toggle('bg-blue-500', i===cur);
+        d.classList.toggle('bg-gray-300', i!==cur);
+    });
 }
+
 dots.forEach((dot,idx)=>{
-    dot.onclick = ()=> goTo(idx);
-})
+    dot.onclick = ()=> centerOn(idx);
+});
 
 let startX = 0;
-wrap.addEventListener('touchstart',e=>startX=e.touches[0].clientX)
-wrap.addEventListener('touchend',e=>{
+wrapMobile.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+wrapMobile.addEventListener('touchend', e => {
     const endX = e.changedTouches[0].clientX;
-    const diff = startX-endX;
-    if(diff>40&&cur<pageCount-1) goTo(cur+1)
-    if(diff<-40&&cur>0) goTo(cur-1)
-})
+    const diff = startX - endX;
+    if(diff > 10 && cur < items.length-1) centerOn(cur+1);
+    if(diff < -10 && cur > 0) centerOn(cur-1);
+});
+
+window.addEventListener('load', () => centerOn(cur));
+window.addEventListener('resize', () => centerOn(cur));
 </script>
+
+
 <div class="grid-container-introup">
   <div class="line-grid-container">
   <div class="grid-flow-line"></div>
