@@ -1,8 +1,143 @@
-<!-- 这里写注释 -->
+<!-- drop down header bar -->
+ <style>
+ nav a {
+    position: relative;
+    color: var(--color-text-light);
+    background: var(--color-bg-dark);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+nav a::after {
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: var(--color-text-light);
+    transition: width 0.5s ease; 
+}
+
+nav a:hover::after {
+    width: 100%; 
+}
+
+nav p {
+    margin: 0; 
+    font-size: 0.85rem; 
+    white-space: nowrap; 
+}
+
+nav p a {
+    padding: 6px 10px !important; 
+    font-size: 0.85rem !important; 
+}
  
- 
- 
- 
+.main-nav a {
+    position: relative;
+    color: var(--color-text-light);
+    background: var(--color-bg-dark);
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+
+.main-nav a:hover {
+    background: #1a3b70;
+    color: var(--color-bg-dark);
+}
+
+.nav-item {
+    position: relative; 
+    overflow: visible !important;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    margin-top: 10px;
+    min-width: 200px;
+    background-color: #1A1D24;
+    border-radius: 6px;
+    padding: 0.5rem 0; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s; 
+    z-index: 30; 
+    display:block;
+}
+
+.dropdown a {
+    display: block; 
+    padding: 8px 15px;
+    background: transparent; 
+    color: var(--color-text-light);
+    border-radius: 0;
+    font-size: 0.80rem;
+}
+
+.dropdown a:hover {
+    background: #49A6FF;
+    color: var(--color-bg-dark);
+    z-index: 30;
+}
+
+.nav-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    z-index: 30;
+}
+
+.dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sidenav {
+    border-radius: 8px;
+    color: var(--color-text-light);
+    font-size: 2rem;
+    text-align: right;
+}
+
+
+
+@media (max-width: 768px) {     
+         nav {
+    display: none;
+        }
+
+    .dropdown {
+    position: static;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+        }
+            
+    .nav-item.active .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+        }
+            
+
+
+
+
+</style>
  
  
  

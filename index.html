@@ -14,7 +14,14 @@ html, body {
     padding: 0;
     font-family: Arial, sans-serif;
     background: black;
-    overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section{
+    scroll-margin-top: 70px;
 }
 
 .hero-section {
@@ -71,8 +78,8 @@ body.lock-scroll {
     justify-content: space-between;
     background: black;
     padding: 1rem 2rem 0 2rem;
-    position: relative; 
-    z-index: 10;
+    position: absolute; 
+    z-index: 100;
     overflow: visible !important;
 }  
  
@@ -80,44 +87,6 @@ body.lock-scroll {
     margin: 0;
     color: var(--color-text-muted);
     font-size: 2rem;
-}
-
-nav a {
-    position: relative;
-    color: var(--color-text-light);
-    background: var(--color-bg-dark);
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.85rem;
-    transition: background 0.2s;
-}
-
-nav a::after {
-    content: ""; 
-    position: absolute; 
-    left: 0; 
-    bottom: 0; 
-    width: 0; 
-    height: 2px; 
-    background-color: var(--color-text-light);
-    transition: width 0.5s ease; 
-}
-
-nav a:hover::after {
-    width: 100%; 
-}
-
-nav p {
-    margin: 0; 
-    font-size: 0.85rem; 
-    white-space: nowrap; 
-}
-
-nav p a {
-    padding: 6px 10px !important; 
-    font-size: 0.85rem !important; 
 }
 
 .main-nav {
@@ -129,7 +98,7 @@ nav p a {
     z-index: 200;
 }
 
-.main-nav a {
+nav.main-nav a {
     position: relative;
     color: var(--color-text-light);
     background: var(--color-bg-dark);
@@ -141,60 +110,11 @@ nav p a {
     transition: background 0.2s;
 }
 
-.main-nav a:hover {
+nav.main-nav a:hover {
     background: #1a3b70;
-    color: var(--color-bg-dark);
-}
-
-.nav-item {
-    position: relative; 
-    overflow: visible !important;
-}
-
-.dropdown {
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    margin-top: 10px;
-    min-width: 200px;
-    background-color: #1A1D24;
-    border-radius: 6px;
-    padding: 0.5rem 0; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s; 
-    z-index: 30; 
-    display:block;
-}
-
-.dropdown a {
-    display: block; 
-    padding: 8px 15px;
-    background: transparent; 
     color: var(--color-text-light);
-    border-radius: 0;
-    font-size: 0.80rem;
 }
 
-.dropdown a:hover {
-    background: #49A6FF;
-    color: var(--color-bg-dark);
-    z-index: 30;
-}
-
-.nav-item:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    z-index: 30;
-}
-
-.dropdown.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
 
 .contact-link {
     background: #49A6FF;
@@ -232,12 +152,10 @@ nav p a {
 .flexbox-selfintrotitle {
     grid-column: 1 / 2;
     text-align: left;
-    margin-top: 10px;
-    margin-left: 40px;
     line-height: 1.8;
     font-size: clamp(1rem, 3vw, 1.2rem);
     color: var(--color-text-muted);
-    padding: 60px 35px 10px 35px;
+    padding: 70px 35px 50px 85px;
 }
 
 .grid-containerintro {
@@ -333,11 +251,10 @@ nav p a {
 .flex-container-introdown{
     text-align: center;
     display: flex;
-    gap: 10px;
-    padding: 6rem 6rem 2rem 6rem;
+    padding: 6rem 1rem 2rem 1rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
     color:black;
-    max-width: 100vw;
+    width:100%;
     box-sizing: border-box; 
     background: linear-gradient(to bottom, var(--color-bg-dark) 0%, white 100% );
     font-weight: bold;
@@ -348,11 +265,10 @@ nav p a {
 }.flex-container-introdown2{
     text-align: center;
     display: flex;
-    gap: 10px;
-    padding: 6rem 6rem 2rem 6rem;
+    padding: 12rem 1rem 4rem 1rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
     color:black;
-    max-width: 100vw;
+    width:100%;
     box-sizing: border-box; 
     background: linear-gradient(to bottom,white 0%,black 100% );
     font-weight: bold;
@@ -543,13 +459,9 @@ h2 {
     padding: 0;
         }
             
-    .grid-container-selfintro {
-    grid-template-columns: 1fr;
-    padding: 40px 20px 10px 20px;
-        }
-            
     .flexbox-selfintrotitle {
-    padding: 30px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+
         }
     
     .grid-containerintro {
@@ -603,6 +515,10 @@ h2 {
     text-align: center;
     }
 
+    .grid-container2 > div{
+    min-width: 0;
+    }
+
     .flexbox-intro svg {
     display: none;
     }
@@ -643,7 +559,7 @@ h2 {
 
 .grid-container2 {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     gap: 15px;
     padding: 20px;
@@ -652,14 +568,9 @@ h2 {
     color: #1A1D24;
     max-width: 100vw;
     box-sizing: border-box; 
+    overflow-x: auto;
 }
 
-.sidenav {
-    border-radius: 8px;
-    color: var(--color-text-light);
-    font-size: 2rem;
-    text-align: right;
-}
 
 .footer-row--large {
     font-size: clamp(1.1rem, 4vw, 1.6rem);
@@ -705,26 +616,28 @@ h2 {
 <body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<div class="header-bar" id="second-page">
+
+<div class="header-bar relative" id="second-page">
      <div class="mt-2 md:mt-0">
              <h1>Behind Numbers</h1>
      </div>
-             <nav class="main-nav" id="mainNav">
-                 <a href="services.html">Services</a>
-                 <a href="about.html">About</a>
-                 <a href="projects.html">Projects</a>
-                 <a href="Contact.html">Contact</a>
-             </nav>
-     </div>
 
+     <nav class="main-nav">
+            <a href="#Service">Service</a>
+            <a href="#About">About</a>
+            <a href="#Projects">Projects</a>
+            <a href="Contact.html">Contact</a>
+     </nav>
+    
      <div class="menu-toggle" id="menuToggle">
          <span></span> 
          <span></span> 
          <span></span> 
      </div>
+</div>
 
-     <div class="relative w-full h-screen m-0 p-0 overflow-hidden">
-         <div class="relative md:absolute md:inset-0 w-full h-auto md:h-full z-0 mt-40 md:mt-0 overflow-hidden">
+<div class="relative w-full h-screen m-0 p-0 overflow-hidden">
+         <div class="relative md:absolute md:inset-0 w-full h-auto md:h-full z-0 mt-10 md:mt-0 overflow-hidden">
              <video autoplay muted loop playsinline
                 class="w-full h-full object-cover object-[center_5%] sm:object-[center_10%] md:object-[center_20%] 
                 block">
@@ -732,26 +645,26 @@ h2 {
                 Your browser does not support the MP4 video format.
                 </video>
          </div>
-     </div>
+    
 
- <div class="absolute inset-0 z-10 flex flex-col items-center justify-end pb-40 md:justify-center md:pb-0 
+     <div class="absolute inset-0 z-10 flex flex-col items-center justify-end pb-5 md:justify-end md:pb-10 
             text-center px-6">
-
-             <h2 class="text-white text-[clamp(2rem,6vw,4rem)] mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                  <h2 class="text-white text-[clamp(2rem,6vw,4rem)] mb-8 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                    Unlock Your Numbers.<br> Maximize the power of information.
-             </h2>
-              
-             <p class="text-white text-[clamp(1.0rem,2.5vw,1.2rem)] leading-tight max-w-3xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
-                  Behind Numbers helps businesses build statistical models, interactive dashboards
-                  and predictive analytics workflows - granting complete ownership of your raw data,
-                  operational spend, and data-driven business decisions.
-             </p>
- </div>
+                  </h2>
+                         <div class="md:mt-40 mb-40 md:mb-4">
+                             <p class="text-white text-[clamp(1.0rem,2.5vw,1.2rem)] pb-20 md:pb-20 leading-tight max-w-3xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                                Behind Numbers helps businesses build statistical models, interactive dashboards
+                                and predictive analytics workflows - granting complete ownership of your raw data,
+                                operational spend, and data-driven business decisions.
+                             </p>
+                         </div> 
+     </div> 
 
 </div>
 
 
-<div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[10px] pt-[30px] md:pt-[60px] px-4 md:px-[80px] pb-[10px] 
+<div id="About" class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[10px] mt-[-80px] md:mt-0 pt-[30px] md:pt-[70px] px-4 md:px-[80px] pb-[10px] 
              text-[clamp(1rem,5vw,1.5rem)] text-[var(--color-primary)] max-w-full h-full relative">
 
              <div class="absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px]">
@@ -825,7 +738,7 @@ h2 {
              </div>
      </div>
     
-     <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">Certificates</h3> 
+     <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] w-full font-medium mb-6 tracking-wide mt-10">Certificates</h3> 
       
      <div class="grid grid-cols-2 gap-4 w-full max-w-none">
 
@@ -851,7 +764,7 @@ h2 {
      </div>
     </div>
      <div class="[transform:translateZ(0)]">
-         <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide px-10 md:ml-4">About</h3>
+         <h3 class="text-[var(--color-primary)] text-[clamp(1.5rem,2vw,2.0rem)] font-medium mb-6 mt-10 md:mt-0 tracking-wide md:px-25 md:ml-16 md:pl-6">About</h3>
                
              <div class="grid grid-cols-2 gap-1 items-center">
                  <a href="https://www.aacsb.edu/about-us" target="_blank">
@@ -919,8 +832,8 @@ h2 {
 </div>
 </div>
 
-<div class="grid-container-introup">
-  <div class="line-grid-container">
+<div class="relative z-10 grid grid-cols-1 grid-rows-auto text-center p-[4rem_2rem_2rem_2rem] max-w-[100vw] box-border bg-black text-white font-bold text-[clamp(1.2rem,3vw,5rem)]">
+  <div class="line-grid-container absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px] pt-10">
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
@@ -1028,8 +941,8 @@ window.addEventListener('resize', () => centerOn(cur));
 </script>
 
 
-<div class="grid-container-introup">
-  <div class="line-grid-container">
+<div id="Service" class="grid-container-introup">
+  <div class="line-grid-container absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px]">
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
@@ -1094,9 +1007,9 @@ window.addEventListener('resize', () => centerOn(cur));
                 </h2>
      </div>
 
-<section class="scroll-box relative overflow-visible h-[300vh]">
+<section class="scroll-box relative h-[300vh]">
   <div class="sticky top-0 min-h-screen flex items-center justify-center relative">
-    <div class="absolute inset-0 z-20 overflow-visible">
+    <div class="absolute inset-0 z-20">
       <div class="absolute top-[10%] left-[38%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item 
       will-change-transform transition-opacity duration-75 ease-out"data-cx="80" data-cy="40">标签内容1</div>
 
@@ -1106,7 +1019,7 @@ window.addEventListener('resize', () => centerOn(cur));
       <div class="absolute top-[26%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
       will-change-transform transition-opacity duration-75 ease-out"data-cx="90" data-cy="-30">标签内容3</div>
 
-      <div class="absolute top-[36%] left-[78%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      <div class="absolute md:top-[36%] md:left-[78%] top-[27%] left-[58%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
       will-change-transform transition-opacity duration-75 ease-out"data-cx="85" data-cy="-25">标签内容4</div>
 
       <div class="absolute top-[68%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
@@ -1115,10 +1028,10 @@ window.addEventListener('resize', () => centerOn(cur));
       <div class="absolute top-[78%] left-[10%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
       will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容6</div>
 
-      <div class="absolute top-[85%] left-[55%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      <div class="absolute top-[75%] left-[55%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
       will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容7</div>
 
-      <div class="absolute top-[80%] left-[75%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      <div class="absolute md:top-[80%] md:left-[75%] top-[68%] left-[65%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
       will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容8</div>
     </div>
 
@@ -1130,66 +1043,64 @@ window.addEventListener('resize', () => centerOn(cur));
   </div>
 </section>
 
-<div class="flex-container-introdown">
-  <div class="line-grid-container">
-  <div class="grid-flow-line"></div>
-  <div class="grid-flow-line"></div>
-  <div class="grid-flow-line"></div>
-  </div>
-  <div class="flex w-full justify-center">
-     <div class="text-center text-black text-[clamp(3.0rem,2vw,4rem)] font-medium mb-6 tracking-wide mt-10" >
-    <p>Projects</p>
+<div id="Projects" class="flex-container-introdown">
+     <div class="flex w-full justify-center" style="box-sizing:border-box; min-width:0;">
+         <div class="text-center text-black text-[clamp(3.0rem,2vw,4rem)] font-medium mb-6 mt-10" >
+         <p>Projects</p>
+         </div>
      </div>
-  </div>
 </div>
+
+
 <div class="bg-[linear-gradient(to_bottom,#ffffff_85%,#ffffff_100%)]">
-<div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
+     <div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
-     <div class="flex flex-col bg-[black] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
-  <div class="text-left text-[var(--color-primary)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
-    <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
-  </div>
+          <div class="flex flex-col bg-[black] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
+              <div class="text-left text-[var(--color-primary)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+              <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
+              </div>
 
-  <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
-    <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
-  </div> 
+              <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
+              <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
+              </div> 
+          </div>
+
+          <div class="flex flex-col bg-[black] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
+              <div class="text-left text-[white] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
+              <p>Credential</p>
+              </div>
+
+          <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide ">
+              <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
+          </div>
+          </div>
      </div>
 
-  <div class="flex flex-col bg-[black] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
-    <div class="text-left text-[white] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
-    <p>Credential</p>
-</div>
 
-      <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide ">
-    <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
-</div>
-  </div>
-</div>
+     <div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
+          <div class="flex flex-col bg-[black] rounded-l-md border-r border-r-white p-4">
+              <div class="text-left text-[var(--color-primary)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+              <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
+              </div>
 
-    <div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
+              <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
+              <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
+              </div> 
+          </div>
 
-     <div class="flex flex-col bg-[black] rounded-l-md border-r border-r-white p-4">
-  <div class="text-left text-[var(--color-primary)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
-    <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
-  </div>
+          <div class="flex flex-col bg-black rounded-r-md p-4 ">
+              <div class="text-left text-[white] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
+              <p>Credential</p>
+              </div>
 
-  <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
-    <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
-  </div> 
-     </div>
-
-  <div class="flex flex-col bg-black rounded-r-md p-4 ">
-    <div class="text-left text-[white] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
-    <p>Credential</p>
-</div>
-
-      <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide ">
-    <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
-</div>
-  </div>
+          <div class="text-left text-[white] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide ">
+              <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
+          </div>
+          </div>
      </div>
 </div>
+
 <script>
         const menuToggle = document.getElementById('menuToggle');
         const navContainer = document.getElementById('mainNav');
@@ -1215,68 +1126,77 @@ window.addEventListener('resize', () => centerOn(cur));
         }
     }
 });
+
 </script>
+
+
 <div class="flex flex-col  bg-white p-4 text-center text-[black] text-[clamp(3.0rem,2vw,6rem)] font-medium tracking-wide">
-    <p>What I bring</p>
-</div>
-  </div>
-<div class="bg-white">
-<div class="grid-containerkeyvalue">
-      <div class="flexbox-keyvalueitem1 relative overflow-hidden z-10">
-        <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
-          <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Privacy First</div>
-          <p class="relative z-10 text-[var(--color-text-light)] mt-2">Keep sensitive data in-house, never exposed to third-party platforms..</p>
-    </div>
-      <div class="flexbox-keyvalueitem2 relative overflow-hidden z-10">
-        <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
-        <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Cost Optimized</div>
-          <p class="relative z-10 text-[var(--color-text-light)] mt-2">Scale smarter with efficient on-prem & cloud data infrastructure.</p>
-    </div>
-      <div class="flexbox-keyvalueitem3 relative overflow-hidden z-10">
-        <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
-        <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Tailored Business Analytics</div>
-          <p class="relative z-10 text-[var(--color-text-light)] mt-2">Custom data models built for your industry.</p>
-      </div>
-</div>
-</div>
-  <div class="flex-container-introdown2"></div>
+     <p>What I bring</p>
 </div>
 
-<div class="video-container2">
-    <div class="video-wrapper2">
-       <video autoplay muted loop >
-        <source src="imgs/Video3.mp4" type="video/mp4">
-        Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
-        </video>
-        </div>
+
+<div class="bg-white">
+     <div class="grid-containerkeyvalue">
+             <div class="flexbox-keyvalueitem1 relative overflow-hidden z-10">
+             <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
+                 <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Privacy First
+                 </div>
+                 <p class="relative z-10 text-[var(--color-text-light)] mt-2">Keep sensitive data in-house, never exposed to third-party platforms..</p>
+             </div>
+                 
+             <div class="flexbox-keyvalueitem2 relative overflow-hidden z-10">
+             <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
+                 <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Cost Optimized
+                 </div>
+                 <p class="relative z-10 text-[var(--color-text-light)] mt-2">Scale smarter with efficient on-prem & cloud data infrastructure.</p>
+              </div>
+                 
+             <div class="flexbox-keyvalueitem3 relative overflow-hidden z-10">
+             <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none bg-white">
+                 <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-white">Tailored Business Analytics
+                 </div>
+                 <p class="relative z-10 text-[var(--color-text-light)] mt-2">Custom data models built for your industry.</p>
+             </div>
+     </div>
 </div>
-    <div class="grid-container3">
-     <div class="grid-container3-text"><a href="requestaCV.html">Request a CV</a></div>
+
+ <div class="flex-container-introdown2">
+ </div>
+
+<div class="video-container2">
+     <div class="video-wrapper2">
+          <video autoplay muted loop >
+          <source src="imgs/Video3.mp4" type="video/mp4">
+           Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
+          </video>
+     </div>
+</div>
+
+<div class="grid-container3">
+     <div class="grid-container3-text"><a href="requestaCV.html">Request a CV</a>
+     </div>
 </div>
 
 <footer>
 <h2 class="text-white text-4xl text-center">More about us</h2>
-        <div class="grid-container2">
-        <div class="flexbox-Main footer-row--large">Behind Numbers</div>
-        <div class="flexbox-Privacy policy footer-row--large">Privacy policy</div>
-        <div class="flexbox-Accessibility Statement footer-row--large">Accessibility Statement</div>
-        <div class="flexbox-Cookies footer-row--large">Cookies</div>
-        <div class="flexbox-Connect footer-row--large">Connect</div>
+     <div class="grid-container2">
+         <div class="flexbox-Main footer-row--large">Behind Numbers</div>
+         <div class="flexbox-Privacy policy footer-row--large">Privacy policy</div>
+         <div class="flexbox-Cookies footer-row--large">Cookies</div>
+         <div class="flexbox-Connect footer-row--large">Connect</div>
         
-        <div class="flexbox-Main2 footer-row--small"></div>
-        <div class="flexbox-Privacy policy2 footer-row--small"><a href="Privacy policy.html">Privacy policy</a></div>
-        <div class="flexbox-Accessibility Statement2 footer-row--small"><a href="Accessibility Statement.html">Accessibility Statement</a></div>
-        <div class="flexbox-Cookies2 footer-row--small"><a href="Cookies.html">Cookies</a></div>
-        <div class="flexbox-Connect2 footer-row--small"><a href="https://www.linkedin.com/in/xueke-hou">Linkedin</a></div>
+         <div class="flexbox-Main2 footer-row--small"></div>
+         <div class="flexbox-Privacy policy2 footer-row--small"><a href="Privacy policy.html">Privacy policy</a></div>
+         <div class="flexbox-Cookies2 footer-row--small"><a href="Cookies.html">Cookies</a></div>
+         <div class="flexbox-Connect2 footer-row--small"><a href="https://www.linkedin.com/in/xueke-hou">Linkedin</a></div>
 
-        <div class="flexbox-Main3 footer-row--small"></div>
-        <div class="flexbox-Privacy policy3 footer-row--small"></div>
-        <div class="flexbox-Accessibility Statement3 footer-row--small"></div>
-        <div class="flexbox-Cookies3 footer-row--small"></div>
-        <div class="flexbox-Connect3 footer-row--small"><a href="https://github.com/pollyglotcoder">Github</a></div>
-      </div>   
+         <div class="flexbox-Main3 footer-row--small"></div>
+         <div class="flexbox-Privacy policy3 footer-row--small"></div>
+         <div class="flexbox-Cookies3 footer-row--small"></div>
+         <div class="flexbox-Connect3 footer-row--small"><a href="https://github.com/pollyglotcoder">Github</a></div>
+      </div>  
+
     <p>&copy;2026 Behind Numbers. All rights reserved</p>
-    </div>
 
 <script>
 
@@ -1289,18 +1209,15 @@ const COLLAPSE_OPACITY = 0.12;
 
 function lerp(a, b, t) { return a + (b - a) * t; }
 function clamp01(v) { return Math.min(1, Math.max(0, v)); } 
-
 function smoothstep(min, max, value) {
   const x = Math.max(0, Math.min(1, (value - min) / (max - min)));
   return x * x * (3 - 2 * x); 
 }
 
-let ticking = false; 
-
-window.addEventListener('scroll', ()=>{
+function updateTags(){
   const boxTop = scrollBox.getBoundingClientRect().top;
   const totalDistance = scrollBox.clientHeight - window.innerHeight;
-  const progress = Math.max(0, Math.min(1, (-boxTop) / totalDistance));
+  const progress =  clamp01((-boxTop) / totalDistance);
 
 
  tags.forEach((tag, idx) => {
@@ -1311,7 +1228,6 @@ window.addEventListener('scroll', ()=>{
     const start = 0.05 + idx * (0.7 / n);
     const end = start + 0.25;
     const rawT = clamp01((progress - start) / (end - start));
-    
     const t = smoothstep(0, 1, rawT); 
 
     const scale = lerp(COLLAPSE_SCALE, 1, t);
@@ -1322,7 +1238,22 @@ window.addEventListener('scroll', ()=>{
     tag.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${scale})`;
     tag.style.opacity = opacity;
   })
-})
+}
+
+let ticking = false;
+function onScroll() {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      updateTags();
+      ticking = false;
+    });
+    ticking = true;
+  }
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', updateTags);
+updateTags();
 
 </script></body>
 </html>
