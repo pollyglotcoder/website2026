@@ -85,7 +85,7 @@ body.lock-scroll {
  
 .header-bar h1 {
     margin: 0;
-    color: var(--color-text-muted);
+    color: var(--color-text-light);
     font-size: 2rem;
 }
 
@@ -112,13 +112,13 @@ nav.main-nav a {
 
 nav.main-nav a:hover {
     background: #1a3b70;
-    color: var(--color-text-light);
+    color: var(---color-text-light);
 }
 
 
 .contact-link {
     background: #49A6FF;
-    color:var(--color-text-light);
+    color:var(---color-text-light);
     padding: 8px 16px;
     border-radius: 6px;
 }
@@ -138,7 +138,7 @@ nav.main-nav a:hover {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--color-text-muted);
+    background: var(--color-text-light);
     border-radius: 3px;
     transition: all 0.3s; 
 }
@@ -154,7 +154,7 @@ nav.main-nav a:hover {
     text-align: left;
     line-height: 1.8;
     font-size: clamp(1rem, 3vw, 1.2rem);
-    color: var(--color-text-muted);
+    color: var(--color-text-light);
     padding: 70px 35px 50px 85px;
 }
 
@@ -167,6 +167,7 @@ nav.main-nav a:hover {
     margin-top: 20px;
     font-size: clamp(1.0rem, 5vw, 1.5rem);
     max-width: 100vw;
+    color: var(--color-text-light);
     box-sizing: border-box; 
     height: auto;
 }
@@ -306,7 +307,7 @@ nav.main-nav a:hover {
     grid-template-rows: auto;
     padding: 20px;
     font-size: clamp(1rem, 5vw, 1.5rem);
-    color: var(--color-text-light);
+    color: var(--color-text-muted);
     width: 100%;
     max-width: 100vw;
     box-sizing: border-box; 
@@ -316,7 +317,7 @@ nav.main-nav a:hover {
 .grid-container3-text{
     font-weight: bold;
     font-size: clamp(1.2rem, 3vw, 1rem);
-    color: var(--color-text-light);
+    color: var(--color-text-muted);
     background:  var(--color-primary);
     padding: 8px 15px;
     border-radius: 6px;
@@ -324,7 +325,7 @@ nav.main-nav a:hover {
 }
 
 .grid-container3-text a {
-    color: var(--color-text-light); 
+    color: var(--color-text-muted); 
     text-decoration: none; 
     position: relative;
     z-index: 100;
@@ -563,9 +564,9 @@ h2 {
     grid-template-rows: auto;
     gap: 15px;
     padding: 20px;
-    background: var(--color-bg-dark);
+    background:var(--color-bg-dark);
     font-size: clamp(0.8rem, 3vw, 1.2rem);
-    color: #1A1D24;
+    color: var(--color-bg-dark);
     max-width: 100vw;
     box-sizing: border-box; 
     overflow-x: auto;
@@ -622,7 +623,7 @@ h2 {
              <h1>Behind Numbers</h1>
      </div>
 
-     <nav class="main-nav">
+     <nav id="mainNav" class="main-nav">
             <a href="#Service">Service</a>
             <a href="#About">About</a>
             <a href="#Projects">Projects</a>
@@ -664,19 +665,10 @@ h2 {
 </div>
 
 
-<div id="About" class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[10px] mt-[-80px] md:mt-0 pt-[30px] md:pt-[70px] px-4 md:px-[80px] pb-[10px] 
-             text-[clamp(1rem,5vw,1.5rem)] text-[var(--color-primary)] max-w-full h-full relative">
+<div id="About" class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[10px] mt-[-80px] md:mt-[10px] md:mb-[30px] pt-[10px] md:pt-[10px] px-4 md:px-[80px] pb-[10px] 
+                        text-[clamp(1rem,5vw,1.5rem)] text-[var(--color-primary)] max-w-full h-full relative">
 
-             <div class="absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px]">
-                 
-                 <div class="grid-flow-line"></div>
-                 <div class="grid-flow-line"></div>
-                 <div class="grid-flow-line-vertical-1"></div>
-                 <div class="grid-flow-line-vertical-2"></div>
-
-             </div> 
-
-    <div class="[transform:translateZ(0)]">
+     <div class="[transform:translateZ(0)]">
          
          <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mt-8 md:mt-0 mb-6 
                     tracking-wide">Foundational Knowledge Areas</h3>
@@ -778,18 +770,22 @@ h2 {
             
              <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based business 
                         analytics graduate,&nbsp;enthusiastic about data science and machine learning.
-                        I am a part-time front-end developer and a barista.&nbsp;Let's explore the world of 
+                        I am a part-time front-end developer and a barista. This is the first website I designed. &nbsp;Let's explore the world of 
                         data together!<br>
-                        This course is delivered by the AACSB-accredited Business School, an accreditation 
+                        <br>
+                        My course is delivered by the AACSB-accredited Bournemouth University Business School, an accreditation 
                         that places within the top institutions globally for business degrees. 
-                        Less than 6% of business schools worldwide have attained this hallmark of excellence 
-                        which recognises a focus on excellence in all areas, including teaching and students learning.
+                        Less than 6% of business schools worldwide have attained this hallmark of excellence.<br>
+                        <br>
+                        Starting with 0 computer science knowledge, passion and enthusiasm led me to finish this master with Marit, along with 
+                        2 AWS cloud and AI certificates and front-end development skills by self learning within 6 months.I believe curisity,
+                        passion and consistency makes things happen!                         
              </div>
      </div>
     </div>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-0">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-0 mt-5">
      <div class="flex flex-col">
   <div class="text-Left text-[var(--color-primary)] text-[clamp(4.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
     <p>Credential Verified</p>
@@ -832,19 +828,19 @@ h2 {
 </div>
 </div>
 
-<div class="relative z-10 grid grid-cols-1 grid-rows-auto text-center p-[4rem_2rem_2rem_2rem] max-w-[100vw] box-border bg-black text-white font-bold text-[clamp(1.2rem,3vw,5rem)]">
+<div class="relative z-10 grid grid-cols-1 py-10 grid-rows-auto text-center p-[4rem_2rem_2rem_2rem] max-w-[100vw] box-border bg-black text-white font-bold text-[clamp(1.2rem,3vw,5rem)]">
   <div class="line-grid-container absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px] pt-10">
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
   </div> 
 
-<div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" ></div>
+<div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-20 ml-4" ></div>
       <p>Credential Verified</p> 
 </div>
 
 <div id="slideWrap" class="relative w-full">
-     <div class="hidden md:flex justify-center items-center gap-4 py-10 perspective-[800px]">
+     <div class="hidden md:flex justify-center items-center gap-4 py-10 mb-10 perspective-[800px]">
           <div class="group transition-all duration-300">
               <img src="./imgs/C1.png" class="w-56 opacity-60 rotate-y-12 transition-all duration-300 group-hover:scale-125 group-hover:opacity-100 group-hover:rotate-y-0 group-hover:shadow-xl">
           </div>    
@@ -963,33 +959,33 @@ window.addEventListener('resize', () => centerOn(cur));
         <svg class="absolute top-1/2 right-[50px] -translate-y-1/2  w-[340px] h-[680px] z-1" viewBox="0 0 340 680">
              <circle 
                 cx="0" cy="340" r="330" 
-                stroke="var(--color-text-muted)" stroke-width="4" fill="none" 
+                stroke="var(--color-text-light)" stroke-width="4" fill="none" 
                 clip-path="url(#rightSemicircleClip)"
              />
         </svg>
         <svg class="absolute top-1/2 right-[70px] -translate-y-1/2 w-[320px] h-[660px] z-1" viewBox="0 0 300 600">
             <circle 
                 cx="0" cy="300" r="290" 
-                stroke=" var(--color-text-muted)" stroke-width="4" fill="none"  
+                stroke=" var(--color-text-light)" stroke-width="4" fill="none"  
                 clip-path="url(#rightSemicircleClip)"
             />
         </svg>
         <svg class="absolute top-1/2 right-[90px] -translate-y-1/2 w-[300px] h-[640px] z-1" viewBox="0 0 260 520">
             <circle 
                 cx="0" cy="260" r="250"  
-                stroke=" var(--color-text-muted)" stroke-width="4" fill="none"  
+                stroke=" var(--color-text-light)" stroke-width="4" fill="none"  
                 clip-path="url(#rightSemicircleClip)"
             />
         </svg>
          <svg class="absolute top-1/2 right-[110px] -translate-y-1/2 w-[280px] h-[620px] z-1" viewBox="0 0 220 480">
             <circle 
                 cx="0" cy="240" r="210"  
-                stroke=" var(--color-text-muted)" stroke-width="4" fill="none"  
+                stroke=" var(--color-text-light)" stroke-width="4" fill="none"  
                 clip-path="url(#rightSemicircleClip)"
             />
          </svg>
                  <div class="absolute inset-0 flex items-center justify-center p-4">
-                        <h2 class="text-7xl text-left font-semibold text-[var(--color-text-light)] z-2">
+                        <h2 class="text-7xl text-left font-semibold text-[var(---color-text-light)] z-2">
                                Why <br>
                                Behind Numbers? <br>
                                </h2>
@@ -1000,7 +996,7 @@ window.addEventListener('resize', () => centerOn(cur));
                     tracking-[0.06em] 
                     leading-[1.0em] 
                     text-left 
-                    text-[var(--color-text-light)]
+                    text-[var(---color-text-light)]
                     mt-6 md:mt-0">
                    Behind Numbers’ mission is to empower businesses with secure, cost-effective, and high-performance business analytics by building and deploying scalable data pipelines, predictive dashboards and statistical modeling tools on-premise and cloud. We combine open-source data frameworks with deep analytical expertise to deliver private, scalable, and tailored BA solutions that drive measurable business value while ensuring full data governance, operational efficiency, and stakeholder trust.<br>
                    <br>
@@ -1010,29 +1006,29 @@ window.addEventListener('resize', () => centerOn(cur));
 <section class="scroll-box relative h-[300vh]">
   <div class="sticky top-0 min-h-screen flex items-center justify-center relative">
     <div class="absolute inset-0 z-20">
-      <div class="absolute top-[10%] left-[38%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item 
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="80" data-cy="40">标签内容1</div>
+      <div class="absolute top-[10%] left-[38%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item 
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="80" data-cy="40">LOCATION MANCHESTER, UK M1</div>
 
-      <div class="absolute top-[19%] left-[53%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="70" data-cy="35">标签内容2</div>
+      <div class="absolute top-[19%] left-[53%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="70" data-cy="35">CATEGORY MCC-5814 RETAIL-SHOP-LOG</div>
 
-      <div class="absolute top-[26%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="90" data-cy="-30">标签内容3</div>
+      <div class="absolute top-[26%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="90" data-cy="-30">STORE-BA07294121 | Retail | -£42.30</div>
 
-      <div class="absolute md:top-[36%] md:left-[78%] top-[27%] left-[58%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="85" data-cy="-25">标签内容4</div>
+      <div class="absolute md:top-[36%] md:left-[78%] top-[27%] left-[58%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="85" data-cy="-25">USER-ID-7249 Browsing-History | Session 28min</div>
 
-      <div class="absolute top-[68%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容5</div>
+      <div class="absolute top-[68%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">LOCATION MANCHESTER, UK M1</div>
 
-      <div class="absolute top-[78%] left-[10%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容6</div>
+      <div class="absolute top-[78%] left-[10%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">LOCATION MANCHESTER, UK M1</div>
 
-      <div class="absolute top-[75%] left-[55%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容7</div>
+      <div class="absolute top-[75%] left-[55%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">LOCATION MANCHESTER, UK M1</div>
 
-      <div class="absolute md:top-[80%] md:left-[75%] top-[68%] left-[65%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-8 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">标签内容8</div>
+      <div class="absolute md:top-[80%] md:left-[75%] top-[68%] left-[65%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">LOCATION MANCHESTER, UK M1</div>
     </div>
 
     <div class="relative z-10 text-center text-4xl font-bold">
@@ -1178,8 +1174,7 @@ window.addEventListener('resize', () => centerOn(cur));
 </div>
 
 <footer>
-<h2 class="text-white text-4xl text-center">More about us</h2>
-     <div class="grid-container2">
+     <div class="grid-container2 text-center">
          <div class="flexbox-Main footer-row--large">Behind Numbers</div>
          <div class="flexbox-Privacy policy footer-row--large">Privacy policy</div>
          <div class="flexbox-Cookies footer-row--large">Cookies</div>
