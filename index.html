@@ -13,7 +13,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: black;
+    background: var(--color-bg-dark);
 }
 
 html {
@@ -76,7 +76,7 @@ body.lock-scroll {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: black;
+    background: var(--color-bg-dark);
     padding: 1rem 2rem 0 2rem;
     position: absolute; 
     z-index: 100;
@@ -184,10 +184,10 @@ nav.main-nav a:hover {
     grid-template-rows: auto;
     padding: 4rem 2rem 2rem 2rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color: white;
+    color: var(--color-text-light);
     max-width: 100vw;
     box-sizing: border-box; 
-    background-color: #000;
+    background-color: var(--color-bg-dark);
     font-weight: bold;
     position:relative;
     z-index: 10; 
@@ -253,7 +253,7 @@ nav.main-nav a:hover {
     display: flex;
     padding: 6rem 1rem 2rem 1rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color:black;
+    color:var(--color-bg-dark);
     width:100%;
     box-sizing: border-box; 
     background: linear-gradient(to bottom, var(--color-bg-dark) 0%, white 100% );
@@ -267,7 +267,7 @@ nav.main-nav a:hover {
     display: flex;
     padding: 12rem 1rem 4rem 1rem;
     font-size: clamp(1.2rem, 3vw, 5rem);
-    color:black;
+    color:var(--color-bg-dark);
     width:100%;
     box-sizing: border-box; 
     background: linear-gradient(to bottom,white 0%,black 100% );
@@ -286,7 +286,7 @@ nav.main-nav a:hover {
     padding: 20px;
     font-size: clamp(1rem, 5vw, 1.5rem);
     color: var(--color-text-light);
-    max-width: 200vw;
+    max-width: 100%;
     box-sizing: border-box; 
     min-height: 400px;
     position: relative;
@@ -378,7 +378,6 @@ h2 {
 .video-container2 {
     width: 100%;
     margin: 0 auto 0 auto;
-    padding: 0 1rem;
     position: relative;
     height: auto;
 }      
@@ -609,6 +608,9 @@ h2 {
     background:black;    
 }
 
+.progress-ring-fill {
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.25, 1, 0.5, 1), stroke 0.4s ease;
+}
 </style>
 </head>
 
@@ -669,7 +671,7 @@ h2 {
 
      <div class="[transform:translateZ(0)]">
          
-         <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mt-8 md:mt-0 mb-6 
+         <h3 class="text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mt-8 md:mt-10 mb-6 
                     tracking-wide">Foundational Knowledge Areas</h3>
 
                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-none">
@@ -739,7 +741,7 @@ h2 {
                      <a href="https://www.credly.com/badges/4b3d197a-c34b-43d9-a63f-bf41c5a387f7/linked_in_profile" target="_blank"
                          class="group-hover:text-white transition-colors duration-300">
                          <img src="imgs/Cloud.png" alt="AWS Cloud Practitioner" 
-                         class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS Cloud Practitioner
+                         class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS Cloud <br>Practitioner
                      </a>
              </div>
      
@@ -755,7 +757,7 @@ h2 {
      </div>
     </div>
      <div class="[transform:translateZ(0)]">
-         <h3 class="text-[var(--color-primary)] text-[clamp(1.5rem,2vw,2.0rem)] font-medium mb-6 mt-10 md:mt-0 tracking-wide md:px-25 md:ml-16 md:pl-6">About</h3>
+         <h3 class="text-[var(--color-primary)] text-[clamp(1.5rem,2vw,2.0rem)] font-medium mb-6 mt-10 md:mt-10 tracking-wide md:px-25 md:ml-16 md:pl-6">About</h3>
                
              <div class="grid grid-cols-2 gap-1 items-center">
                  <a href="https://www.aacsb.edu/about-us" target="_blank">
@@ -775,8 +777,8 @@ h2 {
                         AACSB-accredited institution placing it among the top 6% of business schools globally.<br>
                         <br>
                         Driven by passion, I transitioned into tech with zero CS background,&nbsp;completing my Master's degree with Merit and 
-                        earning two AWS certifications independently.&nbsp;Combined with a strong interest in front-end development, I thrive at 
-                        the intersection of coding, data, and business strategy.<br>
+                        earning two AWS certifications independently.&nbsp;Combined with a strong interest in front-end development, I bring 
+                        expertise bridging coding, data analysis and business strategy.<br>
                         <br>
                         I firmly believe that passion and consistency make things happen!                         
              </div>
@@ -784,18 +786,18 @@ h2 {
     </div>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-0 mt-5">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-0 mt-2">
      <div class="flex flex-col">
-  <div class="text-Left text-[var(--color-primary)] text-[clamp(4.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
+  <div class="text-Left text-[var(--color-primary)] text-[clamp(3.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
     <p>Credential Verified</p>
   </div>
-  <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
+  <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-2 ml-4" >
     <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. They can determine the correct types of AI/ML technologies to apply to specific use cases and know how to use AI, ML, and generative AI technologies responsibly. They are familiar with the AWS Global Infrastructure, core AWS services and use cases, AWS service pricing models, and the AWS shared responsibility model for security and compliance in the AWS Cloud.</p>
   </div> 
 
     <div class="grid grid-cols-2 gap-4 items-start">
       <div class="flex flex-wrap gap-3 content-start ml-4">   
-      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">AI and ML on AWS‑Foundational</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">AI and ML on AWS-Foundational</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Amazon Web Services</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Artificial Intelligence(AI)</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Foundation Models</div>
@@ -808,15 +810,15 @@ h2 {
  </div>
 
     <div class="flex flex-col">
-    <div class="text-Left text-[var(--color-primary)] text-[clamp(4.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10" >
+    <div class="text-Left text-[var(--color-primary)] text-[clamp(3.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10" >
     <p>Credential</p>
 </div>
-      <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10">
+      <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-2">
     <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
 </div>
     <div class="grid grid-cols-2 gap-4 items-start">
 
-    <img src="./imgs/AWS2.png" class="w-[400px] h-auto p-4 mx-auto">
+    <img src="./imgs/AWS2.png" class="w-[400px] max-w-[400px] h-auto p-4 mx-auto">
     <div class="flex flex-wrap gap-3 items-start content-start">
       <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">AWS Cloud</div>
       <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Computing</div>
@@ -827,7 +829,7 @@ h2 {
 </div>
 </div>
 
-<div class="relative z-10 grid grid-cols-1 py-10 grid-rows-auto text-center p-[4rem_2rem_2rem_2rem] max-w-[100vw] box-border bg-black text-white font-bold text-[clamp(1.2rem,3vw,5rem)]">
+<div class="relative z-10 grid grid-cols-1 py-10 grid-rows-auto text-center p-[4rem_2rem_2rem_2rem] max-w-[100vw] box-border bg-[var(--color-bg-dark)] text-white font-bold text-[clamp(1.2rem,3vw,5rem)]">
   <div class="line-grid-container absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px] pt-10">
   <div class="grid-flow-line"></div>
   <div class="grid-flow-line"></div>
@@ -1010,7 +1012,7 @@ window.addEventListener('resize', () => centerOn(cur));
 </div>
 
 <div class="text-center grid grid-cols-1 md:grid-cols-2 gap-[10px] p-[20px] text-[clamp(1rem,5vw,1.5rem)] text-[#E6E7EB]
-            w-full max-w-[100vw] box-border min-h-[400px] bg-[var(--color-bg-dark)]">
+            w-full max-w-[100vw] box-border min-h-[400px] !bg-[var(--color-bg-dark)]">
          
              <div class="col-span-1 flex items-center justify-center p-[1rem] relative min-h-[320px]">
                  <div class="grid grid-cols-1 absolute inset-[10%] bg-[#1A1D24] rounded-[8px] 
@@ -1057,125 +1059,59 @@ window.addEventListener('resize', () => centerOn(cur));
              </div>
     
 </div>   
-     <div class="flex flex-col text-center text-[var(--color-primary)] text-[clamp(1.0rem,2vw,2.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4">
-        <p>We designed well structured data pipelines</p>
-     </div>
-         <div class="flex flex-col">
-             <div class="grid grid-cols-10 bg-[--color-accent] md:grid-cols-10 px-4 sm:px-0 mt-5">
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-
-                  </div> 
-
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] border !border-[var(--color-primary)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-                         <p>Earners of this badge understand AI</p>
-                 <div class="relative z-20 bg-[var(--color-text-muted)] border !border-[var(--color-primary)] px-2 py-3 text-xs font-mono text-[white] 
-                             rounded-l tag-item">
-                             <p>Earners of this badge understand AI</p>
-                 </div>
-                 </div> 
-
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] border !border-[var(--color-primary)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-                         <p>Earners of this badge understand AI</p>
-                <div class="relative z-20 bg-[var(--color-text-muted)] border !border-[var(--color-primary)] px-2 py-3 text-xs font-mono text-[white] 
-                             rounded-l tag-item">
-                             <p>Earners of this badge understand AI</p>
-                 </div>
-                 </div> 
-                 
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] border !border-[var(--color-primary)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-                         <p>Earners of this badge understand AI</p>
-                 <div class="relative z-20 bg-[var(--color-text-muted)] border !border-[var(--color-primary)] px-2 py-3 text-xs font-mono text-[white] 
-                             rounded-l tag-item">
-                             <p>Earners of this badge understand AI</p>
-                 </div>
-                 </div> 
-
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] border !border-[var(--color-primary)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-                         <p>Earners of this badge understand AI</p>
-                 <div class="relative z-20 bg-[var(--color-text-muted)] border !border-[var(--color-primary)] px-2 py-3 text-xs font-mono text-[white] 
-                             rounded-l tag-item">
-                             <p>Earners of this badge understand AI</p>
-                 </div>
-                 </div> 
-
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] border !border-[var(--color-primary)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-                         <p>Earners of this badge understand AI</p>
-                 <div class="relative z-20 bg-[var(--color-text-muted)] border !border-[var(--color-primary)] px-2 py-3 text-xs font-mono text-[white] 
-                             rounded-l tag-item">
-                             <p>Earners of this badge understand AI</p>
-                 </div>
-                 </div> 
-
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] border !border-[var(--color-primary)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-                         <p>Earners of this badge understand AI</p>
-                 <div class="relative z-20 bg-[var(--color-text-muted)] border !border-[var(--color-primary)] px-2 py-3 text-xs font-mono text-[white] 
-                             rounded-l tag-item">
-                             <p>Earners of this badge understand AI</p>
-                 </div>
-                 </div> 
-
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] border !border-[var(--color-primary)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-                         <p>Earners of this badge understand AI</p>
-                 <div class="relative z-20 bg-[var(--color-text-muted)] border !border-[var(--color-primary)] px-2 py-3 text-xs font-mono text-[white] 
-                             rounded-l tag-item">
-                             <p>Earners of this badge understand AI</p>
-                 </div>
-                 </div> 
-
-                 <div class="col-span-1 border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 ml-4 flex items-center justify-center" >
-                        
-                 <div class="w-24 h-20 shrink-0 relative items-center justify-center bg-[var(--color-text-muted)] border !border-[var(--color-primary)] px-2 py-3 text-s font-medium text-[white] pt-10
-                             rounded-l tag-item">
-                             <p>Earners of this badge understand AI</p>
-                 </div>
-                 </div>
-
-                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-                         <p></p>
-            
-                 </div>
-                 </div>
-</div>
-</div>
-
-<div class="relative z-10 grid grid-cols-1 py-10 grid-rows-auto text-center mt-20 p-[4rem_2rem_2rem_2rem] max-w-[100vw] box-border bg-black text-white font-bold text-[clamp(1.2rem,3vw,5rem)]">
-  <div class="line-grid-container absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px] pt-10">
-     <div class="line-grid-container absolute inset-0 z-20 pointer-events-none grid grid-rows-[20px_20px_20px_20px]">
-         <div class="grid-flow-line"></div>
-         <div class="grid-flow-line"></div>
-     </div>
-  </div>
-</div>
-
-
+     
 
 <section class="scroll-box relative h-[300vh]">
   <div class="sticky top-0 min-h-screen flex items-center justify-center relative">
     <div class="absolute inset-0 z-20">
-      <div class="absolute top-[10%] left-[38%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item 
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="80" data-cy="40">LOCATION MANCHESTER, UK M1</div>
+      <div class="absolute max-w-[45vw] top-[10%] left-[38%] bg-[var(--color-primary)] 
+                  border !border-[var(--color-accent)] 
+                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item 
+                  will-change-transform transition-opacity duration-75 ease-out"data-cx="80" data-cy="40"
+                  >LOCATION MANCHESTER, UK M1</div>
 
-      <div class="absolute top-[19%] left-[53%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="70" data-cy="35">CATEGORY MCC-5814 RETAIL-SHOP-LOG</div>
+      <div class="absolute max-w-[45vw] top-[19%] left-[53%] bg-[var(--color-primary)] 
+                  border !border-[var(--color-accent)] 
+                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out"data-cx="70" data-cy="35"
+                  >CATEGORY MCC-5814 RETAIL-SHOP-LOG</div>
 
-      <div class="absolute top-[26%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="90" data-cy="-30">STORE-BA07294121 | Retail | -£42.30</div>
+      <div class="absolute max-w-[45vw] top-[26%] left-[16%] bg-[var(--color-primary)] 
+                  border !border-[var(--color-accent)] 
+                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out"data-cx="90" data-cy="-30"
+                  >STORE-BA07294121 | Retail | -£42.30</div>
 
-      <div class="absolute md:top-[36%] md:left-[78%] top-[27%] left-[58%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="85" data-cy="-25">USER-ID-7249 Browsing-History | Session 28min</div>
+      <div class="absolute max-w-[45vw] md:top-[36%] md:left-[78%] top-[27%] left-[58%]
+                  bg-[var(--color-primary)] border 
+                  !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out"data-cx="85" data-cy="-25"
+                  >USER-ID-7249 Browsing-History | Session 28min</div>
 
-      <div class="absolute top-[68%] left-[16%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">LOCATION MANCHESTER, UK M1</div>
+      <div class="absolute max-w-[45vw] top-[68%] left-[16%] bg-[var(--color-primary)] 
+                  border !border-[var(--color-accent)] 
+                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20"
+                  >LOCATION MANCHESTER, UK M1</div>
 
-      <div class="absolute top-[78%] left-[10%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">LOCATION MANCHESTER, UK M1</div>
+      <div class="absolute max-w-[45vw] top-[78%] left-[10%] bg-[var(--color-primary)] 
+                  border !border-[var(--color-accent)] 
+                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20"
+                  >LOCATION MANCHESTER, UK M1</div>
 
-      <div class="absolute top-[75%] left-[55%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">LOCATION MANCHESTER, UK M1</div>
+      <div class="absolute max-w-[45vw] top-[75%] left-[55%] bg-[var(--color-primary)] 
+                  border !border-[var(--color-accent)] 
+                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20"
+                  >LOCATION MANCHESTER, UK M1</div>
 
-      <div class="absolute md:top-[80%] md:left-[75%] top-[68%] left-[65%] bg-[var(--color-primary)] border !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-      will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20">LOCATION MANCHESTER, UK M1</div>
-    </div>
+      <div class="absolute max-w-[45vw] md:top-[80%] md:left-[75%] top-[68%] left-[65%]
+                  bg-[var(--color-primary)] border 
+                  !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20"
+                  >LOCATION MANCHESTER, UK M1</div>
+      </div>
 
     <div class="relative z-10 text-center text-4xl font-bold">
       Financial institutions process<br>
@@ -1185,9 +1121,287 @@ window.addEventListener('resize', () => centerOn(cur));
   </div>
 </section>
 
+<div class="flex flex-col text-center text-[var(--color-primary)] text-[clamp(3.0rem,4vw,6rem)] font-medium mb-6 tracking-wide mt-8 md:mt-50 ml-4">
+        <p>We design well structured data pipelines</p>
+</div>
+
+<div class="pipeline-progress-section">
+<div class="flex flex-col">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-10 px-4 sm:px-0 mt-10 md:mt-40">
+
+                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 md:mt-30 ml-4"></div> 
+
+                 <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
+                         <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-start border !border-[var(--color-primary)] px-2 py-3
+                                 font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
+                             <p class="break-words hidden">Identify Business Goal</p>
+                             <span class="text-2xl text-white hidden">→</span>
+                             <p class="break-words md:hidden" >Identify Business Goal<br>
+                                                    ↓</p>
+
+                             </p>
+                         </div>
+                     </div>
+                 
+                  <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
+                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-start border !border-[var(--color-primary)] px-2 py-3
+                                 font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
+                          <p class="break-words hidden">Frame ML problem</p>
+                          <span class="text-2xl text-white hidden">→</span>
+                          <p class="break-words md:hidden" >Frame ML problem<br>
+                                                    ↓</p>
+                     </div>
+                 </div>
+                 
+                         
+                 <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
+                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-start border !border-[var(--color-primary)] px-2 py-3
+                                 font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
+                          <p class="break-words hidden">Collect Data</p>
+                          <span class="text-2xl text-white hidden">→</span>
+                          <p class="break-words md:hidden" >Collect Data<br>
+                                                    ↓</p>
+                     </div>
+                 </div>
+                 
+                         
+                 <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
+                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-start border !border-[var(--color-primary)] px-2 py-3 
+                                 font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
+                          <p class="break-words hidden">Pre-process Data</p>
+                          <span class="text-2xl text-white hidden">→</span>
+                          <p class="break-words md:hidden" >Pre-process Data<br>
+                                                    ↓</p>
+                     </div>
+                 </div>
+                
+
+                 <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
+                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-start border !border-[var(--color-primary)] px-2 py-3 
+                                 font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
+                          <p class="break-words hidden">Engineer Features</p>
+                          <span class="text-2xl text-white hidden">→</span>
+                          <p class="break-words md:hidden" >Engineer Features<br>
+                                                    ↓</p>
+                     </div>
+                 </div>
+
+                         
+                  <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
+                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-start border !border-[var(--color-primary)] px-2 py-3 
+                                 font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
+                          <p class="break-words hidden">Train,
+                                                <br>Tune,
+                                                <br>Evaluate</p>
+                          <span class="text-2xl text-white hidden">→</span>
+                          <p class="break-words md:hidden" >Train,
+                                                <br>Tune,
+                                                <br>Evaluate
+                                                <br>
+                                                    ↓</p>
+                   </div>
+                 </div>
+
+                         
+                 <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
+                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-start border !border-[var(--color-primary)] px-2 py-3 
+                                 font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
+                          <p class="break-words hidden">Deploy</p>
+                          <span class="text-2xl text-white hidden">→</span>
+                          <p class="break-words md:hidden" >Deploy<br>
+                                                    ↓</p>
+                     </div>
+                 </div>
+
+                        
+                 <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
+                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center border !border-[var(--color-primary)] px-2 py-3 
+                                 font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
+                          <p class="break-words hidden">Monitor</p>
+                          <p class="break-words md:hidden" >Monitor<br>
+                     </div>
+                 </div>
+
+                 <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
+                         <p></p>
+            
+                 </div>
+
+                  <div class="invisible"></div>
+             </div>
+         </div>
+ </div>
+
+<section>
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-10 gap-3 mt-4 hidden md:block">
+        <div class="invisible"></div>
+
+        <div class="flex justify-center">
+            <svg class="progress-ring" width="36" height="36" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#1A1D24" stroke-width="4"/>
+                <circle class="progress-ring-fill" cx="20" cy="20" r="16" fill="none"
+                        stroke="var(--color-accent)" stroke-width="4"
+                        stroke-linecap="round"
+                        transform="rotate(90 20 20)"/>
+            </svg>
+        </div>
+
+        <div class="flex justify-center">
+            <svg class="progress-ring" width="36" height="36" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#1A1D24" stroke-width="4"/>
+                <circle class="progress-ring-fill" cx="20" cy="20" r="16" fill="none"
+                        stroke="var(--color-accent)" stroke-width="4"
+                        stroke-linecap="round"
+                        transform="rotate(90 20 20)"/>
+            </svg>
+        </div>
+
+        <div class="flex justify-center">
+            <svg class="progress-ring" width="36" height="36" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#1A1D24" stroke-width="4"/>
+                <circle class="progress-ring-fill" cx="20" cy="20" r="16" fill="none"
+                        stroke="var(--color-accent)" stroke-width="4"
+                        stroke-linecap="round"
+                        transform="rotate(90 20 20)"/>
+            </svg>
+        </div>
+
+        <div class="flex justify-center">
+            <svg class="progress-ring" width="36" height="36" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#1A1D24" stroke-width="4"/>
+                <circle class="progress-ring-fill" cx="20" cy="20" r="16" fill="none"
+                        stroke="var(--color-accent)" stroke-width="4"
+                        stroke-linecap="round"
+                        transform="rotate(90 20 20)"/>
+            </svg>
+        </div>
+
+        <div class="flex justify-center">
+            <svg class="progress-ring" width="36" height="36" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#1A1D24" stroke-width="4"/>
+                <circle class="progress-ring-fill" cx="20" cy="20" r="16" fill="none"
+                        stroke="var(--color-accent)" stroke-width="4"
+                        stroke-linecap="round"
+                        transform="rotate(90 20 20)"/>
+            </svg>
+        </div>
+
+        <div class="flex justify-center">
+            <svg class="progress-ring" width="36" height="36" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#1A1D24" stroke-width="4"/>
+                <circle class="progress-ring-fill" cx="20" cy="20" r="16" fill="none"
+                        stroke="var(--color-accent)" stroke-width="4"
+                        stroke-linecap="round"
+                        transform="rotate(90 20 20)"/>
+            </svg>
+        </div>
+
+        <div class="flex justify-center">
+            <svg class="progress-ring" width="36" height="36" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#1A1D24" stroke-width="4"/>
+                <circle class="progress-ring-fill" cx="20" cy="20" r="16" fill="none"
+                        stroke="var(--color-accent)" stroke-width="4"
+                        stroke-linecap="round"
+                        transform="rotate(90 20 20)"/>
+            </svg>
+        </div>
+
+        <div class="flex justify-center">
+            <svg class="progress-ring" width="36" height="36" viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="16" fill="none" stroke="#1A1D24" stroke-width="4"/>
+                <circle class="progress-ring-fill" cx="20" cy="20" r="16" fill="none"
+                        stroke="var(--color-accent)" stroke-width="4"
+                        stroke-linecap="round"
+                        transform="rotate(90 20 20)"/>
+            </svg>
+        </div>
+
+        <div class="invisible"></div>
+    </div>
+
+</section>
+</div>
+
+<script>
+const pipelineSection = document.querySelector('.pipeline-progress-section');
+const ringFills = document.querySelectorAll('.progress-ring-fill');
+
+const RADIUS = 16;
+const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
+
+const thresholds = [0.125, 0.250, 0.375, 0.500, 0.625, 0.750, 0.875, 1.000];
+
+ringFills.forEach(ring => {
+    ring.style.strokeDasharray = CIRCUMFERENCE;
+    ring.style.strokeDashoffset = CIRCUMFERENCE;
+});
+
+function updatePipelineProgress() {
+    if (!pipelineSection) return;
+    const targetEl = document.querySelector('.progress-ring-fill') || pipelineSection;
+    const rect = targetEl.getBoundingClientRect();
+
+    const startY = window.innerHeight * 0.85;
+    const endY = window.innerHeight * 0.45;
+
+    const raw = (startY - rect.top) / (startY - endY);
+    const overallProgress = Math.min(1, Math.max(0, raw));
+
+    ringFills.forEach((ring, idx) => {
+        const currThreshold = thresholds[idx]; 
+        const prevThreshold = idx === 0 ? 0 : thresholds[idx - 1];
+
+        let localFraction = 0; 
+
+        if (overallProgress >= currThreshold) {
+          
+            localFraction = currThreshold;
+        } else if (overallProgress > prevThreshold) {
+         
+            localFraction = overallProgress; 
+        } else {
+           
+            localFraction = 0;
+        }
+
+        const offset = CIRCUMFERENCE * (1 - localFraction);
+        ring.style.strokeDashoffset = offset;
+
+       
+        const isReached = overallProgress >= (currThreshold - 0.0001);
+        ring.style.stroke = isReached ? 'var(--color-accent)' : 'var(--color-primary)';
+    });
+}
+
+let pipelineTicking = false;
+window.addEventListener('scroll', () => {
+    if (!pipelineTicking) {
+        requestAnimationFrame(() => {
+            updatePipelineProgress();
+            pipelineTicking = false;
+        });
+        pipelineTicking = true;
+    }
+}, { passive: true });
+
+window.addEventListener('resize', updatePipelineProgress);
+updatePipelineProgress();
+</script>
+
+<div class="flex flex-col text-center text-[var(--color-primary)] text-[clamp(1.0rem,2vw,2.5rem)] font-medium mb-20 tracking-wide mt-20 ml-4 hidden md:block">
+        
+</div>
+
+<div class="flex flex-col text-center text-[var(--color-primary)] text-[clamp(1.0rem,2vw,2.5rem)] font-medium mb-20 tracking-wide mt-10 ml-4 hidden md:block">
+     
+</div>
+
+
+
+
 <div id="Projects" class="flex-container-introdown">
      <div class="flex w-full justify-center" style="box-sizing:border-box; min-width:0;">
-         <div class="text-center text-black text-[clamp(3.0rem,2vw,4rem)] font-medium mb-6 mt-10" >
+         <div class="text-center text-black text-[clamp(3.0rem,2vw,4rem)] font-medium mb-6 mt-0 md:mt-10" >
          <p>Projects</p>
          </div>
      </div>
@@ -1197,7 +1411,7 @@ window.addEventListener('resize', () => centerOn(cur));
 <div class="bg-[linear-gradient(to_bottom,#ffffff_85%,#ffffff_100%)]">
      <div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
-          <div class="flex flex-col bg-[black] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
+          <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
               <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
               <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
               </div>
@@ -1207,7 +1421,7 @@ window.addEventListener('resize', () => centerOn(cur));
               </div> 
           </div>
 
-          <div class="flex flex-col bg-[black] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
+          <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
               <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
               <p>Credential</p>
               </div>
@@ -1221,7 +1435,7 @@ window.addEventListener('resize', () => centerOn(cur));
 
      <div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
-          <div class="flex flex-col bg-[black] rounded-l-md border-r border-r-white p-4">
+          <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-l-md border-r border-r-white p-4">
               <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
               <p>Your membership scheme isn't increasing your sales,&nbsp;why?</p>
               </div>
@@ -1231,7 +1445,7 @@ window.addEventListener('resize', () => centerOn(cur));
               </div> 
           </div>
 
-          <div class="flex flex-col bg-black rounded-r-md p-4 ">
+          <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-r-md p-4 ">
               <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
               <p>Credential</p>
               </div>
@@ -1311,7 +1525,7 @@ window.addEventListener('resize', () => centerOn(cur));
           <source src="imgs/Video3.mp4" type="video/mp4">
            Your browser does not support the MP4 video format. Please update your browser or change your device to watch.
           </video>
-          <div class="absolute inset-0 z-10 flex flex-col items-center justify-center pb-5 md:justify-center md:pb-10 
+          <div class="absolute top-0 left-0 right-0 z-10 flex flex-col items-center justify-center pb-5 md:justify-center md:pb-80 mt-20 md:mt-80
             text-center px-6">
                   <h2 class="text-[var(--color-text-muted)] text-[clamp(2rem,6vw,4rem)] mb-20 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                    Control your data,let's start now.
@@ -1325,66 +1539,80 @@ window.addEventListener('resize', () => centerOn(cur));
 
 <footer>
      <div class="grid-container2 text-center">
-         <div class="flexbox-Main footer-row--large">Behind Numbers</div>
-         <div class="flexbox-Privacy policy footer-row--large">Privacy policy</div>
-         <div class="flexbox-Cookies footer-row--large">Cookies</div>
-         <div class="flexbox-Connect footer-row--large">Connect</div>
-        
-         <div class="flexbox-Main2 footer-row--small"></div>
-         <div class="flexbox-Privacy policy2 footer-row--small"><a href="Privacy policy.html">Privacy policy</a></div>
-         <div class="flexbox-Cookies2 footer-row--small"><a href="Cookies.html">Cookies</a></div>
-         <div class="flexbox-Connect2 footer-row--small"><a href="https://www.linkedin.com/in/xueke-hou">Linkedin</a></div>
+    <div class="flexbox-Main">
+        <div class="footer-row--large">Behind Numbers</div>
+        <div class="footer-row--small"></div>
+        <div class="footer-row--small"></div>
+    </div>
 
-         <div class="flexbox-Main3 footer-row--small"></div>
-         <div class="flexbox-Privacy policy3 footer-row--small"></div>
-         <div class="flexbox-Cookies3 footer-row--small"></div>
-         <div class="flexbox-Connect3 footer-row--small"><a href="https://github.com/pollyglotcoder">Github</a></div>
-      </div>  
+    <div class="flexbox-Privacy policy">
+        <div class="footer-row--large">Privacy policy</div>
+        <div class="footer-row--small"><a href="Privacy policy.html">Privacy policy</a></div>
+        <div class="footer-row--small"></div>
+    </div>
+
+    <div class="flexbox-Cookies">
+        <div class="footer-row--large">Cookies</div>
+        <div class="footer-row--small"><a href="Cookies.html">Cookies</a></div>
+        <div class="footer-row--small"></div>
+    </div>
+
+
+    <div class="flexbox-Connect">
+        <div class="footer-row--large">Connect</div>
+        <div class="footer-row--small"><a href="https://www.linkedin.com/in/xueke-hou">Linkedin</a></div>
+        <div class="footer-row--small"><a href="https://github.com/pollyglotcoder">Github</a></div>
+    </div>
+</div>
+
 
     <p>&copy;2026 Behind Numbers. All rights reserved</p>
+</footer>
 
 <script>
 
 const scrollBox = document.querySelector('.scroll-box');
 const tags = document.querySelectorAll('.tag-item');
 const n = tags.length;
-
 const COLLAPSE_SCALE = 0.55;
-const COLLAPSE_OPACITY = 0.12;
+const COLLAPSE_OPACITY = 0.02;
+
 
 function lerp(a, b, t) { return a + (b - a) * t; }
-function clamp01(v) { return Math.min(1, Math.max(0, v)); } 
+function clamp01(v) { return Math.min(1, Math.max(0, v)); }
 function smoothstep(min, max, value) {
-  const x = Math.max(0, Math.min(1, (value - min) / (max - min)));
-  return x * x * (3 - 2 * x); 
+
+const x = Math.max(0, Math.min(1, (value - min) / (max - min)));
+return x * x * (3 - 2 * x);
+
 }
+
 
 function updateTags(){
-  const boxTop = scrollBox.getBoundingClientRect().top;
-  const totalDistance = scrollBox.clientHeight - window.innerHeight;
-  const progress =  clamp01((-boxTop) / totalDistance);
+const boxTop = scrollBox.getBoundingClientRect().top;
+const totalDistance = scrollBox.clientHeight - window.innerHeight;
+const progress =  clamp01((-boxTop) / totalDistance);
+
+tags.forEach((tag, idx) => {
+const cx = parseFloat(tag.dataset.cx);
+const cy = parseFloat(tag.dataset.cy);
+
+const start = 0.05 + idx * (0.7 / n);
+const end = start + 0.25;
+const rawT = clamp01((progress - start) / (end - start));
+const t = smoothstep(0, 1, rawT);
+
+const scale = lerp(COLLAPSE_SCALE, 1, t);
+const opacity = lerp(COLLAPSE_OPACITY, 1, t);
+const tx = lerp(cx, 0, t);
+const ty = lerp(cy, 0, t);
 
 
- tags.forEach((tag, idx) => {
-    const cx = parseFloat(tag.dataset.cx);
-    const cy = parseFloat(tag.dataset.cy);
+tag.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${scale})`;
+tag.style.opacity = opacity;
 
-
-    const start = 0.05 + idx * (0.7 / n);
-    const end = start + 0.25;
-    const rawT = clamp01((progress - start) / (end - start));
-    const t = smoothstep(0, 1, rawT); 
-
-    const scale = lerp(COLLAPSE_SCALE, 1, t);
-    const opacity = lerp(COLLAPSE_OPACITY, 1, t);
-    const tx = lerp(cx, 0, t);
-    const ty = lerp(cy, 0, t);
-
-    tag.style.transform = `translate3d(${tx}px, ${ty}px, 0) scale(${scale})`;
-    tag.style.opacity = opacity;
   })
 }
-
 let ticking = false;
 function onScroll() {
   if (!ticking) {
@@ -1399,6 +1627,5 @@ function onScroll() {
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', updateTags);
 updateTags();
-
 </script></body>
 </html>
