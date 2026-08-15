@@ -183,7 +183,7 @@ nav.main-nav a:hover {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     padding: 4rem 2rem 2rem 2rem;
-    font-size: clamp(1.2rem, 3vw, 5rem);
+    font-size: clamp(2rem, 3vw, 5rem);
     color: var(--color-text-light);
     max-width: 100vw;
     box-sizing: border-box; 
@@ -317,8 +317,9 @@ nav.main-nav a:hover {
 .grid-container3-text{
     font-weight: bold;
     font-size: clamp(1.2rem, 3vw, 1rem);
-    color: var(--color-text-muted);
-    background:  var(--color-primary);
+    color: var(--color-text-light);
+    background: var(--color-bg-dark);
+    border: 1px solid var(--color-primary) !important;
     padding: 8px 15px;
     border-radius: 6px;
     display: inline-block;
@@ -326,7 +327,6 @@ nav.main-nav a:hover {
 
 .grid-container3-text a {
     color: var(--color-text-muted); 
-    text-decoration: none; 
     position: relative;
     z-index: 100;
 }
@@ -738,7 +738,7 @@ h2 {
                         group transition-all duration-300 hover:shadow-[0_0_10px_2px_var(--color-accent)] hover:!border-[#548cd6]">
                      <a href="https://www.credly.com/badges/4b3d197a-c34b-43d9-a63f-bf41c5a387f7/linked_in_profile" target="_blank"
                          class="group-hover:text-white transition-colors duration-300">
-                         <img src="imgs/Cloud.png" alt="AWS Cloud Practitioner" 
+                         <img src="imgs/Cloud.png" alt="Click to verify" 
                          class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS Cloud <br>Practitioner
                      </a>
              </div>
@@ -748,7 +748,7 @@ h2 {
                         group transition-all duration-300 hover:shadow-[0_0_10px_2px_var(--color-accent)] hover:!border-[#548cd6]">
                      <a href="https://www.credly.com/badges/3f42e5a8-d67b-4faf-a948-43331481b7a6/linked_in_profile" target="_blank"
                          class="group-hover:text-white transition-colors duration-300">
-                         <img src="imgs/AI.png" alt="AWS AI Practitioner" 
+                         <img src="imgs/AI.png" alt="Click to verify" 
                          class="w-5 h-5 inline-block mr-2 bg-[var(--color-accent)]">AWS AI <br>Practitioner
                      </a>
              </div>
@@ -768,7 +768,7 @@ h2 {
              </div>
             
              <div class="flexbox-selfintrotitle">Hi there! I am Xueke&nbsp;(Polly),&nbsp;a UK-based Management with Business Analytics graduate,
-                        junior front-end developer,passionate about Data Science and Machine Learning.&nbsp;Welcome to my first self-designed
+                        junior front-end developer,&nbsp;passionate about Data Science and Machine Learning.&nbsp;Welcome to my first self-designed
                         website.<br>
                         <br>
                         My course is delivered by the AACSB-accredited Business School&nbsp;(Bournemouth University)&nbsp;,&nbsp;an
@@ -786,9 +786,10 @@ h2 {
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-0 mt-2">
      <div class="flex flex-col">
-  <div class="text-Left text-[var(--color-primary)] text-[clamp(3.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10 ml-4" >
-    <p>Credential Verified</p>
-  </div>
+    <div class="text-Left text-[var(--color-primary)] text-[clamp(4.0rem,2vw,5rem)] font-medium mb-1 tracking-wide mt-1 ml-4" >
+         <p>AI Specialization</p>
+    </div>
+
   <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-2 ml-4" >
     <p>"Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. 
         They can determine the correct types of AI/ML technologies to apply to specific use cases and know how to use AI, ML, 
@@ -799,14 +800,14 @@ h2 {
 
       <div class="grid grid-cols-2 gap-4 items-start">
       <div class="flex flex-wrap gap-3 content-start ml-4">   
-      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">AI and ML on AWS-Foundational</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">Amazon Web Services</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">S3</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">ECR</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">BLEU</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">GANs</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">VAEs</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center">RNNs</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center hidden md:block">Amazon Web Services</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center hidden md:block">AI and ML on AWS-Foundational</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center hidden md:block">Artificial Intelligence(AI)</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center hidden md:block">Foundation Models</div>
       <div class="border !border-[var(--color-accent)] py-1 px-1 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center hidden md:block">Generative AI</div>
@@ -836,9 +837,9 @@ h2 {
 
 
     <div class="flex flex-col">
-    <div class="text-Left text-[var(--color-primary)] text-[clamp(3.0rem,2vw,5rem)] font-medium mb-6 tracking-wide mt-10" >
-    <p>Credential</p>
-</div>
+    <div class="text-Left text-[var(--color-primary)] text-[clamp(4.0rem,2vw,5rem)] font-medium mb-1 tracking-wide mt-1" >
+         <p>Cloud Architecture</p>
+    </div>
       <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-2">
        <p>"Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They 
         demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services 
@@ -849,9 +850,9 @@ h2 {
     <img src="./imgs/AWS2.png" class="w-full max-w-[400px] h-auto p-4 mx-auto">
     
     <div class="flex flex-wrap gap-3 items-start content-start">
-      <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Route53</div>EC2
+      <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Route53</div>
       <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">EC2</div>
-      <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Lightsail</div>
+      <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">EKS</div>
       <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">AWS Cloud</div>
       <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block">Cloud Services</div>
       <div class="border !border-[var(--color-accent)] py-1 px-3 text-white text-[clamp(0.7rem,1.8vw,0.9rem)] text-center inline-block hidden md:block">Elastic Beanstalk</div>
@@ -906,7 +907,7 @@ h2 {
   </div> 
 
 <div class="text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-20 ml-4" ></div>
-      <p>Credential Verified</p> 
+      <p>Industry Masterclasses & Awards</p> 
 </div>
 
 <div id="slideWrap" class="relative w-full">
@@ -1066,7 +1067,7 @@ window.addEventListener('resize', () => centerOn(cur));
                     leading-[1.0em] 
                     text-left 
                     text-[var(---color-text-light)]
-                    mt-10 md:mt-0">
+                    mt-8 md:mt-0">
                    Behind Numbers' mission is to empower businesses with secure, cost-effective, and high-performance business analytics by building and deploying scalable data pipelines, predictive dashboards and statistical modeling tools on-premise and cloud. We combine open-source data frameworks with deep analytical expertise to deliver private, scalable, and tailored BA solutions that drive measurable business value while ensuring full data governance, operational efficiency, and stakeholder trust.<br>
                    <br>
                 </h2>
@@ -1087,8 +1088,8 @@ window.addEventListener('resize', () => centerOn(cur));
                  <div class="grid grid-cols-1 absolute inset-[10%] bg-[#1A1D24] rounded-[8px] 
                              shadow-[inset_0_0_10px_3px_#A6A9B3] transition-transform duration-[2000ms] md:hover:perspective-[800px] 
                              md:hover:translate-x-[40px] md:hover:translate-y-[40px]">
-                                 <h3 class="text-2xl mt-5 font-bold text-white">Curiousity</h3>      
-                                     <p class="text-xl text-gray-300 text-center px-4">Enjoy digging into messy data to find the "Why"
+                                 <h3 class="text-2xl mt-5 font-bold text-white">Curiosity</h3>      
+                                     <p class="text-xl text-gray-300 text-center px-4">Enjoying digging into messy data to find the "Why"
                                         behind the numbers.
                                      </p>
                   </div>
@@ -1100,7 +1101,7 @@ window.addEventListener('resize', () => centerOn(cur));
                         md:hover:translate-x-[-40px] md:hover:translate-y-[40px]">
                              <h3 class="text-2xl mt-5 font-bold text-white">Cross functional Collaboration.</h3>
                                  <p class="text-xl text-gray-300 text-center px-4">
-                                    Partner closely with Tech, Product, Data team to understand pain points.
+                                    Partnering closely with Tech, Product, Data team to understand pain points.
                                  </p>
                  </div>
              </div>
@@ -1110,8 +1111,8 @@ window.addEventListener('resize', () => centerOn(cur));
                              shadow-[inset_0_0_10px_3px_#A6A9B3] transition-transform duration-[2000ms] md:hover:perspective-[800px] 
                              md:hover:translate-x-[40px] md:hover:translate-y-[-40px]">
                                  <h3 class="text-2xl mt-5 font-bold text-white">AI leveraging</h3>      
-                                     <p class="text-xl text-gray-300 text-center px-4">Be a practitioner of AI-assisted work.&nbsp;Use AI tools
-                                        to accelerate analysis, automate repetitive tasks and draft written outputs.
+                                     <p class="text-xl text-gray-300 text-center px-4">Leveraging cutting-edge AI tools to automate 
+                                        repetitive workflows, speed up data pipelines, and accelerate analysis.
                                      </p>
                  </div>
              </div>
@@ -1122,7 +1123,7 @@ window.addEventListener('resize', () => centerOn(cur));
                         md:hover:translate-x-[-40px] md:hover:translate-y-[-40px]">
                              <h3 class="text-2xl mt-5 font-bold text-white">Continuous learning</h3>
                                   <p class="text-xl text-gray-300 text-center px-4">
-                                      Keep learning and grow with the fast-evolving world. To stand still as others advance is to fall behind.
+                                      Keep learning and grow with the fast-evolving world, staying the same is falling behind.
                                   </p>
                  </div>
              </div>
@@ -1133,70 +1134,77 @@ window.addEventListener('resize', () => centerOn(cur));
 <section class="scroll-box relative h-[300vh]">
   <div class="sticky top-0 min-h-screen flex items-center justify-center relative">
     <div class="absolute inset-0 z-20">
-      <div class="absolute max-w-[45vw] top-[10%] left-[38%] bg-[var(--color-primary)] 
+      <div class="absolute max-w-[45vw] top-[10%] left-[38%] md:max-w-[280px] md:top-[10%] md:left-[38%]
+                  bg-[var(--color-primary)] 
                   border !border-[var(--color-accent)] 
-                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item 
-                  will-change-transform transition-opacity duration-75 ease-out"data-cx="80" data-cy="40"
-                  >LOCATION MANCHESTER, UK M1</div>
+                  px-2 py-3 text-xs md:text-sm font-mono text-[white] rounded-sm tag-item 
+                  will-change-transform transition-opacity duration-75 ease-out" data-cx="80" data-cy="40"
+                  >LOCATION LONDON, UK E1</div>
 
-      <div class="absolute max-w-[45vw] top-[19%] left-[53%] bg-[var(--color-primary)] 
+      <div class="absolute max-w-[45vw] top-[19%] left-[51%] md:max-w-[280px] md:top-[19%] md:left-[51%]
+                  bg-[var(--color-primary)] 
                   border !border-[var(--color-accent)] 
-                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-                  will-change-transform transition-opacity duration-75 ease-out"data-cx="70" data-cy="35"
+                  px-2 py-3 text-xs md:text-sm font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out" data-cx="70" data-cy="35"
                   >CATEGORY MCC-5814 RETAIL-SHOP-LOG</div>
 
-      <div class="absolute max-w-[45vw] top-[26%] left-[16%] bg-[var(--color-primary)] 
-                  border !border-[var(--color-accent)] 
-                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-                  will-change-transform transition-opacity duration-75 ease-out"data-cx="90" data-cy="-30"
+      <div class="absolute max-w-[45vw] top-[20%] left-[4%] md:max-w-[280px] md:top-[26%] md:left-[16%]
+                  bg-[var(--color-primary)] border !border-[var(--color-accent)] tag-item whitespace-normal 
+                  md:whitespace-nowrap px-2 py-3 text-xs md:text-sm font-mono text-[white] rounded-sm tag-item 
+                  will-change-transform transition-opacity duration-75 ease-out" data-cx="90" data-cy="-30"
                   >STORE-BA07294121 | Retail | -£42.30</div>
 
-      <div class="absolute max-w-[45vw] md:top-[36%] md:left-[78%] top-[27%] left-[58%]
-                  bg-[var(--color-primary)] border 
-                  !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
+      <div class="absolute max-w-[45vw] top-[3%] left-[48%] md:top-[36%] md:left-[75%]
+                  bg-[var(--color-primary)] border !border-[var(--color-accent)] tag-item whitespace-normal 
+                  md:whitespace-nowrap px-2 py-3 text-xs md:text-sm font-mono text-[white] rounded-sm tag-item 
                   will-change-transform transition-opacity duration-75 ease-out"data-cx="85" data-cy="-25"
-                  >USER-ID-7249 Browsing-History | Session 28min</div>
+                  >TICKET: #4091 | Sentiment: -0.72</div>
 
-      <div class="absolute max-w-[45vw] top-[68%] left-[16%] bg-[var(--color-primary)] 
+
+      <div class="absolute max-w-[45vw] top-[68%] left-[6%] md:max-w-[280px] md:top-[68%] md:left-[16%]
+                  bg-[var(--color-primary)] 
                   border !border-[var(--color-accent)] 
-                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-                  will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20"
-                  >LOCATION MANCHESTER, UK M1</div>
+                  px-2 py-3 text-xs md:text-sm font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out" data-cx="60" data-cy="20"
+                  >POS_STORE: #104 EMEA | Target -14%</div>
 
-      <div class="absolute max-w-[45vw] top-[78%] left-[10%] bg-[var(--color-primary)] 
+      <div class="absolute max-w-[45vw] top-[78%] left-[10%] md:max-w-[280px] md:top-[78%] md:left-[10%]
+                  bg-[var(--color-primary)] 
                   border !border-[var(--color-accent)] 
-                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-                  will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20"
-                  >LOCATION MANCHESTER, UK M1</div>
+                  px-2 py-3 text-xs md:text-sm font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out" data-cx="60" data-cy="20"
+                  >CHURN_RISK: High (Score 88)</div>
 
-      <div class="absolute max-w-[45vw] top-[75%] left-[55%] bg-[var(--color-primary)] 
+      <div class="absolute max-w-[45vw] top-[75%] left-[52%] md:max-w-[280px] md:top-[75%] md:left-[52%]
+                  bg-[var(--color-primary)] 
                   border !border-[var(--color-accent)] 
-                  px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-                  will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20"
-                  >LOCATION MANCHESTER, UK M1</div>
+                  px-2 py-3 text-xs md:text-sm font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out" data-cx="60" data-cy="20"
+                  >STOCK_ALERT: SKU-402 (0 Left)</div>
 
-      <div class="absolute max-w-[45vw] md:top-[80%] md:left-[75%] top-[68%] left-[65%]
+      <div class="absolute max-w-[45vw] top-[68%] left-[53%] md:max-w-[280px] md:top-[80%] md:left-[75%]
                   bg-[var(--color-primary)] border 
-                  !border-[var(--color-accent)] px-2 py-3 text-xs font-mono text-[white] rounded-sm tag-item
-                  will-change-transform transition-opacity duration-75 ease-out"data-cx="60" data-cy="20"
-                  >LOCATION MANCHESTER, UK M1</div>
+                  !border-[var(--color-accent)] 
+                  px-2 py-3 text-xs md:text-sm font-mono text-[white] rounded-sm tag-item
+                  will-change-transform transition-opacity duration-75 ease-out" data-cx="60" data-cy="20"
+                  >CONVERSION: 1.4% (Target 3.5%)</div>
       </div>
 
     <div class="relative z-10 text-center text-4xl font-bold">
-      Financial institutions process<br>
-      billions of transactions every<br>
-      day, <span class="text-[#426890]">but most of that data is<span class="text-[var(--color-primary)]"><br>hard to use.</span></span>
+      Modern businesses track millions,<br>
+      of operations every day,<br>
+      <span class="text-[#426890]">but turning that data into action <span class="text-[var(--color-primary)]"><br>is hard.</span></span>
     </div>
   </div>
 </section>
 
-<div class="flex flex-col text-center text-[var(--color-primary)] text-[clamp(3.0rem,4vw,4rem)] font-medium mb-6 tracking-wide mt-8 md:mt-50 ml-4">
+<div class="flex flex-col text-center text-[var(--color-primary)] text-[clamp(2.0rem,4vw,4rem)] font-medium mb-2 md:mb-6 tracking-wide mt-8 md:mt-70 ml-4">
         <p>I design well-structured ML and data pipelines.</p>
 </div>
 
 <div class="pipeline-progress-section">
 <div class="flex flex-col">
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-10 px-4 sm:px-0 mt-10 md:mt-40">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-10 px-4 sm:px-0 md:mt-40">
 
                  <div class="col-span-1 text-left text-[var(--color-primary)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide mt-10 md:mt-30 ml-4"></div> 
 
@@ -1257,15 +1265,13 @@ window.addEventListener('resize', () => centerOn(cur));
 
                          
                   <div class="col-span-1 text-center border !border-[var(--color-primary)] mb-6 tracking-wide mt-10 flex items-center justify-center">
-                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-start border !border-[var(--color-primary)] px-2 py-3 
+                     <div class="relative z-20 w-full h-full min-w-[70px] flex items-center justify-center md:justify-center border !border-[var(--color-primary)] px-2 py-3 
                                  font-medium text-[var(--color-text-light)] rounded-l text-[clamp(1.0rem,2vw,1.125rem)]">
                           <p class="break-words hidden md:block">Train,
                                                 <br>Tune,
                                                 <br>Evaluate</p>
                           <span class="text-2xl text-white hidden md:block">→</span>
-                          <p class="break-words md:hidden" >Train,
-                                                <br>Tune,
-                                                <br>Evaluate
+                          <p class="break-words md:hidden" >Train,&nbsp;Tune,&nbsp;Evaluate
                                                 <br>
                                                     ↓</p>
                    </div>
@@ -1302,7 +1308,7 @@ window.addEventListener('resize', () => centerOn(cur));
  </div>
 
 <section>
-    <div class="grid grid-cols-10 gap-3 mt-4 ">
+    <div class="grid grid-cols-10 gap-3 mt-4 mb-20">
         <div class="invisible"></div>
 
         <div class="flex justify-center">
@@ -1389,6 +1395,10 @@ window.addEventListener('resize', () => centerOn(cur));
     </div>
 
 </section>
+</div>
+
+<div class="flex flex-col text-center text-[var(--color-primary)] text-[clamp(2.0rem,4vw,4rem)] font-medium mb-2 md:mb-6 tracking-wide mt-8 md:mt-70 ml-4">
+        <p>&nbsp;</p>
 </div>
 
 <script>
@@ -1582,7 +1592,7 @@ updatePipelineProgress();
              <img src="imgs/security.jpg" class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none">
                  <div class="relative z-10 font-bold text-[clamp(1.2rem,3vw,2rem)] text-[--color-text-light] mt-4">Rigor</div>
                  <p class="relative z-10 text-[var(--color-text-light)] mt-2">One flawed number, ten steps backwards.&nbsp;Errors erode every data-driven decision.
-                    Accuracy is non-negotiable.</p>
+                    Accuracy is priority.</p>
              </div>
      </div>
 </div>
@@ -1611,20 +1621,23 @@ updatePipelineProgress();
 <footer>
      <div class="grid-container2 text-center">
     <div class="flexbox-Main">
-        <div class="footer-row--large">Behind Numbers</div>
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" 
+        class="footer-row--large cursor-pointer no-underline text-[--color-text-muted] hover:opacity-80 transition-opacity">
+        Behind Numbers
+        </a>
         <div class="footer-row--small"></div>
         <div class="footer-row--small"></div>
     </div>
 
     <div class="flexbox-Privacy policy">
         <div class="footer-row--large">Privacy policy</div>
-        <div class="footer-row--small"><a href="Privacy policy.html">Privacy policy</a></div>
+        <div class="footer-row--small"><a href="privacy-policy.html">Privacy policy</a></div>
         <div class="footer-row--small"></div>
     </div>
 
     <div class="flexbox-Cookies">
         <div class="footer-row--large">Cookies</div>
-        <div class="footer-row--small"><a href="Cookies.html">Cookies</a></div>
+        <div class="footer-row--small"><a href="cookies.html">Cookies</a></div>
         <div class="footer-row--small"></div>
     </div>
 
