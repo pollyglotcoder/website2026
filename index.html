@@ -1522,7 +1522,6 @@ updatePipelineProgress();
               <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
               <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
               <img src="./imgs/Dashboard1.png" class="w-full w-[1000px] h-auto p-2 mx-auto">
-
               </div> 
               <img src="./imgs/Dashboard3.png" class="w-full w-[1000px] h-auto p-2 mx-auto">
               <img src="./imgs/lasso.png" class="w-full w-[1000px] h-auto p-2 mx-auto">
@@ -1532,11 +1531,24 @@ updatePipelineProgress();
               <p>Credential</p>
               </div>
 
-          <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide ">
-              <p>Statistics show<br>
-                1.Membership doesn't correlate with trsnsaction amount<br>
-                 2.With same city,branch, fruit accounts for the largest share of high-end consumption,stationary accounts the least. 
-                 Household and personal care have no significant correlation with the high transaction.
+          <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
+              <p>The dataset is a real-world Supermarket Sales Dataset from Kaggle, the supermarket located in 3 regions: Chicago, 
+                Los Angeles and New York. Each supermarket has 2 branches: Branch A, Branch B.<br>
+                <br>
+                This dataset has 1000 observations and 12 variables, they are: sale_id, branch, city, customer_type, gender, product_name, 
+                product_category, unit_price, quantity, tax, total_price and reward_points.This study aim to find out if the membership 
+                status correlate with higher single transaction sales value.<br>
+                <br>
+                R studio is used to visualise and analysis the data, to categorize the spending level, total spending was divided into three 
+                levels : low price: 1.21 ~ 38.38;  middle price: 38.38 ~ 176.07; high price:176.07 ~ 433.99(unit: dollar). Tableau was used to
+                creat the dashboard.<br>
+                <br>
+                Logit regression and lasso regression are used to explore the correlation between the membership status and high single 
+                transaction sales value.<br>
+                <br>
+                The result shows that membership status is not significantly correlated with single transaction value, however, on low price 
+                band, membership customer tends to spend more money;on high price band, non membership customer tends to spend more money. <br>
+                
             </p>
           </div>
           </div>
