@@ -1544,23 +1544,27 @@ updatePipelineProgress();
               </div>
 
           <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
-              <p>The dataset is a real-world Supermarket Sales Dataset from Kaggle, the supermarket located in 3 regions: Chicago, 
-                Los Angeles and New York. Each supermarket has 2 branches: Branch A, Branch B.<br>
-                <br>
-                This dataset has 1000 observations and 12 variables, they are: sale_id, branch, city, customer_type, gender, product_name, 
-                product_category, unit_price, quantity, tax, total_price and reward_points.This study aim to find out if the membership 
-                status correlate with higher single transaction sales value.<br>
-                <br>
-                R studio is used to visualise and analysis the data, to categorize the spending level, total spending was divided into three 
-                levels : low price: 1.21 ~ 38.38;  middle price: 38.38 ~ 176.07; high price:176.07 ~ 433.99(unit: dollar). Tableau was used to
-                creat the dashboard.<br>
-                <br>
-                Logit regression and lasso regression are used to explore the correlation between the membership status and high single 
-                transaction sales value.<br>
-                <br>
-                The result shows that membership status is not significantly correlated with single transaction value, however, on low price 
-                band, membership customer tends to spend more money;on high price band, non membership customer tends to spend more money. <br>
+              <p>Demographic:<br>
                 
+                 In this dataset,52.8% customers are male,47.2% customers are female;51.6% customers are membership customers,48.4% 
+                 customers are non-membership customers, demographics are balanced.<br>
+                 <br>
+                 Product:<br>
+                 
+                 Five products are in product categories, from highest to lowest are: personal care, fruits, beverages, household, 
+                 stationery. total sales are 27050,26197,22935,21616,20737.
+                 From the most purchased product category to least,they are fruits, personal care, beverages, stationery, household,
+                 each acounts:2286,2278,1952,1913,1908.<br>
+                 <br>
+                 Regional Sales:<br>
+                 
+                 Chicago:<br>
+                 Stationery are the most purchased items, followed by fruits and household, beverages are the least purchased items.<br>
+                 Los Angeles:<br>
+                 Fruits are the most purchased items, followed by beverages and personal care, stationery are the least purchased items.<br>
+                 New York:<br>
+                 Personal care are the most purchased items, followed by household, stationery and beverages,
+                 all three category items accounts similarly.fruits are the least purchased items.              
             </p>
           </div>
           </div>
