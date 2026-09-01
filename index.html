@@ -1487,27 +1487,34 @@ updatePipelineProgress();
 
 
 <div class="bg-[linear-gradient(to_bottom,#ffffff_85%,#ffffff_100%)]">
-     <div class="grid  grid-cols-1 sm:grid-cols-[2fr_4fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
+     <div class="grid  grid-cols-1 gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
           <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
               <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
               <p>Does membership status correlate with higher single - transaction sales value?</p>
               </div>
 
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
-              <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
+              <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide" >
+                     <p>This study aim to find out if the membership status is correlated with higher single transaction sales value based on a real-world Supermarket 
+                        Sales Dataset from Kaggle, the supermarket located in 3 regions: Chicago, Los Angeles and New York. Each supermarket has 2 branches: Branch A, Branch B.<br>
+                        <br>
+                        This dataset has 1000 observations and 12 variables, they are: sale_id, branch, city, customer_type, gender, product_name, 
+                        product_category, unit_price, quantity, tax, total_price and reward_points.<br>
+                        <br>
+                        R studio is used to visualise and analysis the data, to categorize the spending level, total spending was divided into three 
+                        levels : low price: 1.21 ~ 38.38;  middle price: 38.38 ~ 176.07; high price:176.07 ~ 433.99(unit: dollar). Tableau is used to
+                        creat the dashboard.<br>
+                        <br>
+                        Logit regression and lasso regression are used to explore the correlation between the membership status and high single 
+                        transaction sales value.<br>
+                        <br>
+                        The result shows that membership status is not significantly correlated with single transaction value, however, on low price 
+                        band, membership customer tends to spend more money;on high price band, non membership customer tends to spend more money. <br>  
+                        </p>
               </div> 
           </div>
 
-          <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
-              <p>Credential</p>
-              </div>
-
-          <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide ">
-              <p>Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.</p>
-          </div>
-          </div>
+          
      </div>
 
 
@@ -1515,20 +1522,25 @@ updatePipelineProgress();
 
           <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-l-md border-r border-r-white p-4">
               <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
-              <p>Does membership status correlate with higher single - transaction sales value?</p>
-              <img src="./imgs/Dashboard2.png" class="w-full max-w-[1000px] h-auto p-2 mx-auto">
+               <div class="ml-4" ><p>General Insighs1</p></div>
+              <img src="./imgs/Dashboard22.png" class="w-full max-w-[1000px] h-auto p-2 mx-auto">
               </div>
 
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.0rem,2vw,1.5rem)] font-medium mb-6 tracking-wide" >
-              <p>Earners of this badge understand AI, ML, and generative AI concepts, methods, and strategies in general and on AWS. </p>
+              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+              <div class="ml-4" ><p>General Insighs2</p></div>
               <img src="./imgs/Dashboard1.png" class="w-full w-[1000px] h-auto p-2 mx-auto">
               </div> 
-              <img src="./imgs/Dashboard3.png" class="w-full w-[1000px] h-auto p-2 mx-auto">
-              <img src="./imgs/lasso.png" class="w-full w-[1000px] h-auto p-2 mx-auto">
+              
+              <div class="ml-4 text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-2 tracking-wide" ><p>Lasso Regression Figure</p></div>
+              <div class="grid grid-cols-1 sm:grid-cols-[1fr_1.3fr] items-stretch">
+              
+              <img src="./imgs/Rplot.png" class="w-full w-[500px] h-auto mx-auto">
+              <img src="./imgs/lasso.png" class="w-full w-[574px] h-auto mx-auto">
          </div>
+          </div>
           <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-r-md p-4 ">
               <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] mb-6 tracking-wide" >
-              <p>Credential</p>
+              <p>Analysis</p>
               </div>
 
           <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
