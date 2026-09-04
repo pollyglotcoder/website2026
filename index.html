@@ -1487,14 +1487,15 @@ updatePipelineProgress();
 
 
 <div class="bg-[linear-gradient(to_bottom,#ffffff_85%,#ffffff_100%)]">
-     <div class="grid  grid-cols-1 gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden">
+     <div class="grid  grid-cols-1 gap-0 p-4 sm:p-6 rounded-3xl mx-5 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
-          <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 sm:border-r border-white p-4">
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+          <div class="flex flex-col rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 
+               sm:border-r border-white p-2 border !border-[var(--color-accent)] rounded-lg">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
               <p>Does membership status correlate with higher single - transaction sales value?</p>
               </div>
 
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide" >
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide" >
                      <p>This study aim to find out if the membership status is correlated with higher single transaction sales value based on a real-world Supermarket 
                         Sales Dataset from Kaggle, the supermarket located in 3 regions: Chicago, Los Angeles and New York. Each supermarket has 2 branches: Branch A, Branch B.<br>
                         <br>
@@ -1520,43 +1521,47 @@ updatePipelineProgress();
 
      <div class="grid grid-cols-1 sm:grid-cols-[4fr_2fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden min-w-0">
 
-          <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-l-md border-r border-r-white p-4">
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
-               <div class="ml-4" ><p>General Insighs1</p></div>
-              <img src="./imgs/Dashboard22.png" class="w-full max-w-[1000px] h-auto p-2 mx-auto">
+          <div class="flex flex-col border-r border-r-[var(--color-accent)] p-4">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+               <div class="ml-4 mb-6" ><p>General Insights1</p></div>
+              <img src="./imgs/Dashboard2.png" class="w-full h-auto p-2 mx-auto mb-6 border !border-[var(--color-accent)] rounded-lg">
               </div>
 
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
-              <div class="ml-4" ><p>General Insighs2</p></div>
-              <img src="./imgs/Dashboard1.png" class="w-full w-[1000px] h-auto p-2 mx-auto">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+              <div class="ml-4 mb-6" ><p>General Insights2</p></div>
+              <img src="./imgs/Dashboard1.png" class="w-full h-auto p-2 mx-auto mb-6 border !border-[var(--color-accent)] rounded-lg">
               </div> 
               
-              <div class="ml-4 text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-2 tracking-wide" ><p>Lasso Regression Figure</p></div>
+              <div class="ml-4 text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-2 tracking-wide" ><p>Lasso Regression Figure</p></div>
               <div class="grid grid-cols-1 sm:grid-cols-[1fr_1.3fr] items-stretch">
               
-              <img src="./imgs/Rplot.png" class="w-full w-[500px] h-auto mx-auto">
+              <img src="./imgs/Rplot.png" class="w-full w-[500px] h-auto mx-auto ">
               <img src="./imgs/lasso.png" class="w-full w-[574px] h-auto mx-auto">
          </div>
           </div>
-          <div class="flex flex-col bg-[var(--color-bg-dark)] rounded-r-md p-4 ">
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] tracking-wide" >
+          <div class="flex flex-col p-4 ">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] tracking-wide mb-6" >
               <p>Analysis</p>
               </div>
 
-          <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>Demographic:<br></div>
+          <div class="text-left text-[var(--color-accent)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Demographic:<br></div>
                 
-                 In this dataset,52.8% customers are male,47.2% customers are female;51.6% customers are membership customers,48.4% 
-                 customers are non-membership customers, demographics are balanced.<br>
+                 In this dataset,52.8% customers are male,&nbsp;47.2% customers are female;&nbsp;51.6% customers are membership customers,&nbsp;48.4% 
+                 customers are non-membership customers,&nbsp;demographics are balanced.<br>
                  <br>
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>Product:<br></div>
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Product:<br></div>
                  
-                 Five products are in product categories, from highest to lowest are: personal care, fruits, beverages, household, 
-                 stationery. total sales are 27050,26197,22935,21616,20737.
-                 From the most purchased product category to least,they are fruits, personal care, beverages, stationery, household,
-                 each acounts:2286,2278,1952,1913,1908.<br>
+                 There are five products in product categories, from highest to lowest: personal care, fruits, beverages, household and 
+                 stationery. Total sales are 27050, 26197, 22935, 21616, 20737 (unit:dollars).<br>
+                 From the most purchased product category to least, they are fruits, personal care, beverages, stationery and household. Corresponding 
+                 purchased quantity: 2286, 2278, 1952, 1913, 1908.<br> 
                  <br>
-              <div class="text-left text-[var(--color-text-muted)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>Regional Sales:<br></div>
+                 For the unit price: min: 1.02; 1st quantil: 5.867; median:10.615; 3rd quantil: 15.883; max: 20.980.<br>
+                 <br>
+                 For the quantity: min: 1; 1st quantil: 5; median:10; 3rd quantil: 16; max: 20.<br>
+                 <br>
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Regional Sales:<br></div>
                  
                  Chicago:<br>
                  Stationery are the most purchased items, followed by fruits and household, beverages are the least purchased items.<br>
@@ -1567,6 +1572,39 @@ updatePipelineProgress();
                  all three category items accounts similarly.fruits are the least purchased items.              
             </p>
           </div>
+          <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●General insights 2<br></div>
+                
+                 For Female customer, fruits and personal care are 2 most purchased products; for male customer, stationery and household products are 2 most 
+                 purchased products, beverages are the least purchased products for both.<br>
+                 <br>
+                 Member customers tend to buy personal care and household products, non member customers tend to buy stationery products and fruits, beverages 
+                 are the least purchased products for both.<br>
+                 <br>
+                 Customers in Chicago has the strongest purchasing power in general, followed by New York and Los Angles, However, few customers in New York has 
+                 higher transaction records than in Chicago.<br>
+                 <br>
+                 Most total sales are around 13.3 to 93.1, total price over 119.7 are less.<br>
+                 <br>
+                 The amount of branch A is 2 times of branch B, each of them are 672, 326.<br>
+                 <br>
+          </div>
+          <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Lasso Regression<br></div>
+                
+                 For low price band, customer purchase in branch B is around 77% higher than branch A; member customer has 18% higher
+                 chance to purchase; compared to beverages, the chance of customer buying fruit is 4% lower, buying household products is 11% lower, buying personal care 
+                 products is 10% lower, buying stationery products is 52% lower; the lower the price, the less the unit price, quantity and reward points.
+                 city and gender has no correlation with the low price band purchase.<br>
+                 <br>
+                 For middle price, customer purchase in New York is 7% lower than in Chicago; Male customer is only 0.1% lower than female customer to purchase. Branch, 
+                 customer type, product category has no correlation with the middle price band purchase.<br>
+                 <br>
+                 For high price band, compared with Chicago, customer purchase in LA is 64% lower, purchase in New York is 33% higher. Normal customer has nearly 49% chance 
+                 to purchase than member customer; male customer has 56% chance than female to purchase; compared with beverage, customer buying fruits is 42% higher, buying 
+                 household category is 175% higher, buying personal care is 39.4% higher, buying stationery products is 20% higher. unit price, quantity, reward points increase 
+                 when the price increase. branch has no correlation with the high price band purchase.<br>
+                 <br>
           </div>
      </div>
 </div>
