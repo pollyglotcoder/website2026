@@ -1496,21 +1496,30 @@ updatePipelineProgress();
               </div>
 
               <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide" >
-                     <p>This study aim to find out if the membership status is correlated with higher single transaction sales value based on a real-world Supermarket 
-                        Sales Dataset from Kaggle, the supermarket located in 3 regions: Chicago, Los Angeles and New York. Each supermarket has 2 branches: Branch A, Branch B.<br>
+                        <p>This study aims to investigate if the membership status is correlated with higher single transaction sales value, 
+                            utilizing transactional records from a multi-regional supermarket enterprise sourced via Kaggle. 
+                            The retail network spans three metropolitan markets: Chicago, Los Angeles and New York. Each supermarket comprises 2 branches: Branch A, Branch B.<br>
+
                         <br>
-                        This dataset has 1000 observations and 12 variables, they are: sale_id, branch, city, customer_type, gender, product_name, 
-                        product_category, unit_price, quantity, tax, total_price and reward_points.<br>
+                        This dataset has 1000 observations and 12 variables, capturing transaction identifiers, store attributes, customer profiles, 
+                        product specifications, unit pricing, order quantities, tax liabilities, and cumulative monetary values.<br>
                         <br>
-                        R studio is used to visualise and analysis the data, to categorize the spending level, total spending was divided into three 
-                        levels : low price: 1.21 ~ 38.38;  middle price: 38.38 ~ 176.07; high price:176.07 ~ 433.99(unit: dollar). Tableau is used to
-                        creat the dashboard.<br>
+                        Analytical Framework, Data wrangling, Statistical computing and Econometric modeling were executed in R, supplemented by Tableau for exploratory data visualization. 
+                        To categorize the spending level, total spending was divided into three levels : low price: 1.21 ~ 38.38;  middle price: 38.38 ~ 176.07; high price:176.07 ~ 433.99(unit: dollar).
+                        Quantile-based discretization was adopted.
+                        Each segment accounts for 25%, 50%, and 25% respectively. In this dataset, the mean (Mean: 118.58) is significantly higher than the median (Median: 89.70), 
+                        with a maximum value reaching 433.99. This indicates that this dataset is a Right-Skewed dataset, and a few extremely high-value purchases skew the mean upward. 
+                        Under this distribution, quantiles are adpopted to enhance estimation robustness. (e.g., 0-100, 100-200, 200-300).<br>
                         <br>
-                        Logit regression and lasso regression are used to explore the correlation between the membership status and high single 
+
+                        <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.0rem,2vw,2.0rem)] font-medium mb-6 tracking-wide" ><p>Methodology and Key Findings</p></div><br>
+                        Ordinal Logistic Regression and Lasso Regression were adopted to assess the correlation between the membership status and high single 
                         transaction sales value.<br>
                         <br>
-                        The result shows that membership status is not significantly correlated with single transaction value, however, on low price 
-                        band, membership customer tends to spend more money;on high price band, non membership customer tends to spend more money. <br>  
+
+                        The parametric estimates reveal no statistically significant association between membership status and transaction price bands (p > 0.05). However, 
+                        in the lower price band, members tend to exhibit higher spending, whereas in the higher price band, non-members are more likely to spend greater amounts. 
+                        Despite apparent minor differences in the descriptive statistics, the regression model confirms that this difference is not statistically significant. <br>  
                         </p>
               </div> 
           </div>
@@ -1538,6 +1547,11 @@ updatePipelineProgress();
               <img src="./imgs/Rplot.png" class="w-full w-[500px] h-auto mx-auto ">
               <img src="./imgs/lasso.png" class="w-full w-[574px] h-auto mx-auto">
          </div>
+               
+              <div class="ml-4 text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-2 tracking-wide" ><p>Discribtive Ordinal Logistic Regression Models</p></div>
+              <img src="./imgs/Re2.png" class="w-[500px] h-auto p-2 mx-auto mb-6">
+              
+
           </div>
           <div class="flex flex-col p-4 ">
               <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] tracking-wide mb-6" >
@@ -1547,19 +1561,19 @@ updatePipelineProgress();
           <div class="text-left text-[var(--color-accent)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
               <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Demographic:<br></div>
                 
-                 In this dataset,52.8% customers are male,&nbsp;47.2% customers are female;&nbsp;51.6% customers are membership customers,&nbsp;48.4% 
-                 customers are non-membership customers,&nbsp;demographics are balanced.<br>
+                 In this dataset,Male customers represent 52.80% of the sample, while female customers account for 47.20%;&nbsp;
+                 51.60% hold active memberships and 48.40% are non-member patrons, reflecting an even distributional parity.<br>
                  <br>
               <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Product:<br></div>
                  
-                 There are five products in product categories, from highest to lowest: personal care, fruits, beverages, household and 
-                 stationery. Total sales are 27050, 26197, 22935, 21616, 20737 (unit:dollars).<br>
-                 From the most purchased product category to least, they are fruits, personal care, beverages, stationery and household. Corresponding 
-                 purchased quantity: 2286, 2278, 1952, 1913, 1908.<br> 
+                 A total of five product categories were examined. When sorted from the highest to the lowest sales volume, the categories are personal care, 
+                 fruits, beverages, household goods, and stationery, with respective total sales values of $27,050, $26,197, $22,935, $21,616 and $20,737.<br>
+                 Ranked in descending order of purchase volume, the product categories are fruits, personal care, beverages, stationery and household goods, 
+                 with corresponding purchased quantities of 2286, 2278, 1952, 1913 and 1908, respectively.<br> 
                  <br>
-                 For the unit price: min: 1.02; 1st quantil: 5.867; median:10.615; 3rd quantil: 15.883; max: 20.980.<br>
+                 For the unit price: min: 1.02; 1st quantil((Q1)): 5.87; median:10.62; 3rd quantil(Q3): 15.88; max: 20.98.<br>
                  <br>
-                 For the quantity: min: 1; 1st quantil: 5; median:10; 3rd quantil: 16; max: 20.<br>
+                 For the quantity: min: 1; 1st quantil(Q1): 5; median:10; 3rd quantil(Q3): 16; max: 20.<br>
                  <br>
               <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Regional Sales:<br></div>
                  
@@ -1605,6 +1619,26 @@ updatePipelineProgress();
                  household category is 175% higher, buying personal care is 39.4% higher, buying stationery products is 20% higher. unit price, quantity, reward points increase 
                  when the price increase. branch has no correlation with the high price band purchase.<br>
                  <br>
+          </div>
+          <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Ordinary Logit Regression<br></div>
+                
+                 Model 1: P value of key explanatory variable is 0.21,
+                 greater than 0.005, indicates that customer type has no correlation with total price level.<br>
+                 <br>
+                 Model 2: By adding control variables: City, Gender, product category, results showing that city: LA and product stationery are significantly correlated with outcome 
+                 variable, with p value 0.002 and 0.014. With the coefficient -0.46 and -0.47, one unit product increasing, total sales of LA reduce 46% compared with Chicago; total 
+                 sales of stationery products reduce 47% compared with beverages.<br>
+                 <br>
+                 Model 3: By adding the interactions, results indicates that city LA and product stationery are still significantly correlated with outcome variable. With the coefficient
+                 -0.47 and -0.67, one unit product increasing, total sales of LA reduce 47% compared with Chicago; total sales of stationery products reduce 67% compared with beverages. 
+                 <br>
+                 However, the p value of  interaction terms are greater than 0.005, shows that membership status doesn't affect the correlation between the product category and the total 
+                 price level. Gender has no correlation with the total price level.
+                 <br>
+                 Based on the fact that unit price and quantity are the key explanatory variable of the total price level, the models above didn't include them due to the statistics logic. 
+                 <br>
+                 The McFadden's Pseudo R of model 1,2,3 indicates that they can explain 0.08%, 1.2%, 1.3% of the dataset, the AIC of model 2 are the smallest indicates that model 2 is the best model among 3 models.
           </div>
      </div>
 </div>
