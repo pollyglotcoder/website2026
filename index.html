@@ -1489,8 +1489,7 @@ updatePipelineProgress();
 <div class="bg-[linear-gradient(to_bottom,#ffffff_85%,#ffffff_100%)]">
      <div class="grid  grid-cols-1 gap-0 p-4 sm:p-6 rounded-3xl mx-5 sm:mx-16 md:mx-40 bg-white overflow-hidden">
 
-          <div class="flex flex-col rounded-t-md sm:rounded-l-md sm:rounded-tr-none border-b sm:border-b-0 
-               sm:border-r border-white p-2 border !border-[var(--color-accent)] rounded-lg">
+          <div class="flex flex-col border-white p-2 border !border-[var(--color-accent)] rounded-lg">
               <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
               <p>Does membership status correlate with higher single - transaction sales value?</p>
               </div>
@@ -1507,9 +1506,9 @@ updatePipelineProgress();
                         Analytical Framework, Data wrangling, Statistical computing and Econometric modeling were executed in R, supplemented by Tableau for exploratory data visualization. 
                         To categorize the spending level, total spending was divided into three levels : low price: 1.21 ~ 38.38;  middle price: 38.38 ~ 176.07; high price:176.07 ~ 433.99(unit: dollar).
                         Quantile-based discretization was adopted.
-                        Each segment accounts for 25%, 50%, and 25% respectively. In this dataset, the mean (Mean: 118.58) is significantly higher than the median (Median: 89.70), 
+                        Each segment accounts for 25%, 50%, and 25% respectively. In this dataset, the mean (118.58) is significantly higher than the median (89.70), 
                         with a maximum value reaching 433.99. This indicates that this dataset is a Right-Skewed dataset, and a few extremely high-value purchases skew the mean upward. 
-                        Under this distribution, quantiles are adpopted to enhance estimation robustness. (e.g., 0-100, 100-200, 200-300).<br>
+                        Under this distribution, quantiles were adopted to enhance estimation robustness. (e.g., 0-100, 100-200, 200-300).<br>
                         <br>
 
                         <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.0rem,2vw,2.0rem)] font-medium mb-6 tracking-wide" ><p>Methodology and Key Findings</p></div><br>
@@ -1518,8 +1517,8 @@ updatePipelineProgress();
                         <br>
 
                         The parametric estimates reveal no statistically significant association between membership status and transaction price bands (p > 0.05). However, 
-                        in the lower price band, members tend to exhibit higher spending, whereas in the higher price band, non-members are more likely to spend greater amounts. 
-                        Despite apparent minor differences in the descriptive statistics, the regression model confirms that this difference is not statistically significant. <br>  
+                        customers in Los Angeles are less likely to fall into higher total-price groups compared with customers in Chicago; Stationery purchases 
+                        are less likely to result in higher-value transaction tiers relative to beverages. <br>  
                         </p>
               </div> 
           </div>
@@ -1531,7 +1530,7 @@ updatePipelineProgress();
      <div class="grid grid-cols-1 sm:grid-cols-[4fr_2fr] gap-0 p-4 sm:p-6 rounded-3xl mx-4 sm:mx-16 md:mx-40 bg-white overflow-hidden min-w-0">
 
           <div class="flex flex-col border-r border-r-[var(--color-accent)] p-4">
-              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+               <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
                <div class="ml-4 mb-6" ><p>General Insights1</p></div>
               <img src="./imgs/Dashboard2.png" class="w-full h-auto p-2 mx-auto mb-6 border !border-[var(--color-accent)] rounded-lg">
               </div>
@@ -1541,108 +1540,131 @@ updatePipelineProgress();
               <img src="./imgs/Dashboard1.png" class="w-full h-auto p-2 mx-auto mb-6 border !border-[var(--color-accent)] rounded-lg">
               </div> 
               
-              <div class="ml-4 text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-2 tracking-wide" ><p>Lasso Regression Figure</p></div>
+             
+              <div class="ml-4 text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" ><p>Discribtive Ordinal Logistic Regression Models</p></div>
+              <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr] items-stretch">
+              <img src="./imgs/Re2.png" class="w-[1000px] h-auto p-2 mx-auto mb-6">
+              <div class="flex flex-col p-4">
+              <div class="text-left text-[var(--color-text-muted)] text-[clamp(1.2rem,2vw,4rem)] tracking-wide mb-6" >
+               <div class="w-full h-auto p-2 mx-auto mb-6 text-[var(--color-text-light)] bg-[var(--color-accent)] border !border-[var(--color-accent)] rounded-lg text-[clamp(0.5rem,2vw,1.0rem)]"><p>Model 1: P value of key explanatory variable is 0.21, exceeds the conventional significance threshold (ą = 0.05), customer membership status 
+                 demonstrates no statistically significant relationship with transaction price levels.<br></p></div>
+              <div class="w-full h-auto p-2 mx-auto mb-6 text-[var(--color-text-light)] bg-[var(--color-accent)] border !border-[var(--color-accent)] rounded-lg text-[clamp(0.5rem,2vw,1.0rem)]"><p>Model 2: After introducing control variables including city, gender and product category, Los Angeles and stationery display significant associations with the 
+                 outcome variable, with p-values of 0.002 and 0.014 respectively. Their log-odds coefficients are -0.4603 and -0.4723. Compared with Chicago, customers in Los Angeles 
+                 are less likely to fall into higher total-price groups. Similarly, stationery purchases are less likely to result in higher-value transaction tiers relative to beverages.<br>
+                 <br></p></div>
+              <div class="w-full h-auto p-2 mx-auto mb-6 text-[var(--color-text-light)] bg-[var(--color-accent)] border !border-[var(--color-accent)] rounded-lg text-[clamp(0.5rem,2vw,1.0rem)] sm:hidden">
+            <p>Model 3: Further introduced interaction terms between customer type and product categories. Los Angeles and stationery remain statistically significant predictors. 
+                 The corresponding log-odds coefficients are -0.4717 and -0.6745. All interaction terms return p-values above 0.05, indicating membership status does not moderate 
+                 the relationship between product category and total price level. Gender shows no significant correlation with total price level across model specifications.<br>
+                 <br>
+                 To prevent structural data leakage, deterministic accounting components (unit_price, quantity, tax, and reward_points) were intentionally excluded, ensuring legitimate econometric identification.
+                 <br>
+                 Across all specifications, McFadden's Pseudo R² remains modest (0.08% in Model 1, 1.20% in Model 2, and 1.30% in Model 3). Model 2 achieves the lowest Akaike 
+                 Information Criterion (AIC = 2074.57), identifying it as the best-fitting models among the three.
+                 <br></p></div>
+              </div>
+              </div>
+              </div>
+              <div class="ml-4 text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" ><p>Lasso Regression Figure</p></div>
               <div class="grid grid-cols-1 sm:grid-cols-[1fr_1.3fr] items-stretch">
               
-              <img src="./imgs/Rplot.png" class="w-full w-[500px] h-auto mx-auto ">
-              <img src="./imgs/lasso.png" class="w-full w-[574px] h-auto mx-auto">
-         </div>
-               
-              <div class="ml-4 text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-2 tracking-wide" ><p>Discribtive Ordinal Logistic Regression Models</p></div>
-              <img src="./imgs/Re2.png" class="w-[500px] h-auto p-2 mx-auto mb-6">
+              <img src="./imgs/Rplot.png" class="w-full w-[500px] h-auto mx-auto mb-6">
+              <img src="./imgs/lasso.png" class="w-full w-[574px] h-auto mx-auto mb-6">
+             
+              </div>
+            
+           </div>    
               
 
-          </div>
+         
           <div class="flex flex-col p-4 ">
               <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] tracking-wide mb-6" >
               <p>Analysis</p>
               </div>
 
           <div class="text-left text-[var(--color-accent)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
-              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Demographic:<br></div>
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-bold tracking-wide "><p>●Demographic:<br></div>
                 
-                 In this dataset,Male customers represent 52.80% of the sample, while female customers account for 47.20%;&nbsp;
-                 51.60% hold active memberships and 48.40% are non-member patrons, reflecting an even distributional parity.<br>
+                 In this dataset, male customers represent 52.80% of the sample, while female customers account for 47.20%;&nbsp;
+                 51.60% hold active memberships and 48.40% are non-member, reflecting an even distributional parity.<br>
                  <br>
-              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Product:<br></div>
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-bold tracking-wide "><p>●Product:<br></div>
                  
                  A total of five product categories were examined. When sorted from the highest to the lowest sales volume, the categories are personal care, 
                  fruits, beverages, household goods, and stationery, with respective total sales values of $27,050, $26,197, $22,935, $21,616 and $20,737.<br>
                  Ranked in descending order of purchase volume, the product categories are fruits, personal care, beverages, stationery and household goods, 
                  with corresponding purchased quantities of 2286, 2278, 1952, 1913 and 1908, respectively.<br> 
                  <br>
-                 For the unit price: min: 1.02; 1st quantil((Q1)): 5.87; median:10.62; 3rd quantil(Q3): 15.88; max: 20.98.<br>
+                 For the unit price: min: $1.02; Q1: $5.87; median: $10.62; Q3: $15.88; max: $20.98.<br>
+                 For the quantity: min: 1; Q1: 5; median: 10; Q3: 16; max: 20.<br>
                  <br>
-                 For the quantity: min: 1; 1st quantil(Q1): 5; median:10; 3rd quantil(Q3): 16; max: 20.<br>
-                 <br>
-              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Regional Sales:<br></div>
-                 
-                 Chicago:<br>
-                 Stationery are the most purchased items, followed by fruits and household, beverages are the least purchased items.<br>
-                 Los Angeles:<br>
-                 Fruits are the most purchased items, followed by beverages and personal care, stationery are the least purchased items.<br>
-                 New York:<br>
-                 Personal care are the most purchased items, followed by household, stationery and beverages,
-                 all three category items accounts similarly.fruits are the least purchased items.              
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-bold tracking-wide "><p>●Regional Sales:<br></div>
+                 <div class="text-left text-[var(--color-bg-dark)] text-xl font-medium"><p>Chicago:</div>
+                 Stationery had the highest purchase volume, followed by fruits and household goods; beverages ranked lowest.<br>
+                 <div class="text-left text-[var(--color-bg-dark)] text-xl font-medium"><p>Los Angeles:</div>
+                 Fruits were the top-purchased category, followed by beverages and personal care, with stationery recording the minimum volume.<br>
+                 <div class="text-left text-[var(--color-bg-dark)] text-xl font-medium"><p>New York:</div>
+                 Personal-care purchases were highest. Household goods, stationery and beverages showed comparable volumes, while fruits were least purchased.          
             </p>
           </div>
-          <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
-              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●General insights 2<br></div>
+          <div class="text-left text-[var(--color-accent)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-bold tracking-wide "><p>●Other Aspects<br></div>
                 
-                 For Female customer, fruits and personal care are 2 most purchased products; for male customer, stationery and household products are 2 most 
-                 purchased products, beverages are the least purchased products for both.<br>
+                 For female customers, fruits and personal care are the two most purchased categories, whereas stationery and household goods rank highest among male customers; 
+                 Beverages represent the lowest-volume category for both genders. Member customers tend to purchase personal care and household goods, while non-members prefer 
+                 stationery and fruits. For both membership groups, beverages exhibit the minimum purchase volume.<br>
+                 Customers in Chicago exhibit the strongest overall purchasing power, followed by New York and Los Angeles. However, some New York customers recorded higher transaction 
+                 values than those in Chicago.<br>
                  <br>
-                 Member customers tend to buy personal care and household products, non member customers tend to buy stationery products and fruits, beverages 
-                 are the least purchased products for both.<br>
-                 <br>
-                 Customers in Chicago has the strongest purchasing power in general, followed by New York and Los Angles, However, few customers in New York has 
-                 higher transaction records than in Chicago.<br>
-                 <br>
-                 Most total sales are around 13.3 to 93.1, total price over 119.7 are less.<br>
-                 <br>
-                 The amount of branch A is 2 times of branch B, each of them are 672, 326.<br>
+                 The majority of total-sales values lie within the 13.3 to 93.1 range, few records exceed a total price of 119.7. <br>
+                 Branch A (672) is approximately double the size of Branch B (326).<br>
                  <br>
           </div>
-          <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
-              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Lasso Regression<br></div>
+                <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-bold tracking-wide mb-2 "><p>●Ordinal Logistic Regression<br></div>
+          <div class="w-full h-auto p-2 mx-auto mb-6 text-[var(--color-text-light)] bg-[var(--color-accent)] border !border-[var(--color-accent)] rounded-lg text-[clamp(0.5rem,2vw,1.0rem)]">
+            <p>Model 3: Further introduced interaction terms between customer type and product categories. Los Angeles and stationery remain statistically significant predictors. 
+                 The corresponding log-odds coefficients are -0.4717 and -0.6745. All interaction terms return p-values above 0.05, indicating membership status does not moderate 
+                 the relationship between product category and total price level. Gender shows no significant correlation with total price level across model specifications.
+                 <br></p></div>
+
+          <div class="w-full h-auto p-2 mx-auto mb-6 text-[var(--color-text-light)] bg-[var(--color-accent)] border !border-[var(--color-accent)] rounded-lg text-[clamp(0.5rem,2vw,1.0rem)]">
+            <p>To prevent structural data leakage, deterministic accounting components (unit_price, quantity, tax, and reward_points) were intentionally excluded, ensuring legitimate econometric identification.
+                 <br>
+                 Across all specifications, McFadden's Pseudo R² remains modest (0.08% in Model 1, 1.20% in Model 2, and 1.30% in Model 3). Model 2 achieves the lowest Akaike 
+                 Information Criterion (AIC = 2074.57), identifying it as the best-fitting models among the three.
+                 <br></p></div>
+     
+          <div class="w-full h-auto p-2 mx-auto mb-2 text-[var(--color-text-light)] bg-[var(--color-accent)] border !border-[var(--color-accent)] rounded-lg text-[clamp(0.5rem,2vw,1.0rem)]">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-bold tracking-wide mb-6"><p>●Lasso Regression<br></div>
                 
-                 For low price band, customer purchase in branch B is around 77% higher than branch A; member customer has 18% higher
-                 chance to purchase; compared to beverages, the chance of customer buying fruit is 4% lower, buying household products is 11% lower, buying personal care 
-                 products is 10% lower, buying stationery products is 52% lower; the lower the price, the less the unit price, quantity and reward points.
-                 city and gender has no correlation with the low price band purchase.<br>
+                 The multinomial Lasso regression shrinks nearly all predictor coefficients down to zero. Only stationery shows a tiny non-zero coefficient for the high-price tier.
+                 The left plot displays model deviance against the penalty parameter (ʎ). <br>
+                 As penalisation increases, most variables are eliminated from the model.
+                 Lasso suggests most selected variables have little predictive power for price tiers; only stationery has a very weak association with high-price transactions.
+                 Consequently, customer membership status provides no robust predictive utility for transaction price tiers.
                  <br>
-                 For middle price, customer purchase in New York is 7% lower than in Chicago; Male customer is only 0.1% lower than female customer to purchase. Branch, 
-                 customer type, product category has no correlation with the middle price band purchase.<br>
-                 <br>
-                 For high price band, compared with Chicago, customer purchase in LA is 64% lower, purchase in New York is 33% higher. Normal customer has nearly 49% chance 
-                 to purchase than member customer; male customer has 56% chance than female to purchase; compared with beverage, customer buying fruits is 42% higher, buying 
-                 household category is 175% higher, buying personal care is 39.4% higher, buying stationery products is 20% higher. unit price, quantity, reward points increase 
-                 when the price increase. branch has no correlation with the high price band purchase.<br>
+                
                  <br>
           </div>
-          <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.5rem,2vw,1.0rem)] font-medium mb-6 tracking-wide ">
-              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(0.7rem,2vw,1.2rem)] font-medium tracking-wide "><p>●Ordinary Logit Regression<br></div>
-                
-                 Model 1: P value of key explanatory variable is 0.21,
-                 greater than 0.005, indicates that customer type has no correlation with total price level.<br>
-                 <br>
-                 Model 2: By adding control variables: City, Gender, product category, results showing that city: LA and product stationery are significantly correlated with outcome 
-                 variable, with p value 0.002 and 0.014. With the coefficient -0.46 and -0.47, one unit product increasing, total sales of LA reduce 46% compared with Chicago; total 
-                 sales of stationery products reduce 47% compared with beverages.<br>
-                 <br>
-                 Model 3: By adding the interactions, results indicates that city LA and product stationery are still significantly correlated with outcome variable. With the coefficient
-                 -0.47 and -0.67, one unit product increasing, total sales of LA reduce 47% compared with Chicago; total sales of stationery products reduce 67% compared with beverages. 
-                 <br>
-                 However, the p value of  interaction terms are greater than 0.005, shows that membership status doesn't affect the correlation between the product category and the total 
-                 price level. Gender has no correlation with the total price level.
-                 <br>
-                 Based on the fact that unit price and quantity are the key explanatory variable of the total price level, the models above didn't include them due to the statistics logic. 
-                 <br>
-                 The McFadden's Pseudo R of model 1,2,3 indicates that they can explain 0.08%, 1.2%, 1.3% of the dataset, the AIC of model 2 are the smallest indicates that model 2 is the best model among 3 models.
-          </div>
-     </div>
+   </div>     
 </div>
 
+<div class="grid  grid-cols-1 gap-0 p-4 sm:p-6 rounded-3xl mx-5 sm:mx-16 md:mx-40 bg-white overflow-hidden">
+
+          <div class="flex flex-col w-full h-auto px-100 mx-auto text-center text-[var(--color-text-light)] border !border-[var(--color-accent)] rounded-lg text-[clamp(0.5rem,2vw,1.0rem)]">
+              <div class="text-left text-[var(--color-bg-dark)] text-[clamp(1.2rem,2vw,4rem)] font-medium mb-6 tracking-wide" >
+              <p>Suggestion: <br>
+                <br>
+                Consider including more control variables in the model to improve its explanatory power.Consider including more control variables in the model to improve its explanatory power.
+                    Consider including more control variables in the model to improve its explanatory power.Consider including more control variables in the model to improve its explanatory power.</p>
+              </div>
+          </div>
+<div class="flex flex-col">
+              <div class="w-full h-auto px-100 mx-auto text-center text-[var(--color-text-light)] bg-[var(--color-accent)] border !border-[var(--color-accent)] rounded-lg text-[clamp(0.5rem,2vw,1.0rem)]">
+                <p> Suggestion: Consider including more control variables in the model to improve its explanatory power.Consider including more control variables in the model to improve its explanatory power.
+                    Consider including more control variables in the model to improve its explanatory power.Consider including more control variables in the model to improve its explanatory power.<br>
+                 <br></p></div>
+         </div>
 <script>
         const menuToggle = document.getElementById('menuToggle');
         const navContainer = document.getElementById('mainNav');
